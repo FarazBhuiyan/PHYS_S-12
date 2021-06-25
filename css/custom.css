@@ -1,7 +1,7 @@
 body {
 	padding-top: 30px;
 	color: gray;
-	}
+}
 	
 p {
   font-size: 20px;
@@ -9,7 +9,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
 	color: black;
-	}
+}
 	
 .feature {
 	background-color: #ef9d10; /*Light orange*/
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
     
 .footer-blurb-item {
     padding: 0px;
-    }
+}
  
 .small-print {
 	background-color: #fff;
