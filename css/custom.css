@@ -3,6 +3,10 @@ body {
 	color: gray;
 	}
 	
+p {
+  font-size: 20px;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: black;
 	}
@@ -40,3 +44,14 @@ h1, h2, h3, h4, h5, h6 {
 .gray-text {
   color: gray;
 }
+
+.navy-text {
+  color: #0E2229;
+}
+
+.coolgray-text {
+  color: #6b7b8c;
+}
+
+
+
