@@ -1,6 +1,6 @@
 body {
 	padding-top: 30px;
-	color: #959595;
+	color: gray;
 	}
 	
 h1, h2, h3, h4, h5, h6 {
@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 	
 .feature {
 	background-color: #ef9d10; /*Light orange*/
-	color: black; /*Main text*/
+	color: #0E2229; /*Main text*/
 	}
 	
 .article-intro {
@@ -17,16 +17,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-blurb {
-    padding: 30px 0;
+    padding: 20px 0;
     background-color: #6b7b8c; /*Light grey*/
     color: black;
 }
     
 .footer-blurb-item {
-    padding: 30px;
+    padding: 0px;
     }
  
 .small-print {
 	background-color: #fff;
 	padding: 30px 0;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gray-text {
+  color: gray;
 }
