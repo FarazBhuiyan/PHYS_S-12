@@ -153,7 +153,7 @@
 
             <div class="row">
                 <div class="col-lg-12"> <br><br>
-                     <p style="text-align: justify">Now I will go over and analyze the data I collected. So, looking at the first "Basic LED Circuit Schematic" drawing, it directly matches my breadboard circuit. Except instead of the battery, I used the Metro board to power the circuit. Talking a look at the graph, all the numbers I collected make sense when you look at what's exactly happening in the circuit. I used these drawing and pictures to get a better understanding of circuits.</p>
+                    <p style="text-align: justify">Now I will go over and analyze the data I collected. So, looking at the first "Basic LED Circuit Schematic" drawing, it directly matches my breadboard circuit. Except instead of the battery, I used the Metro board to power the circuit. Talking a look at the graph, all the numbers I collected make sense when you look at what's exactly happening in the circuit. I used these drawing and pictures to get a better understanding of circuits.</p>
 
                     <p style="text-align: justify">Positions A and B are both before any component, including the resistor, so there is no change in voltage. Then, after the resistor at position C, the voltage drops to 2.4 (the actual number was fluctuating between 2.39 and 2.4, so I just rounded up). This means that the 100Ω resistor drops the voltage by 0.9V. After that, at positions D and E, there is no voltage because the voltage is used by the LED, as both those postions are also ground wires. After position E, the circuit finishes its loop and starts back at 3.3V at position A.</p>
 
@@ -170,7 +170,55 @@
 
         <div class="row">
             <div class="col-lg-12">
+
+                <p style="text-align: justify">The blinking LED is probably one of the most common examples of basic arduino coding. As such, the blinking LED is a demo we did in class. The idea is quite simple: the LED blinks on and off for a set period of time. There was no coding (by me) involved, as the blink code is already an example that is given on the Arduino code editor. Since this was the first time I'd be uploading a code sketch from my computer to the Metro board, I had a few steps on the Arduino software to finish first. To get the code from the editor on my computer to my Metro board, I plugged the board into my PC using a USB to micro USB cable. I fiddled around with the board and COM settings to make sure it was on the right board, and then I simple clicked "Upload" on the Arduio software. That's really all there is to it for uploading new Arduino sketches onto a microcontroller.</p>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-7">
+
+                <p style="text-align: justify">The way that the light blinking actually works is by the board using a technique for controlling power called Pulse Width Modulation (PWM). The PWM output produces pulses of power of various set time lengths, instead of constant power seen without PWM, and I used it to change the status of the LED to either on or off.</p>
+
+                <iframe src=https://create.arduino.cc/example/builtin/01.Basics%5CBlink/Blink/preview?embed style="height:700px;width:100%" frameborder=0></iframe>
+            </div>
+
+            <div class="col-lg-5">
+                <img src="One Blinking.gif" class="img-rounded" style="width:100%" alt="Blinking Gif"><br><br>
+
+                <p style="text-align: justify">The top image is a visual of what the blink looks like: the LED on the Metro board flashes on and off. This makes sense because in the code to the left, the pin that is being used as the output is "LED_BUILTIN," which is the built-in LED. To get the LED on the breadboard to flash, as seen below, I connected the positive wire to the 13th digital pin instead of the 3.3V pin connector. The reason this works without changing any code is because the 13th digital pin also functions as the "LED_BUILTIN" pin.</p>
+
+                <img src="Both Blinking.gif" class="img-rounded" style="width:100%" alt="Both Blinking Gif">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
                 <h1 class="page-header">Circuit With Potentiometer</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p style="text-align: justify">This circuit is the first one that I've used the potentiometer in, as well as an analog pin. The way that potentiometer works is by a knob controlling how much resistance is in the circuit. So, if the knob is turned all the way, then the output would be close to 0. And if the knob is turned all the way to the other side, the output will be 1023. Likewise, if the knob is turned to somewhere In the Arduino embed below, there are two different analog read serial codes. Again, this was an example code from the Arduino basic example list, but in the lab session, we edited the example code so when we looked at the serial monitor (what was being outputted from the analog 0 pin), it would show a normal voltage number instead of a unitless value from 0-1023. I talk more on this below.</p>
+            </div>
+        </div>
+
+
+        <div class="row"><br>
+            <div class="col-lg-7">
+                <iframe src=https://create.arduino.cc/editor/farazb/8d26cfea-7e9a-4e2d-a93d-e39225fd9833/preview?embed style="height:700px;width:100%;" frameborder=0></iframe><br><br>
+
+                    <p style="text-align: justify">Looking at the code above, the edits we made to the example code are to make the serial monitor output also produce a numerical voltage amount, instead of just numbers from 0 to 1023. For example, the way we converted the 1024 scale to a 0 to 3.3V scale is by adding in this line: "Serial.println(map(sensorValue, 0, 1023, 0, 3.3));" The map function is used as the converter, so the 1024 scale is just scaled down to a 3.3V scale. 
+
+                   <p style="text-align: justify">The reason the voltages appearing on the right are integers is because I have it set in the code to produce integers. I tried making it produce fractional values so it would produce an exact decimal range from 0 to 3.3, but when I tried, it didn't work. So, I just left it as an integer. </p>
+
+                    <p style="text-align: justify">Also, the reason the "sensor Values" range from 0 to 1023 is because the Metro board we are using uses 10-bit Analog to Digital Conversion (ADC). This means that the values produced are a 10-bit range of 1024 quantifiable numbers that we can use to measure other values, like voltage. Also, the reason the range I am getting is from 0 to 1023 is because including 0, the range from 0 to 1023 is 1024.</p>
+            </div>
+
+            
+            <div class="col-lg-5">
+                <img src="Circuit Potentiometer.JPG" style="width:100%" class="img-rounded" alt="Potentiometer Circuit"><br><br>
+                <img src="Serial Monitor.JPG" style="width:100%" alt="Serial Monitor">
             </div>
         </div>
 
@@ -200,6 +248,7 @@
             </div>
         </div>
     </div>
+    
         <div class="small-print">
             <div class="container">
                 <p style="text-align: center">Copyright &copy; Faraz Bhuiyan 2021 </p>
