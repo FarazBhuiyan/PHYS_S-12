@@ -186,7 +186,7 @@
             <div class="col-lg-5">
                 <img src="One Blinking.gif" class="img-rounded" style="width:100%" alt="Blinking Gif"><br><br>
 
-                <p style="text-align: justify">The top image is a visual of what the blink looks like: the LED on the Metro board flashes on and off. This makes sense because in the code to the left, the pin that is being used as the output is "LED_BUILTIN," which is the built-in LED. To get the LED on the breadboard to flash, as seen below, I connected the positive wire to the 13th digital socket instead of the 3.3V socket connector. The reason this works without changing any code is because the 13th digital socket also functions as the "LED_BUILTIN" pin.</p>
+                <p style="text-align: justify">The image above is a vsual of what the blink circuit looks like: the LED on the Metro board flashes on and off. This makes sense because in the code to the left, the pin that is being used as the output is "LED_BUILTIN," which is the Metro board's built-in LED. To get the LED on the breadboard to flash, as seen below, I connected the positive wire to the 13th digital socket instead of the 3.3V socket connector. The reason this works without changing any code is because the 13th digital socket also functions as the "LED_BUILTIN" pin.</p>
 
                 <img src="Both Blinking.gif" class="img-rounded" style="width:100%" alt="Both Blinking Gif">
             </div>
@@ -230,52 +230,49 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <p style="text-align: justify">Voltage dividers were also something we learned about during the lab session. If the resistors are the same resistance, for example, if both are 10kΩ, then the voltage between the resistors will be exactly half of the system input. In my circuit, I made the system input 3.3V, so the divided voltage is 1.65V</p>
+                <p style="text-align: justify">Voltage dividers were also something we learned about during the lab session. I learned that they form the basis for different types of sensors. The circuit I made is a very basic model of how a voltage divider works, and they can definitely get very complex the more components are in the circuit. However, understanding how this basic voltage divider works was really helpful when comparing my data to other circuits to see how different components linked together affect the voltage at different points of a circuit. </p><br>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-6">
-                <p style="text-align: justify"> The Voltage Divider diagram on the right is what I folowed to make my circuit. The math also checks out. For example, if we take a look at the V1 equation (to find the voltage in the middle of the 2 resistors), R1 is 10kΩ and R1+R2 is 20kΩ, which when divided simplifies to 1/2. One half of 3.3V is 1.65V, which is what the multimeter shows. </p>
-                
+            <div class="col-lg-7">
+                <p style="text-align: justify"> The Voltage Divider diagram on the right is what I folowed to make my circuit. The equations below the diagram work interchangably, meaning you can plug in either resistor value for R1 or R2 and you will still get the same answer. </p>
+                <p style="text-align: justify">I learned that if the resistors are the same resistance, for example, if both are 10kΩ, then the voltage between the resistors will be exactly half of the system input. In my circuit, I made the system input 3.3V, so the divided voltage is 1.65V The math also checks out. If we take a look at the V1 equation (to find the voltage between the two resistors), R1 and R2 in my circuit are both 10kΩ, so R1+R2 is 20kΩ. This simplifies to 1/2. One half of 3.3V is 1.65V, which is what the multimeter shows. Likewise, that also means that the V2 equals 1.65V, because it has the same variables as V1, like voltage and resistance. This means that after the second resistor, there are 0 volts left in the circuit.
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <img src="Voltage Divider.jpg" class="img-rounded" style="width:100%" alt="Voltage Divider Diagram">
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-6">
-                <img src="Voltage Divider Start.JPG" class="img-rounded2" style="width:100%" alt="Voltage Divider Middle">
+                <img src="Voltage Divider Middle.JPG" class="img-rounded2" style="width:100%" alt="Voltage Divider Middle">
             </div>
 
              <div class="col-lg-6">
-                <img src="Voltage Divider Middle.JPG" class="img-rounded2" style="width:100%" alt="Voltage Divider Middle">
+                <img src="Voltage Divider Light.JPG" class="img-rounded2" style="width:100%" alt="Voltage Divider Light">
             </div>
         </div>
 
-        
-
-        
-
-
-
-
+        <div class="row">
+            <div class="col-lg-12">
+                <p style="text-align: justify">Like I said before, the voltage is only split exactly in half between two resistors when the resistance level of the two resistors is the same. This is proven in the image below with the red LED replacing the second resistor. The voltage after the first resistor is 1.73V, which is not half of 3.3V. The LED is using more volts than the seconds resistor in the first image was reducing, which is why the voltage just before the LED is higher than in the first image. </p>
+            </div>
+        </div>
 
     <div class="row">
         <div class="col-lg-12"> <br>
                 <h1 class="page-header">What I Learned </h1>
-                     <p> » How to use Fusion 360 <br>
-                         » How to create rigid and moving joints <br>
-                         » Basic animations skills on Fusion 360 <br>
-                         » How to make Fusion 360 part assemblies <br>
-                         » How to locally on Fusion 360 <br>
-                         » Proper color sampling on Fusion 360 <br>
-                         » Where to find embed share link for different resources <br>
-                         » How to use iframes on HTML <br>
-                     </p>
-
+                     <p> » What volts, current, and amperes are <br>
+                         » How to circuits on a breadbaord <br>
+                         » How to circuits on Tinkercad <br>
+                         » Components of circuits <br>
+                         » Why potentiometers can be used as variable resistors<br>
+                         » How to measure voltages using a multimeter <br>
+                         » How to calculate current using Ohm's Law<br>
+                         » Very basic Arduino language coding <br>
+                         » How to use serial monitor to recieve active feedback from analog connections <br></p>
             </div>
         </div>
     </div>
