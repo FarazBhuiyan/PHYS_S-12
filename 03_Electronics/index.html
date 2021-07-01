@@ -157,7 +157,7 @@
 
                     <p style="text-align: justify">Positions A and B are both before any component, including the resistor, so there is no change in voltage. Then, after the resistor at position C, the voltage drops to 2.4 (the actual number was fluctuating between 2.39 and 2.4, so I just rounded up). This means that the 100Ω resistor drops the voltage by 0.9V. After that, at positions D and E, there is no voltage because the voltage is used by the LED, as both those postions are also ground wires. After position E, the circuit finishes its loop and starts back at 3.3V at position A.</p>
 
-                    <p style="text-align: justify">Using Ohm's law, I calculated that the current in my system is 0.009 amperes, or A. This was calculated by first finding the change in voltage, which was 0.9, and dividing that by the resistance, which is 100 because of the 100Ω resistor.</p>
+                    <p style="text-align: justify">Using Ohm's law, I calculated that the current in my system is 0.009 amperes (A), or 9 milliamperes (mA). This was calculated by first finding the change in voltage, which was 0.9, and dividing that by the resistance, which is 100 because of the 100Ω resistor.</p>
                     <br><br>
                 </div >
              </div> 
@@ -186,7 +186,7 @@
             <div class="col-lg-5">
                 <img src="One Blinking.gif" class="img-rounded" style="width:100%" alt="Blinking Gif"><br><br>
 
-                <p style="text-align: justify">The top image is a visual of what the blink looks like: the LED on the Metro board flashes on and off. This makes sense because in the code to the left, the pin that is being used as the output is "LED_BUILTIN," which is the built-in LED. To get the LED on the breadboard to flash, as seen below, I connected the positive wire to the 13th digital pin instead of the 3.3V pin connector. The reason this works without changing any code is because the 13th digital pin also functions as the "LED_BUILTIN" pin.</p>
+                <p style="text-align: justify">The top image is a visual of what the blink looks like: the LED on the Metro board flashes on and off. This makes sense because in the code to the left, the pin that is being used as the output is "LED_BUILTIN," which is the built-in LED. To get the LED on the breadboard to flash, as seen below, I connected the positive wire to the 13th digital socket instead of the 3.3V socket connector. The reason this works without changing any code is because the 13th digital socket also functions as the "LED_BUILTIN" pin.</p>
 
                 <img src="Both Blinking.gif" class="img-rounded" style="width:100%" alt="Both Blinking Gif">
             </div>
@@ -199,7 +199,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <p style="text-align: justify">This circuit is the first one that I've used the potentiometer in, as well as an analog pin. The way that potentiometer works is by a knob controlling how much resistance is in the circuit. So, if the knob is turned all the way, then the output would be close to 0. And if the knob is turned all the way to the other side, the output will be 1023. Likewise, if the knob is turned to somewhere In the Arduino embed below, there are two different analog read serial codes. Again, this was an example code from the Arduino basic example list, but in the lab session, we edited the example code so when we looked at the serial monitor (what was being outputted from the analog 0 pin), it would show a normal voltage number instead of a unitless value from 0-1023. I talk more on this below.</p>
+                <p style="text-align: justify">This circuit is the first one that I've used the potentiometer in, as well as an analog socket. The way that potentiometer works is by a knob controlling how much resistance is in the circuit. So, if the knob is turned all the way, then the output would be close to 0. And if the knob is turned all the way to the other side, the output will be 1023. Likewise, if the knob is turned to somewhere In the Arduino embed below, there are two different analog read serial codes. Again, this was an example code from the Arduino basic example list, but in the lab session, we edited the example code so when we looked at the serial monitor (what was being outputted from the analog 0 socket), it would show a normal voltage number instead of a unitless value from 0-1023. I talk more on this below.</p>
             </div>
         </div>
 
@@ -227,6 +227,37 @@
                 <h1 class="page-header">Circuit With Voltage Divider</h1>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <p style="text-align: justify">Voltage dividers were also something we learned about during the lab session. If the resistors are the same resistance, for example, if both are 10kΩ, then the voltage between the resistors will be exactly half of the system input. In my circuit, I made the system input 3.3V, so the divided voltage is 1.65V</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <p style="text-align: justify"> The Voltage Divider diagram on the right is what I folowed to make my circuit. The math also checks out. For example, if we take a look at the V1 equation (to find the voltage in the middle of the 2 resistors), R1 is 10kΩ and R1+R2 is 20kΩ, which when divided simplifies to 1/2. One half of 3.3V is 1.65V, which is what the multimeter shows. </p>
+                
+            </div>
+
+            <div class="col-lg-6">
+                <img src="Voltage Divider.jpg" class="img-rounded" style="width:100%" alt="Voltage Divider Diagram">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="Voltage Divider Start.JPG" class="img-rounded2" style="width:100%" alt="Voltage Divider Middle">
+            </div>
+
+             <div class="col-lg-6">
+                <img src="Voltage Divider Middle.JPG" class="img-rounded2" style="width:100%" alt="Voltage Divider Middle">
+            </div>
+        </div>
+
+        
+
+        
 
 
 
