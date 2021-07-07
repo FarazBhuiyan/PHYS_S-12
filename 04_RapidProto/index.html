@@ -98,7 +98,7 @@
                                           2. Control the sculpture with a circuit on a breadboard that uses components in the kit. <br> 
                                           3. Use a multimeter to measure the voltages in the circuit.<br> 
                                           4. Use Ohm's law to calculate current through the circuit. 
-                                          5. Use the Microcontroller Analog in (ADC) to measure the voltage of a potentiometer.
+                                          5. Use the Microcontroller Analog in (ADC) to measure the voltage of a potentiometer.<br>
                                           6. (Optional) Use tools like Tinkercad to simulate the circuit<br> <p>
             </div>
         </div>
@@ -321,7 +321,7 @@
         <div class="col-lg-4">
             <img src="Plane Underside AngledSQ.jpg" class="img-rounded2" style="width:100%" alt="Plane Underside Angled">
         </div>
-    </div><br>
+    </div><br><br>
 
     <div class="row">
         <div class="col-lg-12">
@@ -337,7 +337,7 @@
         <div class="col-lg-6">
             <img src="Wiring On Breadboard2.jpg" class="img-rounded2" width="580" height=440 alt="Wiring On Breadboard">
         </div>
-    </div>
+    </div><br>
 
     <div class="row">
         <div class="col-lg-12">
@@ -407,7 +407,7 @@
 
             <p style="text-align: justify">At this point, when plugging in the wires to the bread and Metro boards, all of the LEDs are on (none are blinking) and the motor is constantly turning in a clockwise direction. I fixed the motor problem first by using the potentiometer motor control code we used in lab last week. This made it so the motor turned in either direction, which I wanted. This is represented in the V1 code tab.</p>
 
-           <p style="text-align: justify"> Next, I wanted to add the blink code so that the top and bottom LEDs blinked. But, one issue I ran into was the delay() function in the blink command messed with the code for the motor. I searched online for alternatives to the delay function, and I found many helpful youtube videos as well as code from Arduino themselves. On the Arduino code editor, there is actually an example sketch of <a href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/BlinkWithoutDelay">Blink Without Delay</a>. Ass the name suggests, this is code for LEDs to blink without the use of the delay function. I copied the example code and formatted it to fit my code.</p>
+           <p style="text-align: justify"> Next, I wanted to add the blink code so that the top and bottom LEDs blinked. But, one issue I ran into was the delay() function in the blink command messed with the code for the motor. I searched online for alternatives to the delay function, and I found many helpful youtube videos as well as code from Arduino themselves. On the Arduino code editor, there is actually an example sketch of <a href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/BlinkWithoutDelay">Blink Without Delay</a>. As the name suggests, this is code for LEDs to blink without the use of the delay function. I copied the example code and formatted it to fit my code.</p>
 
            <p style="text-align: justify"> Looking at the V2 code tab, the way the millis() timer works in a nutshell is by first starting a timer that counts in milliseconds. Then, every 1000 millisecds, 1 second, the LED turns either on or off, which is the blink function. Lines 41 to 51 in the V2 page is where the timer code is. The millis() timer runs forever, which is why I used the <code>unsigned long</code> variable. <a href="https://www.arduino.cc/reference/en/language/variables/data-types/unsignedlong/">Unsigned long</a> variables store 32 bits of info, which is 16 more than regular <a href="https://www.arduino.cc/reference/en/language/variables/data-types/int/">int</a> variables hold. Also, it only stores positive numbers, so the range, for my usage, is virtually unlimited. So, everytime the timer reaches or passes the 1000 millisecond interval, the LED switches states and the previous time is set equal to the current time. It sounds more confusing than it really is, which is why I recommend watching <a href="https://www.youtube.com/embed/BYKQ9rk0FEQ">this video</a> for a better explanation. I talk about why I added the V3 page below.</p> <br><br>
         </div>
@@ -441,7 +441,9 @@
 
     <div class="row">
         <div class="col-lg-4">
-            <p style="text-align: justify">That's all there was to it: the structure, electrical, and coding elements. I think the final product turned out great, especially with all of the LEDs. The rest of this page is just pictures, gifs, and videos.</p>
+            <p style="text-align: justify">That's all there was to it: the structure, electrical, and coding elements. I think the final product turned out great, especially with all of the LEDs. The rest of this page is just pictures, gifs, and videos.</p> 
+
+            <p style="text-align: justify">I also took the sculpture outside in my backyard to take pictures. I power it with a portable power bank that outputs 5V. I'm not sure if im undervolting the circuits, but it looks fine.</p>
         </div>
 
         <div class="col-lg-4">
@@ -512,27 +514,6 @@
             <img src="Outdoor BTS.JPG" class="img-rounded" style="width:100%" alt="Outdoor BTS">
         </div>
     </div>
-
-
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="row"> <br>
         <div class="col-lg-12">
