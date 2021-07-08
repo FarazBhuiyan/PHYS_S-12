@@ -61,15 +61,15 @@
                             <li><a href="../01_Intro/index.html">01: Introduction & Documentation </a></li>
                             <li><a href="../02_2D/index.html">02: 2D Design & Cutting</a></li>
                             <li><a href="../03_Electronics/index.html">03: Electronics and Tools</a></li>
-                            <li><a href="#">04: Rapid Prototyping</a></li>
-                            <li><a href="#">05: Programmable Electronics</a></li>
-                            <li><a href="#">06: 3D Design & Printing</a></li>
-                            <li><a href="#">07: Electronic Input Devices</a></li>
-                            <li><a href="#">08: Electronic Output Devices</a></li>
-                            <li><a href="#">09: Networking / IoT</a></li>
-                            <li><a href="#">10: Machine building</a></li>
-                            <li><a href="#">11: Computer Programming</a></li>
-                            <li><a href="#">12: Wildcard / Project Prep</a></li>
+                            <li><a href="../04_RapidProto/index.html">04: Rapid Prototyping</a></li>
+                            <li><a href="../05_Programable/index.html">05: Programmable Electronics</a></li>
+                            <li><a href="../06_3D/index.html">06: 3D Design & Printing</a></li>
+                            <li><a href="../07_Electronic Input/index.html">07: Electronic Input Devices</a></li>
+                            <li><a href="../08_Electronic Output/index.html">08: Electronic Output Devices</a></li>
+                            <li><a href="..09_Network/index.html">09: Networking / IoT</a></li>
+                            <li><a href="../10_Machine/index.html">10: Machine building</a></li>
+                            <li><a href="../11_Programming/index.html">11: Computer Programming</a></li>
+                            <li><a href="../12_Wildcard/index.html">12: Wildcard / Project Prep</a></li>
                             <li><a href="../Final Project/index.html">Final Project</a></li>
                         </ul>
                     </li>
@@ -97,7 +97,7 @@
                     <p class="gray-text"> 1. Make and document a kinetic sculpture. <br>
                                           2. Control the sculpture with a circuit on a breadboard that uses components in the kit. <br> 
                                           3. Use a multimeter to measure the voltages in the circuit.<br> 
-                                          4. Use Ohm's law to calculate current through the circuit. 
+                                          4. Use Ohm's law to calculate current through the circuit. <br>
                                           5. Use the Microcontroller Analog in (ADC) to measure the voltage of a potentiometer.<br>
                                           6. (Optional) Use tools like Tinkercad to simulate the circuit<br> <p>
             </div>
@@ -131,7 +131,7 @@
         </div>
 
         <div class="row"> 
-            <div class="col-lg-12"><br>
+            <div class="col-lg-12">
                 <p style="text-align: justify"> Something to mention really quick is that I laid this page out in chronological order. The section you just read was a brief overview of what I did, so now, it's all in chronological order. The build process, wiring, coding, etc. are all in order of when I did it.</p>
             </div>
 
@@ -299,7 +299,7 @@
 
             <img src="Makeshift Wire SolderS.jpg" class="img-rounded2" style="width:100%" alt="Makeshift Wire Solder"><br><br>
 
-            <p style="text-align: justify"> To get some of the 1-to-2 and 1-to-3 wire joints, I made a makeshift soldering wire piece as seen above, because I didn't want to solder anything. This is a clever alternative I thought up of on the spot and it really saved a lot of time because I didn't have to solder or use extra positive and ground wires. In total, I used two 1-to-2 joints, one for positive and one for ground, and one 1-to-3 joint for ground.</p>
+            <p style="text-align: justify"> To get the 1-to-2 and 1-to-3 wire joints, I made four makeshift soldering wire piece as seen above, because I didn't want to solder anything. This is a clever alternative I thought up of on the spot and it really saved a lot of time because I didn't have to solder or use extra positive and ground wires. In total, I used three 1-to-2 joints, two for positive and one for ground, and one 1-to-3 joint for ground.</p>
         </div>
 
         <div class="col-lg-7">
@@ -419,9 +419,9 @@
         </div>
 
         <div class="col-lg-4">
-            <p style="text-align: justify">In version 2.5, let's call it, I added in a serial monitor to measure the voltage of the potentiometer. I got it to work, but I needed to add some sort of delay or else the serial monitor would spit out literally as many numbers as it virtually could. This can be seen in the picture on the left, where the serial monitor would spew out 3 to 4 values instead of 1. So, my first idea was to just use the millis timer I already had. Now, this works completely fine, and the delay between each read is 1 second. However, I wanted to have them independent of eachother, meaning I wanted to change the time of one and not have it affect the other. This was confusing at first, but with the help of the TA during the last lab, I learned that I needed to create a completely seperate timer for this to work.</p>
+            <p style="text-align: justify">In version 2.5, let's call it, I added in a serial monitor to measure the voltage of the potentiometer. I got it to work, but I needed to add some sort of delay or else the serial monitor would spit out literally as many numbers as it virtually could. This can be seen in the picture on the left, where the serial monitor would spew out 3 to 4 values instead of 1 at a time. So, my first idea was to just use the millisecond timer I already had. Now, this works completely fine, and the delay between each read is 1 second. However, I wanted to have them independent of eachother, meaning I wanted to change the time of one and not have it affect the other. This was confusing at first, but with the help of the TA during the last lab, I learned that I needed to create a completely seperate timer for this to work.</p>
 
-            <p style="text-align: justify">As seen in the V3 tab, all I did was duplicate the first set of code and changed the variables by adding a "2" after them to make a second timer. This was very easy, as the code was already written. The finished result is seen on the right, where the serial monitor works and I can adjust the time interval between each read independent of the other millis timer. </p>
+            <p style="text-align: justify">As seen in the V3 tab, all I did was duplicate the first set of code and changed the variables by adding a "2" after them to make a second timer. This was very easy, as the code was already written. The finished result is seen on the right, where the serial monitor works and I can adjust the time interval between each read independent of the other millisecond timer. </p>
 
             <p style="text-align: justify">One odd discovery I found with the potentiometer using the serial monitor is that the voltage doesn't ever go the 0 or 1023. The lowest it goes is 2, and the highest is about 1020. Also, the voltage write doesn't ever go to 3. I'm not exactly sure why, as before, on other circuits with just the potentiometer, the serial monitor read from 0 to 1023. I tried troubleshooting by unplugging the motor, but the same problem persisted.</p><br>
         </div>
@@ -430,8 +430,6 @@
             <img src="04_Serial2.PNG" style="width:100%" alt="04_Serial2">
         </div>
     <div>
-
-
 
     <div class="row">
         <div class="col-lg-12">
@@ -515,17 +513,15 @@
         </div>
     </div>
 
-    <div class="row"> <br>
+    <div class="row"> 
         <div class="col-lg-12">
                 <h1 class="page-header">What I Learned </h1>
-                     <p> » How to use Fusion 360 <br>
-                         » How to create rigid and moving joints <br>
-                         » Basic animations skills on Fusion 360 <br>
-                         » How to make Fusion 360 part assemblies <br>
-                         » How to locally on Fusion 360 <br>
-                         » Proper color sampling on Fusion 360 <br>
-                         » Where to find embed share link for different resources <br>
-                         » How to use iframes on HTML <br>
+                     <p> » Why using the delay() function doesn't work with simultaneously functioning components<br>
+                         » How to use the millis() function <br>
+                         » When to use the millis() function <br>
+                         » How to create a timer using the millis() function <br>
+                         » How to create a blink circuit without the delay() function <br>
+                         » How to troubleshoot issues with the millis() function <br>
                      </p>
         </div>
     </div>
