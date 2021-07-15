@@ -82,7 +82,7 @@
 
     <div class="jumbotron feature">
         <div class="container">
-            <h1>01: Introduction & Documentation</h1>
+            <h1><b>07: Electronic Input Devices</h1></b>
         </div>
     </div>
 
@@ -92,27 +92,241 @@
         <!-- Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">What To Do: </h1>
+                <h1 class="page-header">What To Do </h1>
 
-                    <p><h3 class="gray-text">    1. Create a website and make a page with a proposal for a possible final project. <br>
-                                                 2. Read Chapters 1-3 of Making Things Move and note down interesting facts. <br>
-                                                 3. Research local fab labs and makerspaces. </p></h3>
-
-                 <h1 class="page-header">What I Did: </h1>
-                    <p><h3 class="gray-text"> To begin with, I was a little overwhelmed that we had to create a basic website using html and css, as I have no prior experience with either of the two. However, I found a realitvely easy to use template from <a href="https://www.quackit.com/html/templates/simple_website_templates.cfm">here</a>, and I imported and personalized it. The best part is that it's completely free (this isn't sponsored). With a lot of help from <a href="https://www.w3schools.com/html/default.asp">w3schools</a>, I was able to create the bare-bones of a somewhat-working, basic website. My website has key features like images, a working navbar, hyperlinks, etc. There are still many things I don't know to do, like what most of the stuff in the css folder means, but I'm sure with a lot of time and patience, I can learn the basics of css too. The image below is a snippet of my coding for this specific page, my intro & documentation page. Also, I researched local makerspaces. Although there aren't any that are very close to where I live, there are really good ones closer to Chicago. One of them is <a href="https://fox.build/">Fox.Build: Makerspace, Hackerspace, Coworking</a> located in St. Charles, Illinois, which is about 40 minutes away from my house. Unfortunately, there aren't any day passes, as all of their price listings are for monthly memberships. The process of filling in my own information was pretty easy, but I'm still pretty confused on the more complex tasks, like how to use different fonts and insert multiple images in a collage. </p><br></h3>
-
-                    <p><h4 class="gray-text">Part of my code of this specific webpage.</p></h4>
-                    <img src="01_Code.JPG" alt="Website Code" width="1000px"> 
-
-                <h1 class="page-header">What I Learned: </h1>
-                     <p> » What we will do during the course <br>
-                         » The very basics of using HTML and CSS for creating websites </p>
-
+                    <p class="gray-text"> 1. Test<br></p>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-lg-12">                                                           
+                 <h1 class="page-header">What I Did </h1>
+                    <p style="text-align: justify"> For this assignment, I wanted to make something that would be actually useful to me later. At first, I wanted to make a piano with the capactive touch sensors. I changed my mind because it required a lot more complex coding than what we have learned so far. So, I decided to make a soil hydration sensor. The idea is that you put this in different plant pots to measure if the pot has too little, an ok, or the perfect amount of water. </p>
+
+                    <p style="text-align: justify"> The sensor stick as a whole is really straight forward. It has three capactive touch sensor circuits to detect when each are touching water. The water amount can be just a few drops (in the gif below I'm testing it in a vase, so there's inevitably an unrealistic amount of water). It did work really well... the first time.</p> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">                                                           
+                <p style="text-align: justify"> The biggest problem was that after the first few test runs, the water already saturated inside of the meter, which is no good. The way the sensor actually works is by turning an LED on for each of the three activated capactive touch zones. The way the capacitive touch sensors work is by detecting an increase in electrons. When the sensor is touching any water at all, the corresponding LED turns on. But, the problem was that there was already water inside the actual sensor itself. This meant that it would always be detecting water, even when the sensor wasn't in water.</p>
+            </div>
+
+            <div class="col-lg-8">
+                <img src="Water Pouring Gif.gif" class="img-rounded2" style="width:100%" alt="Water Pouring Gif">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">                                                           
+                <p style="text-align: justify">Tehcnincally, my design should work forever so long as the meter stick itself is completely dry before putting in any soil. I can easily revise my current design and make a water hydration sensor V2 by addressing all of the problems I encountered during testing.</p><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-7">                                                           
+                <iframe width="650" height="365" src="https://www.youtube.com/embed/P7Ox2e3zYt8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+
+                <iframe width="650" height="365" src="https://www.youtube.com/embed/Onx2jnLNlD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-5">                                                           
+                <p style="text-align: justify">The first video shows my first attempt at a full sensor test. It worked surprisingly well. As I'm pouring the water in, the green light is constantly flashing because the water is touching the top sensor first.</p>
+
+                <p style="text-align: justify">The LEDs correspond to each capacitive sensor. So, when I first pour in the water, the bottom sensor is being activated, which means the red LED also turns on. Similarly, when the water touches the middle sensor, the yellow LED turns on. And when the water touches the top sensor, the green LED turns on.
+
+                <p style="text-align: justify">To clarify what the LEDs means, green means good, yellow means okay, and red means not good. So when the soil is saturated with water, the green LED should turn on, indicating that the water has reach all levels of the plant's roots.</p>
+
+                <p style="text-align: justify">The second video shows my real plant pot test. When I first insert the sensor stick into the soil, the red LED is on and the yellow LED was flickering, meaning the water level is pretty low. When I pour in the water, the green and yellow LEDs turn on and stay on, meaning the water has saturated all the way to the top of the soil. Although it was a very short-term test, the functionality of the sensor was able to be tested. </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12"> 
+                <p style="text-align: justify"> After both of these tests, the sensor stick was basically unusable because of the water that got under the aluminum and stayed there.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12"> 
+                <h1 class="page-header">Capacitive Touch Sensor Demo</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">                                                           
+                <p style="text-align: justify"> My soil hydration sensor uses this capacitive touch sensor demo that we did in class. In a nutshell, when you touch the copper pad, the sensor increases its output based on whatever range is being used. The way to manipulate the range is by changing what resistor is being used. For example, I used a low level resistor like a 1k Ohm resistor, the sensor sensitivity would be much lower, therefore decreasing the total range. In general, the higher the resistance, the higher the sensor sensitivity.</p> 
+
+                <p style="text-align: justify"> In my case, I found that the 47k Ohm resistors were the perfect amount of sensitivity and range for my application. All three of the capactive sensors are on circuits with 47k Ohm resistors. When I used a 1 Mega Ohm resistor, the range was way too large and the sensor was way too sensitive. With the 1 Mega Ohm resistor, the range started at 10k and went up to 70k, which for my application, is not helpful.</p>
+            </div>
+
+            <div class="col-lg-6">
+                <img src="Basic Cap Sensor.JPG" class="img-rounded2" width="555px" height="455px"alt="Basic Cap Sensor">
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-8">                                                           
+                <iframe src=https://create.arduino.cc/editor/farazb/2f3028b2-e66d-4e07-a61a-18591a07f95e/preview?embed style="height:600px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+                <p style="text-align: justify"> The code for the capacitive touch sensor is pretty straight forward. The code uses a capactive sensor library, made by Paul Stoffregen, to measure the output from the capacitive sensor. When you touch the sensor, the output value increases.</p>
+
+                <p style="text-align: justify"> As seen in the serial monitor to the right, the range for the capacitive sensor using a 47k Ohm resistor is about 3,500 starting at 0. This is the perfect range for my sensor because it isn't too high, like in the tens of thousands, but it isn't too low either, like in the hundreds. This way I can get a strong reading of when the sensor is being activated and when it isn't</p>
+            </div>
+
+            <div class="col-lg-4">                                                           
+                <img src="Serial Monitor 1.PNG" style="width:100%" alt="Basic Cap Sensor Serial Monitor">
+            </div>
+        </div>
+                
+
+        <div class="row">
+            <div class="col-lg-12"> 
+                <h1 class="page-header">Soil Hydration Sensor </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">                                                           
+                <p style="text-align: justify"> The making of my hydration sensor was pretty simple. I first made the sensing stick itself and then worked on the code. The harder part out of the two was definitely the coding, especially trying to find resistors that had the range I wanted. I go over how I made the stick below, and I talk about the coding further below.<br><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">                                                           
+                <img src="Stick 1.JPG" style="width:100%" class="img-rounded2" alt="Stick 1">
+            </div>
+
+            <div class="col-lg-4">                                                           
+                <img src="Stick 2.JPG" style="width:100%" class="img-rounded2" alt="Stick 2">
+            </div>
+
+            <div class="col-lg-4">                                                           
+                <img src="Stick 3.JPG" style="width:100%" class="img-rounded2" alt="Stick 3">
+            </div>
+        </div>
+
+        <div class="row"><br><br>
+            <div class="col-lg-12">                                                           
+                <p style="text-align: justify"> For the sensing stick, I used three wooden dowels and taped them together. I then used aluminum foil as the conductive material for each of the three capacitive sensors. As seen in the middle image, the aluminum foil is laid out in 3 parts: bottom, middle, and top. After that, I started the wiring process. I color-coded my wires so it would be easy to distinguish which wire is coming from which sensor. The black wire is from the bottom sensor, yellow from middle, and red from top. After making this stick, the rest was a bit of breadboard circuitry and coding.</p>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-4">                                                           
+                <img src="Breadboard Circuit.JPG" style="width:100%" class="img-rounded2" alt="Breadboard Circuit">
+            </div>
+
+            <div class="col-lg-4">                                                           
+                <p style="text-align: justify"> The image on the left shows the final breadboard circuit, including the LEDs. Like I said, each of the capacitive sensor circuits use 47k Ohm resistors, while the LEDs each use 100 Ohm resistors.</p>
+
+                <p style="text-align: justify"> The image on the right shows the pin connections. The right 6 pin connections (3 red and 3 black) are for the capactive sensor circuits. For the right 6 wires, the black ones are sensing wires and the red ones are charge wires. For the left 4 wires, the 3 reds are positive for the LED circuits and the black is ground for the whole circuit. </p>
+
+                <p style="text-align: justify"> I recreated my circuiit on Tinkercad, as seen below.</p>
+            </div>
+
+            <div class="col-lg-4">                                                           
+                <img src="Pin Connections.JPG" style="width:100%" class="img-rounded2" alt="Pin Connections">
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-12">                                                           
+                <img src="Tinkercad Simulation.PNG" style="width:100%" class="img-rounded2" alt="Tinkercad Simulation">
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-12">                                                           
+                <p style="text-align: justify"> One of the key things to note about my code below is that I used the number 150 as an indicator of whether or not the sensor is detecting water. This is because 150 is too high for random sensor fluctuations to accidentally hit, yet low enough for a bit of mousture to trigger the LEDs.</p>
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="col-lg-8">                                                           
+                <iframe src=https://create.arduino.cc/editor/farazb/540003e9-983f-4234-b0c2-97127824e744/preview?embed style="height:900px;width:100%" frameborder=0></iframe><br><br>
+
+                    <div class="col-lg-6">
+                        <img src="Water Test LED.JPG" style="width:100%" class="img-rounded" alt="Water Test LED">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <p style="text-align: justify"> To the left is an image of my makeshift testing setup. I used a blue plastic cup with a bit of water to test the bottom sensor. The reason I didn't individually test all of the sensors is because they all used the same code and were wired the same, so I figured if one worked, they all would.</p>
+
+                        <p style="text-align: justify"> To the right is the serial monitor. In my code, I used the key number of 150 to indicate whether the sensor is detecting moisture or not. So, on the serial monitor, the parts in red have the bottom sensor activates, while the part in blue has no sensor activated as all the numbers are basically 0.</p>
+                    </div>
+            </div>
+
+            <div class="col-lg-4">                                                           
+                <p style="text-align: justify"> The rest of the code for my sensing stick is pretty simple. I just used the demo that we did and duplicated it three times because I have three sensors. I then hooked up those sensors to LEDs. I have 3 LEDs, signifying good, okay, and not good.</p>
+
+                <p style="text-align: justify"> I also added some <code>Serial.print</code> lines to show my sensors working on the serial monitor. This is how I figured out what resistor to use. After that, it was the start of the testing phase.</p>
+
+                <p style="text-align: justify"> Below is the serial monitor with markings to show how the serial monitor works. I only used the bottom sensor in my first tests because I didn't want to bring too much water into a cup on my desk scattered with electronics.</p><br>
+
+                <img src="Sertial Monitor Markings.png" style="width:100%" alt="Serial Monitor Markings">
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-12">                                                           
+                <p style="text-align: justify">My next step was to do a full test. I did this by using a vase and filling it with water, as seen in the first video below. </p>
+
+                <p style="text-align: justify">The second video shows the main problem with my sensor: false readings. Because there is space below the aluminum foil, water can get trapped inside with no way for me to wipe it down. This meant that the water below the foil would trigger the sensors and give false readings. To solve this, I'd either have to make a completely new stick and make it completely waterproof or wait a long time for the stick to dry.</p>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-6">                                                           
+                <iframe width="555" height="315" src="https://www.youtube.com/embed/P7Ox2e3zYt8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+             <div class="col-lg-6">                                                           
+                <iframe width="555" height="315" src="https://www.youtube.com/embed/sHvwJztFoLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-12">                                                           
+                <p style="text-align: justify">After the first vase test, I moved on to a real planted pot. The same false reading issue still persisted, but I was able to get a fully running test without false readings.</p>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-8">                                                           
+                <iframe width="750" height="400" src="https://www.youtube.com/embed/Onx2jnLNlD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-4">                                                           
+               <p style="text-align: justify">In this test, when I first put the sensing stick in the soil, the red LED lit up, meaning that the pot had water in the bottom. The yellow LED started to blink, which meant that there was a little bit of water. However the green LED wasn't lit, meaning there was no water near the top. I poured some water in onto the area of the sensor (because I didn't want to wait all day for the soil to saturate with water) and it worked great. The lights all stayed lit after I poured in the water, which meant that the sensors were accurately detecting water.</p>
+            </div>
+        </div>
+
+
+        
+
+
+        
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-lg-12"> 
+                <h1 class="page-header">What I Learned </h1>
+                     <p> » 
+                     </p>
+            </div>
+        </div>
+
+
+    </div>
+    
         <div class="small-print">
             <div class="container">
-                <p>Copyright &copy; Faraz Bhuiyan 2021 </p>
+                <p style="text-align: center">Copyright &copy; Faraz Bhuiyan 2021 </p>
             </div>
         </div>
     </div>
