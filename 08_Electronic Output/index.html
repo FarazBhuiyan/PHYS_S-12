@@ -454,15 +454,54 @@
             </div>
         </div>
 
-        <div class="row"><br>
+        <div class="row">
+            <div class="col-lg-12"> 
+                <p style="text-align: justify">Down below, I embeded some songs I played with the final capacitive piano. Again, I was limited to the first 5 notes on the C major scale, so C, D, E, F, and G. It still turned out to be fine, and in any case, the piano can be expanded to have as many keys as there are open pins on the Metro board (or any other board). </p>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-lg-4"> 
-                <img src="Serial Monitor 2.PNG" width="372px" height="620px" alt="Serial Monitor 2">            
+                <h3 style="text-align: center" class= "gray-text"> Ode To Joy </h3> 
+
+                <iframe width="372" height="270" src="https://www.youtube.com/embed/Yg3v5T5tul8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           
             </div>
 
             <div class="col-lg-4"> 
-                <p style="text-align: justify">On the left is a serial monitor reading from about 12:30 AM in the morning. I am pressing down the blue sensor (the middle key), and the sensing output value is spiking to about 70k. What's interesting is that the sensors next to the the blue key, so the white and yellow keys, are also outputing some sensory value. In the first sensor value set on the left, the blue sensor is reading 70401. The white is reading 930 and the yellow is reading 1411. The red and green are reading fairly little. I think this is happening because I'm using the same charge pin for all sensors. Also, this has to do with the senors being so close and reading the signal from each other.</p>
+                <h3 style="text-align: center" class= "gray-text"> Five Note Scale </h3>  
 
-                <p style="text-align: justify">What's more is that on the serial monitor to the right, which is about 13 hours after the first reading, so 1:30 PM, the same sensing pattern is showing, but the blue sensor is sensing over 100k. I think this has to do with the room humidity changing, which is pretty neat.</p>
+                <iframe width="372" height="270" src="https://www.youtube.com/embed/V3VjnQ5M3mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-4"> 
+                <h3 style="text-align: center" class= "gray-text"> Hot Crossed Buns </h3>  
+
+                <iframe width="372" height="270" src="https://www.youtube.com/embed/r1q1DpzxSkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12"> 
+                <p style="text-align: justify">Down below, I embeded some songs I played with the final capacitive piano. Again, I was limited to the first 5 notes on the C major scale, so C, D, E, F, and G. It still turned out to be fine, and in any case, the piano can be expanded to have as many keys as there are open pins on the Metro board (or any other board). All in all, this was a fun project. It was fun to mess around using the various pianos I made, even though the buzzer was quite annoying. </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12"> 
+                <h1 class="page-header">Interesting Observations </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4"> 
+                <img src="Serial Monitor 2.PNG" width="372px" height="620px" alt="Serial Monitor 2">
+            </div>
+
+            <div class="col-lg-4"> 
+                <p style="text-align: justify">To the left is a serial monitor reading from about 12:30 AM in the morning. I am pressing down the the middle key and the sensing output value is spiking to about 70k. What's interesting is that the sensors next to the the blue key, the white and yellow keys, are also outputting some sensory value. Same is happening with the red and green keys. I think this may be happening because the senors being so close and reading the signal from each other. Also, this could have something to do with the fact that I'm using the same charge pin for all sensors. </p>
+
+                <p style="text-align: justify">What's more is that on the serial monitor to the right, which is about 13 hours after the first reading, so about 1:30 PM, the same sensing pattern is showing, but the blue sensor is sensing over 100k. I think this has to do with the room humidity changing, which is pretty neat.</p>
             </div>
 
             <div class="col-lg-4"> 
@@ -470,42 +509,29 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-12"> 
-                <p style="text-align: justify">All in all, this was a fun project. It was fun to mess around using the various pianos I made, even though the buzzer was quite annoying. Down below, I embeded some songs I played with the final capacitive piano. Again, I'm limited to the first 5 notes on the C major scale, so C, D, E, F, and G.</p>
-            </div>
-        </div>
-
         <div class="row"><br>
-            <div class="col-lg-4"> 
-                <iframe width="372" height="270" src="https://www.youtube.com/embed/Yg3v5T5tul8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           
+            <div class="col-lg-6"> 
+                <p style="text-align: justify">One cool troubleshooting option I found was to look at the serial monitor. Sometimes, when I was playing the capacitive piano, the buzzer would just stop working properly and the LEDs would start to blink. This meant that one of the sensor connections was loose. One way to tell if that's the case if on the serial monitor, one of the sensors is outputting a negative value, as seen with the green sensor in the serial monitor to the right. This was a life saver as this was a super quick way of solving an otherwise time-consuming issue. </p>
+
+                <p style="text-align: justify"> Another cool observation was to see which keys took priority over the other. The keys have a precedent over each other from right-to-left. This is because in the code, the last <code>if()</code> statement is for the last capacitive sensor, the green key, which means while that key is pressed, no one sensor inputs play sound. This is because it's at the bottom of the loop, so pressing the key keeps the buzzer in that <code>if()</code> statement. The opposite happens for the red key, where if the red key is pressed, then all other keys still work as the red key's <code>if()</code> statement is closest to the top out of all the <code>if()</code> statements. </p>
+
+                <iframe width="560" height="280" src="https://www.youtube.com/embed/GM2-xbqH0aI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-4"> 
-                <iframe width="372" height="270" src="https://www.youtube.com/embed/V3VjnQ5M3mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-lg-4"> 
-                <iframe width="372" height="270" src="https://www.youtube.com/embed/r1q1DpzxSkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+            <div class="col-lg-6"> 
+                <img src="Serial Monitor 3.PNG" style="width:100%" alt="Serial Monitor 3">
             </div>
         </div>
-
-
-
-
-
-        
-
-
-        
-        
-
 
 
         <div class="row">
             <div class="col-lg-12"> 
                 <h1 class="page-header">What I Learned </h1>
-                     <p>» 
+                     <p>» How the use the piezo buzzer<br>
+                        » How create a piano using various input devices<br>
+                        » Why using the same charge wire for different sensors works<br>
+                        » How to troubleshoot capacitive sensors using the serial monitor<br>
+                        » How to properly use the noTone function
                      </p>
             </div>
         </div>
