@@ -1,134 +1,82 @@
-<!DOCTYPE html>
-<!-- Template by Quackit.com -->
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <title>Faraz Bhuiyan PHYS_S-12</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
-    <link href="../css/custom.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHYSCI 70: Introduction to Digital Fabrication</title>
 </head>
 
 <body>
+    <button id="turn-on" name="turnon">Turn On </button>
+    <button id="turn-off" name="turnoff">Turn Off </button>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Logo and responsive toggle -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <span class="glyphicon glyphicon-fire"></span> 
-                    PHYS_S-12
-                </a>
-            </div>
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="../index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="../About Me/index.html">About</a>
-                    </li>
-                    <li>
-                        <a href="../Final Project/index.html">Final Project</a>
-                    </li>
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments<span class="caret"></span></a>
-                        <ul class="dropdown-menu" aria-labelledby="about-us">
-                            <li><a href="../01_Intro/index.html">01: Introduction & Documentation </a></li>
-                            <li><a href="../02_2D/index.html">02: 2D Design & Cutting</a></li>
-                            <li><a href="../03_Electronics/index.html">03: Electronics and Tools</a></li>
-                            <li><a href="../04_RapidProto/index.html">04: Rapid Prototyping</a></li>
-                            <li><a href="../05_Programable/index.html">05: Programmable Electronics</a></li>
-                            <li><a href="../06_3D/index.html">06: 3D Design & Printing</a></li>
-                            <li><a href="../07_Electronic Input/index.html">07: Electronic Input Devices</a></li>
-                            <li><a href="../08_Electronic Output/index.html">08: Electronic Output Devices</a></li>
-                            <li><a href="..09_Network/index.html">09: Networking / IoT</a></li>
-                            <li><a href="../10_Machine/index.html">10: Machine building</a></li>
-                            <li><a href="../11_Programming/index.html">11: Computer Programming</a></li>
-                            <li><a href="../12_Wildcard/index.html">12: Wildcard / Project Prep</a></li>
-                            <li><a href="../Final Project/index.html">Final Project</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
 
-    <div class="jumbotron feature">
-        <div class="container">
-            <h1>01: Introduction & Documentation</h1>
-        </div>
-    </div>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
 
-    <!-- Content -->
-    <div class="container">
-
-        <!-- Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">What To Do: </h1>
-
-                    <p><h3 class="gray-text">    1. Create a website and make a page with a proposal for a possible final project. <br>
-                                                 2. Read Chapters 1-3 of Making Things Move and note down interesting facts. <br>
-                                                 3. Research local fab labs and makerspaces. </p></h3>
-
-                 <h1 class="page-header">What I Did: </h1>
-                    <p><h3 class="gray-text"> To begin with, I was a little overwhelmed that we had to create a basic website using html and css, as I have no prior experience with either of the two. However, I found a realitvely easy to use template from <a href="https://www.quackit.com/html/templates/simple_website_templates.cfm">here</a>, and I imported and personalized it. The best part is that it's completely free (this isn't sponsored). With a lot of help from <a href="https://www.w3schools.com/html/default.asp">w3schools</a>, I was able to create the bare-bones of a somewhat-working, basic website. My website has key features like images, a working navbar, hyperlinks, etc. There are still many things I don't know to do, like what most of the stuff in the css folder means, but I'm sure with a lot of time and patience, I can learn the basics of css too. The image below is a snippet of my coding for this specific page, my intro & documentation page. Also, I researched local makerspaces. Although there aren't any that are very close to where I live, there are really good ones closer to Chicago. One of them is <a href="https://fox.build/">Fox.Build: Makerspace, Hackerspace, Coworking</a> located in St. Charles, Illinois, which is about 40 minutes away from my house. Unfortunately, there aren't any day passes, as all of their price listings are for monthly memberships. The process of filling in my own information was pretty easy, but I'm still pretty confused on the more complex tasks, like how to use different fonts and insert multiple images in a collage. </p><br></h3>
-
-                    <p><h4 class="gray-text">Part of my code of this specific webpage.</p></h4>
-                    <img src="01_Code.JPG" alt="Website Code" width="1000px"> 
-
-                <h1 class="page-header">What I Learned: </h1>
-                     <p> » What we will do during the course <br>
-                         » The very basics of using HTML and CSS for creating websites </p>
-
-            </div>
-        </div>
-        <div class="small-print">
-            <div class="container">
-                <p>Copyright &copy; Faraz Bhuiyan 2021 </p>
-            </div>
-        </div>
-    </div>
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "REPLACE_WITH_YOUR_OWN",
+        authDomain: "REPLACE_WITH_YOUR_OWN",
+        databaseURL: "REPLACE_WITH_YOUR_OWN",
+        projectId: "REPLACE_WITH_YOUR_OWN",
+        storageBucket: "REPLACE_WITH_YOUR_OWN",
+        messagingSenderId: "REPLACE_WITH_YOUR_OWN",
+        appId: "REPLACE_WITH_YOUR_OWN"
+    };
     
-    <!-- jQuery -->
-    <script src="../js/jquery-1.11.3.min.js"></script>
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
-    
-    <!-- IE10 viewport bug workaround -->
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
-    
-    <!-- Placeholder Images -->
-    <script src="../js/holder.min.js"></script>
-    
+    // Get a database reference to our blog
+    var ref = firebase.database().ref("/");
+
+    // make the buttons call the function below 
+    document.getElementById('turn-on').addEventListener('click', turnOn, false);
+    document.getElementById('turn-off').addEventListener('click', turnOff, false);
+
+    function turnOn(){
+        console.log("turning on");
+        ref.update({
+            "LED_STATUS": "ON"
+        });
+    }
+
+    function turnOff(){
+        console.log("turning off");
+        ref.update({
+            "LED_STATUS": "OFF"
+        });
+    }   
+    </script>
+
 </body>
 
-</html>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBq8fCzfQKc6OKETFsA8GAPEflK2VvlmZA",
+    authDomain: "esp32-fish-feeder.firebaseapp.com",
+    databaseURL: "https://esp32-fish-feeder-default-rtdb.firebaseio.com",
+    projectId: "esp32-fish-feeder",
+    storageBucket: "esp32-fish-feeder.appspot.com",
+    messagingSenderId: "586070307447",
+    appId: "1:586070307447:web:75434fd439ae6b32a94c72",
+    measurementId: "G-TMKJKDL5SH"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
