@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHYS_S-12: Introduction to Digital Fabrication</title>
+</head>
+
+<body>
+    <button id="turn-on" name="turnon">Turn On </button>
+    <button id="turn-off" name="turnoff">Turn Off </button>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBq8fCzfQKc6OKETFsA8GAPEflK2VvlmZA",
+        authDomain: "esp32-fish-feeder.firebaseapp.com",
+        databaseURL: "https://esp32-fish-feeder-default-rtdb.firebaseio.com",
+        projectId: "esp32-fish-feeder",
+        storageBucket: "esp32-fish-feeder.appspot.com",
+        messagingSenderId: "586070307447",
+        appId: "1:586070307447:web:75434fd439ae6b32a94c72",
+        measurementId: "G-TMKJKDL5SH"
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Get a database reference to our blog
+    var ref = firebase.database().ref("/");
+
+    // make the buttons call the function below 
+    document.getElementById('turn-on').addEventListener('click', turnOn, false);
+    document.getElementById('turn-off').addEventListener('click', turnOff, false);
+
+    function turnOn(){
+        console.log("turning on");
+        ref.update({
+            "LED_STATUS": "ON"
+        });
+    }
+
+    function turnOff(){
+        console.log("turning off");
+        ref.update({
+            "LED_STATUS": "OFF"
+        });
+    }   
+    </script>
+
+</body>

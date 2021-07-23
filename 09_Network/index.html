@@ -1,58 +1,332 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PHYSCI 70: Introduction to Digital Fabrication</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Faraz Bhuiyan PHYS_S-12</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="../css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
 <body>
-    <button id="turn-on" name="turnon">Turn On </button>
-    <button id="turn-off" name="turnoff">Turn Off </button>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-fire"></span> 
+                    PHYS_S-12
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../About Me/index.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../Final Project/index.html">Final Project</a>
+                    </li>
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="../01_Intro/index.html">01: Introduction & Documentation </a></li>
+                            <li><a href="../02_2D/index.html">02: 2D Design & Cutting</a></li>
+                            <li><a href="../03_Electronics/index.html">03: Electronics and Tools</a></li>
+                            <li><a href="../04_RapidProto/index.html">04: Rapid Prototyping</a></li>
+                            <li><a href="../05_Programable/index.html">05: Programmable Electronics</a></li>
+                            <li><a href="../06_3D/index.html">06: 3D Design & Printing</a></li>
+                            <li><a href="../07_Electronic Input/index.html">07: Electronic Input Devices</a></li>
+                            <li><a href="../08_Electronic Output/index.html">08: Electronic Output Devices</a></li>
+                            <li><a href="..09_Network/index.html">09: Networking / IoT</a></li>
+                            <li><a href="../10_Machine/index.html">10: Machine building</a></li>
+                            <li><a href="../11_Programming/index.html">11: Computer Programming</a></li>
+                            <li><a href="../12_Wildcard/index.html">12: Wildcard / Project Prep</a></li>
+                            <li><a href="../Final Project/index.html">Final Project</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+    <div class="jumbotron feature">
+        <div class="container">
+            <h1><b>09: Networking / IoT</h1></b>
+        </div>
+    </div>
 
-    <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyBq8fCzfQKc6OKETFsA8GAPEflK2VvlmZA",
-        authDomain: "esp32-fish-feeder.firebaseapp.com",
-        databaseURL: "https://esp32-fish-feeder-default-rtdb.firebaseio.com",
-        projectId: "esp32-fish-feeder",
-        storageBucket: "esp32-fish-feeder.appspot.com",
-        messagingSenderId: "586070307447",
-        appId: "1:586070307447:web:75434fd439ae6b32a94c72",
-        measurementId: "G-TMKJKDL5SH"
-    };
+    <!-- Content -->
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">What To Do </h1>
+
+                    <p class="gray-text"> 1. Control a board from a local wireless network.<br>
+                                          2. Program a microcontroller to obtain and respond to information from the internet. <br>
+                                          3. Optionally, work with a partner to control a device over a remote server.<br></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">                                                           
+                 <h1 class="page-header">What I Did </h1>
+                    <p style="text-align: justify"> In this assignment, I made various "Internet of Things" (IoT) circuits. I made an LED circuit with on and off access on LAN and <a href="https://firebase.google.com/">Google Firebase</a>, a DC motor circuit with on and off access on LAN and Google Firebase, and a DC motor circuit with on and off access using <a href="https://create.arduino.cc/iot/">Arduino IoT Cloud</a>.</p>
+
+                    <p style="text-align: justify"> I used this assignment as a first step for working on the wireless connectivity part of my final project, which I have finalized to be the automatic fish feeder. I learned a lot on how Google Firebase works and how to connect it to the Huzzah32 board. I also learned how to set up Arduino IoT Cloud to create a user-friendly dashboard to control my Huzzah32 board.</p>
+
+                    <p style="text-align: justify"> Down below are the three circuits I made, each wirelessly connected to either a LAN server or a web hosting platform (Firebase or Arduino IoT CLoud). I talk more on the circuits in their own sections further below.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <iframe width="372" height="250" src="https://www.youtube.com/embed/gYVi8LoB2DQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-4">
+                <iframe width="372" height="250" src="https://www.youtube.com/embed/2OeWGKBnCoo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-4">
+                <iframe width="372" height="250" src="https://www.youtube.com/embed/hm8GXNrshwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12">                                                           
+                <h1 class="page-header">LED LAN and WAN Connectivity</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">                                                           
+                    <p style="text-align: justify"> To get started on the networking assignment, we used Arduino's SimpleWifiServer example code for turning an LED on and off using a LAN web page. I used this example as a basis for all my other circuits.</p>
+
+                    <p style="text-align: justify"> Also, one thing to note is that for my SSID, passwords, and Firebase data in all codes I have on this page, I replaced my actual info with "My _____" (SSID, Password, etc). This is just to protect my information. To actually get the codes to work, the information has to be accurate to your own SSID, passwords, and Firebase data.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-7">      
+                <iframe src=https://create.arduino.cc/editor/farazb/c92e2e61-9bbb-46b9-a8d6-5e0ae3e841d8/preview?embed style="height:1462px;width:100%;margin:10px 0" frameborder=0></iframe>
+            </div>
+
+            <div class="col-lg-5">    
+                <p style="text-align: justify"> On the Arduino embed to the left, there are two tabs. The first one is for LED on and off LAN control. The second is for WAN control using Google Firebase. I'll start by talking about LAN control. </p>
+
+                <p style="text-align: justify"> LAN control for the LED is pretty simple. Using any device on my LAN, I can control the LED status. To actually connect to the Huzzah, I needed to get the IP address of the Huzzah. To do this, I clicked the reset button on the Huzzah after uploading the code. Then, on the serial monitor, the IP address of the Huzzah will show. This IP address is needed to wirelessly connect to the Huzzah using my local network. Plugging that IP address into my search bar would show an HTML page with the "LED on" and "LED off" buttons as shown below.</p>
+
+                <img src="LED On Off.PNG" class="img-rounded center" style="width:18%" alt="LED On Off">
+
+                <p style="text-align: justify">This was a good first step to controlling the LED wirelessly, but it was limited to only my network. To be able to control the LED from anywhere in the world, I used Google Firebase. I had no prior experience using Firebase before, so this assignment was a bit challenging at first. Nonetheless, I still got my Huzzah connected to Firebase.</p>
+
+                <p style="text-align: justify">On Firebase, I created a project called ESP32 Fish Feeder, because I want to make my final project a fish feeder. I just used this project for all my circuits. Once I got my Huzzah connected to Firbase using our class <a href="https://nathanmelenbrink.github.io/intro-dig-fab/09_networking/huzzah1b.html">guide</a>, I could control the LED status using Firebase. I don't show the actual Firebase interface in this section because I talk about in the next one.</p>
+
+                <p style="text-align: justify">After getting the LED to turn on and off using the Firebase console, I used a web interface that I hooked up to this website. The code for the interface is on the same link I posted above. The video below shows what the web interface looks like. I'm using an iPad that's on the same network as the Huzzah, but any network around the world would still work as this is on my website.</p>
+
+                <iframe width="460" height="250" src="https://www.youtube.com/embed/gYVi8LoB2DQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">                                                           
+                <h1 class="page-header">DC Motor LAN and WAN Connectivity</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">                                                           
+                    <p style="text-align: justify"> I hooked up a DC motor to Firebase to get the same results as shown in the previous LED on and off section. This helped me get further on track on coding for my final project, as I want to use a wireless connection to control the fish feeder. I basically just converted the code from before to fit a DC motor, and added a few lines to add more functionality to my motor. I don't document that much for this section because the code pretty much the same as the last section.</p>
+
+                     <p style="text-align: justify"> This is also when I started to 3D print prototype parts for my final project, so the grey screw that is attached to the motor is designed and printed by me.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-7">      
+                <iframe src=https://create.arduino.cc/editor/farazb/c52780b5-d111-49db-beb2-e3450411d922/preview?embed style="height:1086px;width:100%;margin:10px 0" frameborder=0></iframe>
+            </div>
+
+            <div class="col-lg-5">    
+                <p style="text-align: justify">On the Arduino embed to the left, the first tab is for the LAN web interface. I just edited the first LED web interface sketch by changing the variable names and adding three new functions for the new cycle buttons. </p> 
+
+                <p style="text-align: justify"> The first video below shows what the LAN web interface looks like. It's just a plain HTML page with 5 buttons: On, Off, One Cycle, Two Cycles, and Three Cycles. On turns the motor on, off turns it off, and each cycle turns on the motor for an extra 500 miliseconds (half of a second) starting at 1 second. So, one cycle equals 1 second of rotation, two cycles equals 1.5 seconds, and three cycles equals 2 seconds. These can all be adjusted to any amount.</p>
+
+                <iframe width="460" height="250" src="https://www.youtube.com/embed/E-LcFQ4loIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <p style="text-align: justify">The second tab is the Firebase interface version. I removed the cycles, as I just wanted to keep it simple. I added in direction, so the motor can now turn either clockwise or counter-clockwise. This is shown in the video below. </p>
+
+                <iframe width="460" height="250" src="https://www.youtube.com/embed/2OeWGKBnCoo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">                                                           
+                <h1 class="page-header">Fish Feeder Prototype</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">                                                           
+                    <p style="text-align: justify"> Finally, using everything that I learned so far, I made a wirelessly connected fish feeder prototype. This is by no means what the final will look like on the dot, but it's a rough estimation of what I want the size and functions to be. </p> 
+
+                     <p style="text-align: justify"> I also found out that Arduino themselves have an IoT platform, so I decided that I wanted to try that out. I could've used Google Firebase again, but I wanted to try out <a href="https://create.arduino.cc/iot/">Arduino IoT Cloud</a>. After finishing this assignment, I think using Arduino IoT is an excellent option for a basic IoT app, but it's a bit limited in a few ways. I talk about my experience with Arduino IoT below.</p><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">                                                           
+                <img src="Arduino IoT MyESP32 Page.PNG" class="img-rounded center" style="width:100%" alt="Arduino IoT MyESP32 Page">
+            </div>
+
+            <div class="col-lg-4">   
+                <p style="text-align: justify"> First things first, I'll talk about setting up the Huzzah with Arduino IoT Cloud. Unlike before, where setting up a WiFi connection and/or a Google Firebase connection took lots of extra code, setting up your network settings in Arduino IoT Cloud could not be easier.</p>
+
+                <p style="text-align: justify"> When you set up an account, you are sent to a page where you can make your first "thing." A thing is just one whole package of a device, code, integrations, and widgets. In my case, I set up my device as the Adafruit ESP32 Feather, as that's what the Huzzah32 is, and set up my network settings below that. And that's it for setting up your board and network information. </p>
+
+                <p style="text-align: justify"> Then, you identify global variables, and what type of variable they are. I intended to have three buttons for the cycles and one manual switch, so I only used 4 variables: Button1Status, Button2Status, Button3Status, and SwitchStatus. After defining the variables here, it automatically updated the code to either add, remove, or change the variable(s).  </p>
+            </div>
+        </div>
+
+        <div class="row"><br><br>
+            <div class="col-lg-3">  
+                <p style="text-align: justify"> Then, I made my dashboard. This is where you can add a lot of different basic widgets, like buttons, LEDs, and graphs, to control your IoT device.</p> 
+
+                <p style="text-align: justify"> Like I said, I intented to only have 4 variables for now, so I added in the three push bottons and one switch. This is simply a drag-and-drop process.</p> 
+
+                <p style="text-align: justify"> In the future, I want to add a timeline of every feeding and at what time the feedings occured and a calendar or clock function to somehow set exactly what time everyday I wanted to feeder to activate. I don't really know how to do that on Arduino, which is one of the limitations I was taling about earlier, as none of the widgets are a timeline, calendar, or clock.</p>                                                       
+            </div>
+
+            <div class="col-lg-4">   
+                <img src="Arduino IoT Widgets List.PNG" class="img-rounded center" style="width:100%" alt="Arduino IoT Widgets List">
+            </div>
+
+            <div class="col-lg-5">        
+                <img src="Arduino IoT Widgets.PNG" class="img-rounded center" style="width:100%" alt="Arduino IoT Widgets">
+
+                <p style="text-align: justify"> Above is what my dashboard looks like on my computer. It's just 4 widgets on a dashboard page. You can orient your widgets however you want. I wanted to have the manual switch on top and the three cycle buttons below.</p>   
+
+                <p style="text-align: justify"> Like I said, I want to add a few more things, as for me, more customizabilitly is always better than having less. For now, the Arduino IoT Cloud works perfectly, is super simple to use, and is very user-friendly, so I will happily keep using it until I have to switch back to Firebase.</p>
+            </div>
+        </div>
+
+
+        <div class="row"><br>
+            <div class="col-lg-12">  
+                <p style="text-align: justify"> I'll now talk about the code for my fish feeder prototype using Arduino IoT Cloud. It's quite different the coding used for Firebase or a local LAN server, but it's pretty easy to get the hang of.</p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-7">      
+                <iframe src=https://create.arduino.cc/editor/farazb/e0627103-59fa-43f3-ad90-e996b3f2dc51/preview?embed style="height:1185px;width:100%;margin:10px 0" frameborder=0></iframe> 
+            </div>
+
+            <div class="col-lg-5">    
+                <p style="text-align: justify">Some of the interesting things to note in the code to the left is that there really isn't that much code, there's nothing in the <code>void loop()</code>, and there is a <code>things.Properties.h</code> reference.</p>
+
+                <p style="text-align: justify"> Starting with the <code>void</code> functions, there are 4 <code>void</code> functions for 4 of the global variables I created. Arduino IoT Cloud automatically creates those <code>void</code> functions- and, in fact, creates the whole code template- and I just had to add in the <code>if()</code> statements and results. The way this code works is that, for example, for the first actual void variable, <code>onSwitchStatusChange()</code>, the code inside of that <code>void</code> function only activates when the switch status changes, the switch here being manual on-off switch.</p> 
+
+                <p style="text-align: justify">Also, I made the cycle variables a <code>boolean</code> variable and the switch variable a <code>CloudSwitch</code>, which is basically a <code>boolean</code> variable. This means that the variable stored is either 0, false, or 1, true. That's why I used 1 for the <code>if()</code> statements, meaning "if the button/switch is activated, do this..."</p>
+
+                <p style="text-align: justify"> Now to talk about what the <code>things.Properties.h</code> reference is. This is pretty much for setting up the widgets on the Arduino IoT Cloud dashboard to work with this code. Otherwise, those widgets would be useless as they wouldn't be controlling anything. Implementing the <code>things.Properties.h</code> tab, which is also automatically written when a variable is added or changed, is necessary for this code to work.</p>
+
+                <p style="text-align: justify"> Also, the "Secret" tab has information about my SSID, SSID password, and secret device key. That's why it's blank in the embed, Arduino hides it when the code is shared publicly.</p>
+
+                <p style="text-align: justify"> Below are two videos showing the Arduino IoT Cloud widgets in action. The first video is a test with just the screw, and the second video is a test with the outer shell and real fish food. Of course, I still have to tune duration of the spins and the model itself, but my final is still in its prototyping phase, so I haven't not fine-tuned anything yet.</p>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-6">  
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hm8GXNrshwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-6">  
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5ii563apT6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-lg-12">  
+                <p style="text-align: justify"> This was probably one of the most important assignments for me, as learning how to connect my Huzzah to LAN and WAN servers and control it using those servers is essential for my final project. I also just learned a lot about LAN hosting, Google Firebase, Arduino IoT Cloud, and APIs too, which is good. I plan on using these and the information I learned during this assignment to further my final project on its road to completion.</p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12"> 
+                <h1 class="page-header">What I Learned </h1>
+                     <p>» How to connect the Huzzah board to WiFi<br>
+                        » How to use a LAN web interface to control the Huzzah<br>
+                        » How to connect the Huzzah board to Google Firebase<br>
+                        » How to use Firebase's interface to control the Huzzah<br>
+                        » How to use Arduino IoT Cloud to control the Huzzah<br>
+                        » How to use information from APIs in your code<br>
+                     </p>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
     
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+        <div class="small-print">
+            <div class="container">
+                <p style="text-align: center">Copyright &copy; Faraz Bhuiyan 2021 </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="../js/jquery-1.11.3.min.js"></script>
 
-    // Get a database reference to our blog
-    var ref = firebase.database().ref("/");
-
-    // make the buttons call the function below 
-    document.getElementById('turn-on').addEventListener('click', turnOn, false);
-    document.getElementById('turn-off').addEventListener('click', turnOff, false);
-
-    function turnOn(){
-        console.log("turning on");
-        ref.update({
-            "LED_STATUS": "ON"
-        });
-    }
-
-    function turnOff(){
-        console.log("turning off");
-        ref.update({
-            "LED_STATUS": "OFF"
-        });
-    }   
-    </script>
-
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    
+    <!-- IE10 viewport bug workaround -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    
+    <!-- Placeholder Images -->
+    <script src="../js/holder.min.js"></script>
+    
 </body>
+
+</html>
