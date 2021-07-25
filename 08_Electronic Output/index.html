@@ -96,7 +96,7 @@
 
         <!-- Heading -->
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <h1 class="page-header">What To Do </h1>
 
                     <p class="gray-text"> 1.  Use an output device that you haven't used before. <br>
@@ -106,7 +106,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                  <h1 class="page-header">What I Did </h1>
                     <p style="text-align: justify"> I made two buzzer pianos with different inputs: one with buttons and another with capacitive sensors. The button piano was more of a proof-of-concept for the capacitive sensor piano, as I had never used the buzzer before this project and wanted to get the hang of playing diffferent notes using it. </p>
 
@@ -115,49 +115,49 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-sm-6">
                 <img src="Button Scale Gif.gif" class="img-rounded" style="width:100%" alt="Button Scale Gif">
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-sm-6">
                 <img src="Scale Gif.gif" class="img-rounded" style="width:100%" alt="Scale Gif">
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <h1 class="page-header">References </h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <p style="text-align: justify"> For guidance, I referenced numerous piano project videos uploaded on YouTube. Below, I also embeded the videos I watched for help. They were all great inspiration for my two pianos and helped me a lot when I didn't know how to fix certain issues.</p><br>
             </div>
         </div>
             
         <div class="row">
-            <div class="col-lg-4">  
+            <div class="col-sm-4">  
                 <iframe width="372" height="315" src="https://www.youtube.com/embed/niiFx9eiCZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-4">  
+            <div class="col-sm-4">  
                 <iframe width="372" height="315" src="https://www.youtube.com/embed/LPc7RGaqM6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-4">  
+            <div class="col-sm-4">  
                 <iframe width="372" height="315" src="https://www.youtube.com/embed/1MjPbAU_VzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12"><br>
+            <div class="col-sm-12"><br>
                     <p style="text-align: justify">I looked at many projects on the <a href="https://create.arduino.cc/projecthub">Arduino Project Hub</a> that were related to a button/capacitive sensor piezo piano. I embeded some of the Arduino Projects I referenced for my pianos below. For anyone also creating and programming a piezo piano that uses buttons or capacitive sensors as inputs, I highly recommend checking out the projects below.</p><br>
             </div>
         </div>
 
          <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                  <iframe frameborder='0' height='410' scrolling='no' src='https://create.arduino.cc/projecthub/rahulkhanna/arduino-tutorial-mini-piano-08f8b8/embed' width='280'></iframe>
 
                 <iframe frameborder='0' height='410' scrolling='no' src='https://create.arduino.cc/projecthub/ashshaks/how-to-make-arduino-piano-keyboard-ccaa6a/embed' width='280'></iframe>
@@ -169,13 +169,13 @@
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <h1 class="page-header" style="margin-top: -40px" >Button Piano</h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-6">                                                           
+            <div class="col-sm-6">                                                           
                 <p style="text-align: justify"> To the right is the button piano I made. It's super simple: just 5 buttons and a buzzer. I didn't use any physical resistors because I used the built-in pullup resistors for the buttons. Other than that, it's just the coding part that was a bit tedious, but since this served as my reference point for later when I made the capacitive touch piano, I wanted to do it right.</p>
 
                 <p style="text-align: justify">The Arduino embed below shows the code I wrote for this button piano. Like I said, it's super straight forward. I set the pins as input pullups for the buttons, and create variables for the state of each button. Then, I add the <code>if()</code> statements that essentially mean "if the button is pressed, then play a note."</p>
@@ -183,17 +183,17 @@
                 <p style="text-align: justify">Another thing to mention is that I referenced the pitches.h tab, the second tab in the embed, which has frequencies of the buzzer defined to notes on a piano. The way the buzzer works is by producing a sound frequency, and there are certain frequencies that correspond to exact notes on the piano. The pitches.h code is publicly available by Arduio and given with the tone example sketches. Because I had 5 buttons, the 5 notes I chose were C, D, E, F, and G.</p>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-sm-6">
                 <img src="Button Bread Top.JPG" class="img-rounded2" style="width:100%" alt="Button Bread Top">
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-6">                                                           
+            <div class="col-sm-6">                                                           
                 <iframe src=https://create.arduino.cc/editor/farazb/e2967e5d-c2e2-41a6-9480-6bdc7a22b80c/preview?embed style="height:810px;width:100%;margin:10px 0" frameborder=0></iframe>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-sm-6">
                 <p style="text-align: justify"> There was one serious problem I ran into when making the button piano. When I pressed the buttons, no sound played. When I released the buttons, the sound played. This is a key error (hah, it's a pun. "key" error, because it's a piano with "keys") because I wanted the notes to be played when the button was pushed down. </p>
 
                 <p style="text-align: justify">I spent a lot of time trying to figure out why, but I came to no solution. I even tried out the code of other peoples' button pianos, as linked in the projects I referenced above, and still had no luck. This can be seen in the video below. </p>
@@ -207,11 +207,11 @@
         </div>                                                   
             
         <div class="row"><br>
-            <div class="col-lg-7">                                                           
+            <div class="col-sm-7">                                                           
                 <img src="Tinkercad Button Piano Model.PNG" class="img-rounded2" style="width:100%" alt="Tinkercad Button Piano Model">
             </div>
 
-            <div class="col-lg-5">
+            <div class="col-sm-5">
                 <p style="text-align: justify"> To make the whole circuit easier to view, I added a Tinkercad model of my circuit to the left. It uses the exact same pin connections as my real button piano does, so you can directly copy my Tinkercad model and code and have a functioning piano. The wire color-coding is pretty simple: red is positive for the buttons, orange is positive for the buzzer, and black is ground. On my actual button piano, I used a regular red wire for my buzzer positive. I just used an orange one in the Tinkercad model to differentiate between the buzzer poositive and button positives.</p>
 
                 <img src="Button Pins.JPG" class="img-rounded2" style="width:100%" alt="Button Piano Pins">
@@ -221,26 +221,26 @@
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                 <p style="text-align: justify"> Below, there are three embeded videos of some basic songs I played using my button piano. I was limited to a song using only the first 5 notes in the C-major scale, as I only was using 5 buttons as dedicated keys.</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-4">    
+            <div class="col-sm-4">    
                 <h3 style="text-align: center" class= "gray-text"> Marry Had A Little Lamb </h3>  
 
                 <iframe width="372" height="315" src="https://www.youtube.com/embed/S96pr0FqA2I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-4">   
+            <div class="col-sm-4">   
                 <h3 style="text-align: center" class= "gray-text"> Jingle Bells </h3>  
 
 
                 <iframe width="372" height="315" src="https://www.youtube.com/embed/frCL21t2yj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-4">      
+            <div class="col-sm-4">      
                 <h3 style="text-align: center" class= "gray-text"> Hot Crossed Buns </h3>
 
                 <iframe width="372" height="315" src="https://www.youtube.com/embed/ytzSoJm0t5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -248,19 +248,19 @@
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <p style="text-align: justify"> Since I wasn't able to solve the issue with the buttons and I figured that what I had was already a good enough proof-of-concept, I decided to start on the capacitive sensor piano. I started off by making a prototype, which I talk about next.</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <h1 class="page-header">Capacitive Sensor Piano Prototype </h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-6">                                                           
+            <div class="col-sm-6">                                                           
                 <p style="text-align: justify"> To the right is the prototype capacitive sensor piano. It only used two sensors, two resistors, and a buzzer. Since I used capacitive sensors in the last assignment, I was a bit more familiar with how they worked coming into this assignment.</p>
 
                 <p style="text-align: justify">The code for this prototype is below. Because my prototype only used two sensors, I only used two notes in the code: C and D. I also found that the best threshold value for the sensors was 10k. Using 1m Ohm resistors, the range started from 0 to about 60-80k. So, anything below 10k doesn't register as a touch, which is a good amount because it never accidentally detected a touch.</p>
@@ -270,7 +270,7 @@
                 <iframe src=https://create.arduino.cc/editor/farazb/86441725-a64a-4979-b4c9-f0430e467cf4/preview?embed style="height:845px;width:100%;margin:10px 0" frameborder=0></iframe>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-sm-6">
                 <img src="Cap Top.JPG" class="img-rounded2" style="width:100%" alt="Cap Prototype Top"><br><br>
 
                 <p style="text-align: justify"> Because I already had some experience with capacitive sensors before, I didn't have any issues with them this time. The videos below show the sensors working at different thresholds. The first video shows the before calibration, and the second shows after calibration. I don't exactly remember what threshold I used for the first video, but it must've been lower than 10k because it was a lot more sensitive and less accurate than my 10k threshold version. <br><br>
@@ -282,11 +282,11 @@
         </div>                                               
             
         <div class="row"><br>
-            <div class="col-lg-7">                                                           
+            <div class="col-sm-7">                                                           
                 <img src="Tinkercad Capacitive Proto Piano Model.PNG" class="img-rounded2" style="width:100%" alt="Tinkercad Capacitive Proto Piano Model">
             </div>
 
-            <div class="col-lg-5">
+            <div class="col-sm-5">
                 <p style="text-align: justify"> I also experimented with using only one charge wire for both sensors instead of using one for each as I did last assignment. In the model to the left, the red wire connected to pin 1 is the charge wire for both sensors. The black wires on pins 0 and 2 are the detection wires. In this model, the resistors form a voltage divider. Also, pretend the coin batteries are the capacitive sensors.</p>
 
                 <img src="Cap Pins.JPG" class="img-rounded2" style="width:100%" alt="Cap Proto Pins"> <br><br>
@@ -296,19 +296,19 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <p style="text-align: justify"> Now that I had all of the information I needed, like whether or not I could use one charge pin(,) the answer is yes), what resistors were best suited for my project(1m Ohm resistors), and what threshold was a good threshold (10k), I started on the build process for my final capacitive sensor piano.</p>
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <h1 class="page-header">Capacitive Piano Build Process</h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-5">                                                           
+            <div class="col-sm-5">                                                           
                 <p style="text-align: justify"> To the right is the capacitive piano base I made. The idea was that instead of just having sensors laid on a desk, I wanted to have a physical dedicated object to play on. My model simulates a real piano, as the "keys" on my piano bend downwards as if a real key is being pressed.</p>
 
                 <img src="Fusion Rectangle.PNG" class="img-rounded" style="width:100%" alt="Fusion Rectangle"><br><br>
@@ -316,51 +316,51 @@
                 <p style="text-align: justify"> Designing the piano base was pretty simple. I first made the rectangular base. Then I extruded a smaller rectangle on the back (this is where the keys attach to). And then, for each key, key divot, and back cut-outs, I just used the rectangular tool to essentially duplicate the first key 4 other times as seen above.</p>
             </div>
 
-            <div class="col-lg-7">
+            <div class="col-sm-7">
                 <iframe src="https://myhub.autodesk360.com/ue2ba25e9/shares/public/SH56a43QTfd62c1cd96826f9b909a724a34d?mode=embed" width="650" height="710" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-4"> 
+            <div class="col-sm-4"> 
                 <img src="Piano Print Cura.PNG" class="img-rounded" style="width:100%" alt="Piano Print Cura">
             </div>
 
-            <div class="col-lg-4"> 
+            <div class="col-sm-4"> 
                 <p style="text-align: justify"> When designing the piano base, I had to keep in mind that I would be 3D printing this out, so I needed to keep one part of the piece completely flat. At first, I wanted to print it how most would think: with the actual base part on the bottom and keys on top. But, that oreintation used lots of supports, and I figured that removing supports from below each key would be challenging to do neatly.</p>
 
                 <p style="text-align: justify"> So, I printed the piece with the back on the bottom. I used 0.3mm layer height at 50mm/s. It took about 6 hours. </p>
             </div>
 
-            <div class="col-lg-4"> 
+            <div class="col-sm-4"> 
                 <img src="Piano Print Cura Side.PNG" class="img-rounded" style="width:100%" alt="Piano Print Cura Side">
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <p style="text-align: justify"> Below are videos that show the piano base part after printing. It turned out fairly well, although there was a lot of stringing and some support residue that I couldn't remove.</p>
             </div>
         </div>
 
          <div class="row">
-            <div class="col-lg-6">
+            <div class="col-sm-6">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/5m4tQQKEct0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-sm-6">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/1racx_vH584" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <h1 class="page-header">Capacitive Piano Wiring Process</h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <p style="text-align: justify"> Something to note is that I designed and printed this before figuring any of the wiring out for this piano. I figured since the prototype worked, I didn't need to make another test circuit with 5 sensors instead of 2. Another thing to note is that I went ahead and bought a spare parts kit and extra wiring for my projects. So, to make things easier to understand, I color-coded each key to a different wire color, starting from red, then white, then blue, then yellow, and lastly green.</p>
 
                 <p style="text-align: justify">To start the wiring process, I started by making the sensors themselves. I used double-sided table to connect the wires to the aluminum foil sensors to each key, so the tape served three purposes. I first put tape on each key. Then, I placed the stripped end of each wire onto the tape and placed the aluminum foil strips on top. This firmly attached the stripped wire to the foil, meaning that the sensor readings should be pretty accurate.</p>
@@ -370,33 +370,33 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4">  
+            <div class="col-sm-4">  
                 <img src="Step 1.JPG" class="img-rounded" style="width:100%" alt="Step 1">
             </div>
 
-            <div class="col-lg-4">  
+            <div class="col-sm-4">  
                 <img src="Step 2.JPG" class="img-rounded" style="width:100%" alt="Step 2">
             </div>
 
-            <div class="col-lg-4">  
+            <div class="col-sm-4">  
                 <img src="Step 3.JPG" class="img-rounded" style="width:100%" alt="Step 3">
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <p style="text-align: justify">Below, the gif shows the key movement. The keys don't have that much travel, about a couple milimeters, but anything more and it wouldn't go back to it's original position without permanent damage. This was about the perfect about of travel to where when you play the capacitive piano, you can feel each key moving. I think it turned out great and has a super neat effect on the whole project.</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <img src="Key Press Gif Cropped.gif" class="img-rounded center" style="width:70%" alt="Key Press Gif">
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <p style="text-align: justify">After creating each sensor, I started on the breadboard circuit. This was, again, pretty straight forward as I have already made capacitive sensors before. But, it's just a bit confusing because there's many wires. Like I said, I made the whole circuit more organized by color-coding the sensors and their respective circuits accordingly.</p>
 
                 <p style="text-align: justify">I also hooked up correspondingly colored LEDs to each circuit just to make it look cool. This added five extra wires and five extra resistors, but I still found a way to organize them by using dedicated male-to-male pins with black headers and blue resistors for the LEDs.</p>
@@ -404,21 +404,21 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4">  
+            <div class="col-sm-4">  
                 <img src="Breadboard Wires.JPG" class="img-rounded" style="width:100%" alt="Breadboard Wires">
             </div>
 
-            <div class="col-lg-4">  
+            <div class="col-sm-4">  
                 <img src="Breadboard Side.JPG" class="img-rounded" style="width:100%" alt="Breadboard Side">
             </div>
 
-            <div class="col-lg-4">  
+            <div class="col-sm-4">  
                 <img src="Breadboard Side 2.JPG" class="img-rounded" style="width:100%" alt="Breadboard Side 2">
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <p style="text-align: justify">I added a Tinkercad model of my capacitive piano below. I'm not sure whether it really helps, because it's still pretty confusing with all the wires. Anyway, for the LED circuits, I used 100 Ohm resistors and for the sensor circuits, I used 1m Ohm resistors. Also, like before, pretend that the coin batteries are the capacitive sensors.</p>
 
                 <p style="text-align: justify">Like in the prototype model before, I used one charge pin for all the capacitive sensors in this model. This saved using many wires and is shown below by the purple wire connecting from digital pin 0 to the positive power rail.</p>
@@ -426,29 +426,29 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <img src="InkedTinkercad Piano Model_LI.jpg" class="img-rounded center" style="width:90%" alt="Tinkercad Piano Model">
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <p style="text-align: justify">That was it for the electrical process. It looks pretty complicated, but the whole circuit is just one sensor and LED circuit duplicated 5 times. Next, it was time to start coding.</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <h1 class="page-header">Capacitive Piano Programming Process</h1>
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-7"> 
+            <div class="col-sm-7"> 
                 <iframe src=https://create.arduino.cc/editor/farazb/fb601c93-3404-41e0-8f78-b1293d0ae802/preview?embed style="height:1600px;width:100%;margin:10px 0" frameborder=0></iframe>
             </div>
 
-            <div class="col-lg-5"> 
+            <div class="col-sm-5"> 
                 <p style="text-align: justify">Starting the programming process was a bit overwhelming at first but not too bad. I already had a lot of the code written for using a capacitive sensor to light up an LED, so I just copied that over from last assignment. This time, I had to add the buzzer. Again, not too bad because I already had the piches.h tab, which has certain buzzer frequencies defined to notes, and in class, we wrote code to make the buzzer play one sound. Using these two resources, I made the buzzer play 5 notes by using 5 capacitive sensors, which also light up 5 LEDs.</p>
 
                 <p style="text-align: justify">The code starts by defining a bunch of variables, including each pin mode and sensor. To make it convenient for me, I defined each sensor to the color of the circuit that each was on. Then, it's really just 5 <code>if()</code> statements for each of the 5 sesnors. For example, if the far left sensor if touched (the first <code>if()</code> statement), then the red LED is turned on and the note C5 is played. Again, I used the threshold of 10k for all sensors. And, finally, for the <code>noTone</code>, another <code>if()</code> statement is used for when all sensors are detecting below 1k (no touch), then the buzzer turns off.</p>
@@ -460,25 +460,25 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <p style="text-align: justify">Down below, I embeded some songs I played with the final capacitive piano. Again, I was limited to the first 5 notes on the C major scale, so C, D, E, F, and G. It still turned out to be fine, and in any case, the piano can be expanded to have as many keys as there are open pins on the Metro board (or any other board). </p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-4"> 
+            <div class="col-sm-4"> 
                 <h3 style="text-align: center" class= "gray-text"> Ode To Joy </h3> 
 
                 <iframe width="372" height="270" src="https://www.youtube.com/embed/Yg3v5T5tul8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           
             </div>
 
-            <div class="col-lg-4"> 
+            <div class="col-sm-4"> 
                 <h3 style="text-align: center" class= "gray-text"> Five Note Scale </h3>  
 
                 <iframe width="372" height="270" src="https://www.youtube.com/embed/V3VjnQ5M3mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-4"> 
+            <div class="col-sm-4"> 
                 <h3 style="text-align: center" class= "gray-text"> Hot Crossed Buns </h3>  
 
                 <iframe width="372" height="270" src="https://www.youtube.com/embed/r1q1DpzxSkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
@@ -486,36 +486,36 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <p style="text-align: justify">Down below, I embeded some songs I played with the final capacitive piano. Again, I was limited to the first 5 notes on the C major scale, so C, D, E, F, and G. It still turned out to be fine, and in any case, the piano can be expanded to have as many keys as there are open pins on the Metro board (or any other board). All in all, this was a fun project. It was fun to mess around using the various pianos I made, even though the buzzer was quite annoying. </p>
             </div>
         </div>
 
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <h1 class="page-header">Interesting Observations </h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-4"> 
+            <div class="col-sm-4"> 
                 <img src="Serial Monitor 2.PNG" width="372px" height="620px" alt="Serial Monitor 2">
             </div>
 
-            <div class="col-lg-4"> 
+            <div class="col-sm-4"> 
                 <p style="text-align: justify">To the left is a serial monitor reading from about 12:30 AM in the morning. I am pressing down the the middle key and the sensing output value is spiking to about 70k. What's interesting is that the sensors next to the the blue key, the white and yellow keys, are also outputting some sensory value. Same is happening with the red and green keys. I think this may be happening because the senors being so close and reading the signal from each other. Also, this could have something to do with the fact that I'm using the same charge pin for all sensors. </p>
 
                 <p style="text-align: justify">What's more is that on the serial monitor to the right, which is about 13 hours after the first reading, so about 1:30 PM, the same sensing pattern is showing, but the blue sensor is sensing over 100k. I think this has to do with the room humidity changing, which is pretty neat.</p>
             </div>
 
-            <div class="col-lg-4"> 
+            <div class="col-sm-4"> 
                 <img src="Serial Monitor 2.1.PNG" width="372px" height="620px" alt="Serial Monitor 2.1">            
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-6"> 
+            <div class="col-sm-6"> 
                 <p style="text-align: justify">One cool troubleshooting option I found was to look at the serial monitor. Sometimes, when I was playing the capacitive piano, the buzzer would just stop working properly and the LEDs would start to blink. This meant that one of the sensor connections was loose. One way to tell if that's the case if on the serial monitor, one of the sensors is outputting a negative value, as seen with the green sensor in the serial monitor to the right. This was a life saver as this was a super quick way of solving an otherwise time-consuming issue. </p>
 
                 <p style="text-align: justify"> Another cool observation was to see which keys took priority over the other. The keys have a precedent over each other from right-to-left. This is because in the code, the last <code>if()</code> statement is for the last capacitive sensor, the green key, which means while that key is pressed, no one sensor inputs play sound. This is because it's at the bottom of the loop, so pressing the key keeps the buzzer in that <code>if()</code> statement. The opposite happens for the red key, where if the red key is pressed, then all other keys still work as the red key's <code>if()</code> statement is closest to the top out of all the <code>if()</code> statements. </p>
@@ -523,14 +523,14 @@
                 <iframe width="560" height="280" src="https://www.youtube.com/embed/GM2-xbqH0aI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-6"> 
+            <div class="col-sm-6"> 
                 <img src="Serial Monitor 3.PNG" style="width:100%" alt="Serial Monitor 3">
             </div>
         </div>
 
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <h1 class="page-header">What I Learned </h1>
                      <p>» How the use the piezo buzzer<br>
                         » How create a piano using various input devices<br>

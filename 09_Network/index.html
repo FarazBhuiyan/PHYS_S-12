@@ -96,7 +96,7 @@
 
         <!-- Heading -->
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <h1 class="page-header">What To Do </h1>
 
                     <p class="gray-text"> 1. Control a board from a local wireless network.<br>
@@ -106,7 +106,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                  <h1 class="page-header">What I Did </h1>
                     <p style="text-align: justify"> In this assignment, I made various "Internet of Things" (IoT) circuits. I made an LED circuit with on and off access on LAN and <a href="https://firebase.google.com/">Google Firebase</a>, a DC motor circuit with on and off access on LAN and Google Firebase, and a DC motor circuit with on and off access using <a href="https://create.arduino.cc/iot/">Arduino IoT Cloud</a>.</p>
 
@@ -117,28 +117,28 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-sm-4">
                 <iframe width="372" height="250" src="https://www.youtube.com/embed/gYVi8LoB2DQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-sm-4">
                 <iframe width="372" height="250" src="https://www.youtube.com/embed/2OeWGKBnCoo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-sm-4">
                 <iframe width="372" height="250" src="https://www.youtube.com/embed/hm8GXNrshwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                 <h1 class="page-header">LED LAN and WAN Connectivity</h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                     <p style="text-align: justify"> To get started on the networking assignment, we used Arduino's SimpleWifiServer example code for turning an LED on and off using a LAN web page. I used this example as a basis for all my other circuits.</p>
 
                     <p style="text-align: justify"> Also, one thing to note is that for my SSID, passwords, and Firebase data in all codes I have on this page, I replaced my actual info with "My _____" (SSID, Password, etc). This is just to protect my information. To actually get the codes to work, the information has to be accurate to your own SSID, passwords, and Firebase data.</p>
@@ -146,11 +146,11 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-7">      
+            <div class="col-sm-7">      
                 <iframe src=https://create.arduino.cc/editor/farazb/c92e2e61-9bbb-46b9-a8d6-5e0ae3e841d8/preview?embed style="height:1462px;width:100%;margin:10px 0" frameborder=0></iframe>
             </div>
 
-            <div class="col-lg-5">    
+            <div class="col-sm-5">    
                 <p style="text-align: justify"> On the Arduino embed to the left, there are two tabs. The first one is for LED on and off LAN control. The second is for WAN control using Google Firebase. I'll start by talking about LAN control. </p>
 
                 <p style="text-align: justify"> LAN control for the LED is pretty simple. Using any device on my LAN, I can control the LED status. To actually connect to the Huzzah, I needed to get the IP address of the Huzzah. To do this, I clicked the reset button on the Huzzah after uploading the code. Then, on the serial monitor, the IP address of the Huzzah will show. This IP address is needed to wirelessly connect to the Huzzah using my local network. Plugging that IP address into my search bar would show an HTML page with the "LED on" and "LED off" buttons as shown below.</p>
@@ -168,13 +168,13 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                 <h1 class="page-header">DC Motor LAN and WAN Connectivity</h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                     <p style="text-align: justify"> I hooked up a DC motor to Firebase to get the same results as shown in the previous LED on and off section. This helped me get further on track on coding for my final project, as I want to use a wireless connection to control the fish feeder. I basically just converted the code from before to fit a DC motor, and added a few lines to add more functionality to my motor. I don't document that much for this section because the code pretty much the same as the last section.</p>
 
                      <p style="text-align: justify"> This is also when I started to 3D print prototype parts for my final project, so the grey screw that is attached to the motor is designed and printed by me.</p>
@@ -182,11 +182,11 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-7">      
+            <div class="col-sm-7">      
                 <iframe src=https://create.arduino.cc/editor/farazb/c52780b5-d111-49db-beb2-e3450411d922/preview?embed style="height:1086px;width:100%;margin:10px 0" frameborder=0></iframe>
             </div>
 
-            <div class="col-lg-5">    
+            <div class="col-sm-5">    
                 <p style="text-align: justify">On the Arduino embed to the left, the first tab is for the LAN web interface. I just edited the first LED web interface sketch by changing the variable names and adding three new functions for the new cycle buttons. </p> 
 
                 <p style="text-align: justify"> The first video below shows what the LAN web interface looks like. It's just a plain HTML page with 5 buttons: On, Off, One Cycle, Two Cycles, and Three Cycles. On turns the motor on, off turns it off, and each cycle turns on the motor for an extra 500 miliseconds (half of a second) starting at 1 second. So, one cycle equals 1 second of rotation, two cycles equals 1.5 seconds, and three cycles equals 2 seconds. These can all be adjusted to any amount.</p>
@@ -200,13 +200,13 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                 <h1 class="page-header">Fish Feeder Prototype</h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                     <p style="text-align: justify"> Finally, using everything that I learned so far, I made a wirelessly connected fish feeder prototype. This is by no means what the final will look like on the dot, but it's a rough estimation of what I want the size and functions to be. </p> 
 
                      <p style="text-align: justify"> I also found out that Arduino themselves have an IoT platform, so I decided that I wanted to try that out. I could've used Google Firebase again, but I wanted to try out <a href="https://create.arduino.cc/iot/">Arduino IoT Cloud</a>. After finishing this assignment, I think using Arduino IoT is an excellent option for a basic IoT app, but it's a bit limited in a few ways. I talk about my experience with Arduino IoT below.</p><br>
@@ -214,11 +214,11 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-8">                                                           
+            <div class="col-sm-8">                                                           
                 <img src="Arduino IoT MyESP32 Page.PNG" class="img-rounded center" style="width:100%" alt="Arduino IoT MyESP32 Page">
             </div>
 
-            <div class="col-lg-4">   
+            <div class="col-sm-4">   
                 <p style="text-align: justify"> First things first, I'll talk about setting up the Huzzah with Arduino IoT Cloud. Unlike before, where setting up a WiFi connection and/or a Google Firebase connection took lots of extra code, setting up your network settings in Arduino IoT Cloud could not be easier.</p>
 
                 <p style="text-align: justify"> When you set up an account, you are sent to a page where you can make your first "thing." A thing is just one whole package of a device, code, integrations, and widgets. In my case, I set up my device as the Adafruit ESP32 Feather, as that's what the Huzzah32 is, and set up my network settings below that. And that's it for setting up your board and network information. </p>
@@ -228,7 +228,7 @@
         </div>
 
         <div class="row"><br><br>
-            <div class="col-lg-3">  
+            <div class="col-sm-3">  
                 <p style="text-align: justify"> Then, I made my dashboard. This is where you can add a lot of different basic widgets, like buttons, LEDs, and graphs, to control your IoT device.</p> 
 
                 <p style="text-align: justify"> Like I said, I intented to only have 4 variables for now, so I added in the three push bottons and one switch. This is simply a drag-and-drop process.</p> 
@@ -236,11 +236,11 @@
                 <p style="text-align: justify"> In the future, I want to add a timeline of every feeding and at what time the feedings occured and a calendar or clock function to somehow set exactly what time everyday I wanted to feeder to activate. I don't really know how to do that on Arduino, which is one of the limitations I was taling about earlier, as none of the widgets are a timeline, calendar, or clock.</p>                                                       
             </div>
 
-            <div class="col-lg-4">   
+            <div class="col-sm-4">   
                 <img src="Arduino IoT Widgets List.PNG" class="img-rounded center" style="width:100%" alt="Arduino IoT Widgets List">
             </div>
 
-            <div class="col-lg-5">        
+            <div class="col-sm-5">        
                 <img src="Arduino IoT Widgets.PNG" class="img-rounded center" style="width:100%" alt="Arduino IoT Widgets">
 
                 <p style="text-align: justify"> Above is what my dashboard looks like on my computer. It's just 4 widgets on a dashboard page. You can orient your widgets however you want. I wanted to have the manual switch on top and the three cycle buttons below.</p>   
@@ -251,18 +251,18 @@
 
 
         <div class="row"><br>
-            <div class="col-lg-12">  
+            <div class="col-sm-12">  
                 <p style="text-align: justify"> I'll now talk about the code for my fish feeder prototype using Arduino IoT Cloud. It's quite different the coding used for Firebase or a local LAN server, but it's pretty easy to get the hang of.</p>
             </div>
         </div>
 
 
         <div class="row">
-            <div class="col-lg-7">      
+            <div class="col-sm-7">      
                 <iframe src=https://create.arduino.cc/editor/farazb/e0627103-59fa-43f3-ad90-e996b3f2dc51/preview?embed style="height:1185px;width:100%;margin:10px 0" frameborder=0></iframe> 
             </div>
 
-            <div class="col-lg-5">    
+            <div class="col-sm-5">    
                 <p style="text-align: justify">Some of the interesting things to note in the code to the left is that there really isn't that much code, there's nothing in the <code>void loop()</code>, and there is a <code>things.Properties.h</code> reference.</p>
 
                 <p style="text-align: justify"> Starting with the <code>void</code> functions, there are 4 <code>void</code> functions for 4 of the global variables I created. Arduino IoT Cloud automatically creates those <code>void</code> functions- and, in fact, creates the whole code template- and I just had to add in the <code>if()</code> statements and results. The way this code works is that, for example, for the first actual void variable, <code>onSwitchStatusChange()</code>, the code inside of that <code>void</code> function only activates when the switch status changes, the switch here being manual on-off switch.</p> 
@@ -278,24 +278,24 @@
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-6">  
+            <div class="col-sm-6">  
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/hm8GXNrshwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-6">  
+            <div class="col-sm-6">  
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/5ii563apT6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12">  
+            <div class="col-sm-12">  
                 <p style="text-align: justify"> This was probably one of the most important assignments for me, as learning how to connect my Huzzah to LAN and WAN servers and control it using those servers is essential for my final project. I also just learned a lot about LAN hosting, Google Firebase, Arduino IoT Cloud, and APIs too, which is good. I plan on using these and the information I learned during this assignment to further my final project on its road to completion.</p>
             </div>
         </div>
 
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <h1 class="page-header">What I Learned </h1>
                      <p>» How to connect the Huzzah board to WiFi<br>
                         » How to use a LAN web interface to control the Huzzah<br>

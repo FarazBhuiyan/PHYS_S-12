@@ -96,7 +96,7 @@
 
         <!-- Heading -->
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <h1 class="page-header">What To Do </h1>
 
                     <p class="gray-text"> 1a. Program a microcontroller to produce an output using at least one button for input. <br>
@@ -106,7 +106,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                  <h1 class="page-header">What I Did </h1>
                     <p style="text-align: justify"> For this assignment, I made a mini light show. I used the Metro board, the breadboard, and Arduino IDE.  I used the conditional statements that we learned in class, like <code>if()</code> statements and used many <code>for()</code> loops, to control all 5 of the LEDs in various ways. Using both of these newly learned aspects of coding on Arduino, I was able to program 5 buttons to control 5 lights, but with a twist. In total, I'd say it took me around 4 to 5 hours to finish all of the electronics building and programming, which I think is really quick considering I had to learn how to apply the different fucntions we learned into my light show. </p>
 
@@ -118,64 +118,64 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-sm-6">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ECHFxmKUDFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-sm-6">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/h4ApLHe8tbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12">
+            <div class="col-sm-12">
                 <p style="text-align: justify"> I really like the way it turned out, especially in the dark. Now that I have the code written and saved and have a better understanding of making circuits with multiple LEDs, I feel in the future, I can make much more intracate LED "shows" and other interactive LED circuits.</p>
             </div>
         </div>
 
 
         <div class="row">
-            <div class="col-lg-4">                                                           
+            <div class="col-sm-4">                                                           
                 <p style="text-align: justify"> To the right is a gif of my favorite moment of the actual "show." Technically, there are two "shows," but they're both pretty similar. So the buttons on the back left and back right are for the shows, and the front three are for manual control of the lights.</p>
 
                 <p style="text-align: justify">My orignal idea for this assignment was to actually only have the 3 front buttons, but have multiple functions for the buttons to essentialy make a manual light show. I still went with this idea, so the three buttons in the front do manually control the lights, but I ran into many issues, which I talk about later. </p><br>
             </div>
 
-            <div class="col-lg-8">
+            <div class="col-sm-8">
                 <img src="LED Spiral.gif" class="img-rounded2" style="width:100%" alt="LED Spiral">
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                 <p style="text-align: justify"> Below, there are two embeded videos of demos of my circuit in the light and the dark. Like I said, all the buttons have some functionality, and the 3 bottom buttons are for manual control, which will be shown in both videos. I talk about my programming and build process further down the page, as I talk about the class demo circuits first.</p><br>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-6">                                                           
+            <div class="col-sm-6">                                                           
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ulDBKxbyluw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-6">                                                           
+            <div class="col-sm-6">                                                           
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/pky5hLqVoGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <p style="text-align: justify"> In all of the demo cricuits, I used a 470 Ohm resistor for the LED(s). Although, I don't really know if I needed them because I was using the one on the Metro board. For the final light show circuit, I used 100 Ohm resistors on all LEDs to keep it simple.<br></p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <h1 class="page-header">Two Button LED Circuit </h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                 <p style="text-align: justify"> This lab example is one that I heavily referenced for my light show circuit, as mine uses 5 buttons, 3 of which share similar functionality. This circuit was the first time I used push buttons and the built-in pullup resistors.</p> 
 
                 <p style="text-align: justify"> One thing we learned in class what the difference between pullup and pulldown resistors are. Our Metro boards have built-in pullup resistors, which essentially just inverts the reading. So, in my sketch, both buttons have to be pushed down while being in a <code>LOW</code> state. Now, this is only possible if we use pullup resistors or else any button press reads as a <code>HIGH</code> output, not <code>LOW</code>.</p><br>
@@ -185,11 +185,11 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-7">                                                           
+            <div class="col-sm-7">                                                           
                 <iframe src=https://create.arduino.cc/editor/farazb/4035a484-7e4c-4f56-b904-fb53b11b56d7/preview?embed style="height:760px;width:100%" frameborder=0></iframe>
             </div>
 
-            <div class="col-lg-5">                                                           
+            <div class="col-sm-5">                                                           
                 
                 <p style="text-align: justify"> In the gif below, the red LED only turns on when both buttons are pressed. The coding for this was very helpful for my light show, as two of the LEDs and three buttons on my circuit have the same functionality as the red LED and two buttons on this circuit.</p>
 
@@ -202,23 +202,23 @@
                 
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <h1 class="page-header">Nested For() Loop Circuit </h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                 <p style="text-align: justify"> Although I got the hang of reglar <code>for()</code> loops in circuits, I'm still a bit iffy on nested for loops. However, the example we did in the lab helped my understanding of the application of nested for loops.<br>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-7">                                                           
+            <div class="col-sm-7">                                                           
                 <iframe src=https://create.arduino.cc/editor/farazb/0c8390a6-d1f3-4dd4-8581-3f324d11c156/preview?embed style="height:760px;width:100%" frameborder=0></iframe>
             </div>
 
-            <div class="col-lg-5">                                                           
+            <div class="col-sm-5">                                                           
                 <p style="text-align: justify"> The function of the code is pretty simple: one LED toggles on and off every second and the other toggles every minute. In this example, we used regular <code>int</code> variables as well as <code>bool</code> variables. In the gif below, the blue LED is toggling every one second while the yellow LED is staying on (the gif is repeating so the yellow LED never turns off). </p><br>
 
                 <img src="Minute Second Toggle LEDs.gif" class="img-rounded2" style="width:100%" alt="Minute Second LEDs"><br><br>
@@ -231,23 +231,23 @@
 
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <h1 class="page-header">Button Dimming LED Circuit </h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">                                                           
+            <div class="col-sm-12">                                                           
                 <p style="text-align: justify"> This circuit was the last of the 3 main demos we did in class and lab. In this example, we used a button to control an LED, which runs on a <code>for()</code> loop.<br>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-7">                                                           
+            <div class="col-sm-7">                                                           
                 <iframe src=https://create.arduino.cc/editor/farazb/578681db-00b9-4a6a-8b81-0b9cf99a5918/preview?embed style="height:760px;width:100%" frameborder=0></iframe>
             </div>
 
-            <div class="col-lg-5">                                                           
+            <div class="col-sm-5">                                                           
                 <p style="text-align: justify"> The function of the code is pretty simple: one LED toggles on and off every second and the other toggles every minute. In this example, we used regular <code>int</code> variables as well as <code>bool</code> variables. In the gif below, the blue LED is toggling every one second while the yellow LED is staying on (the gif is repeating so the yellow LED never turns off). </p><br>
 
                 <img src="Button Dimming LED.gif" class="img-rounded2" style="width:100%" alt="Button Dimming LED"><br><br>
@@ -259,39 +259,39 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <h1 class="page-header">Light Show Circuit V1 </h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                     <p style="text-align: justify"> For my circuit, I combined what I learned in all the demos, and added some of my own code. The embeded Arduiono sketch below doesn't include the back two buttons, as that's coming up next after this section. The two images below show the circuit and the pin connections. I color-coded the positive wires: red for LEDs and yellow for buttons. And of course, black for ground. There wasn't any sort of pattern I was following in terms of where I plugged in the wires on the Metro board. For the LEDs, I used 100 Ohm resistors to keep it simple.</p><br>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-6"> 
+            <div class="col-sm-6"> 
                 <img src="Top View 1.JPG" class="img-rounded2" style="width:100%" alt="Top Angled View 1">
             </div>
 
-            <div class="col-lg-6"> 
+            <div class="col-sm-6"> 
                 <img src="Pin Connections 1.JPG" class="img-rounded2" style="width:100%" alt="Pin Connections 1">
             </div>
         </div><br><br>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                     <p style="text-align: justify"> Building the circuit was the easy part. The harder part was definitely the coding. After wiring, the first thing I did on the code was define each button and LED variable. I also defined the <code>pinMode</code> for all pins. For the LED pins, I made them all <code>OUTPUT</code>, and I made all the button pins<code>INPUT_PULLUP</code>. This way, the button logic is inverted, so when it is pressed, it is in a <code>LOW</code> state. After than, I defined three more variables for the actual state of the buttons (<code>HIGH</code> or <code>LOW</code>). </p><br>
             </div>
         </div>
  
         <div class="row">
-            <div class="col-lg-7"> 
+            <div class="col-sm-7"> 
                 <iframe src=https://create.arduino.cc/editor/farazb/43665b94-a147-47c1-b3bd-d3a258a9f645/preview?embed style="height:1780px;width:100%" frameborder=0></iframe>
             </div>
 
-            <div class="col-lg-5">                                                           
+            <div class="col-sm-5">                                                           
                 <p style="text-align: justify"> The gif below shows the three buttons controlling the three front LEDs This was just taking the demo circuit code we did in class and reformatting it to fit my circuit, which was really easy.</p>
 
                 <img src="Single Button.gif" class="img-rounded2" style="width:100%" alt="Single Button"><br><br>
@@ -312,13 +312,13 @@
 
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <h1 class="page-header">Light Show Circuit V2 </h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                     <p style="text-align: justify"> Because my V1 code didn't use any <code>for()</code> loops, I added two new buttons which added the actual light show component of my build. All I did was add two more buttons, increasing the total number of buttons from 3 to 5, and made one unique pattern for each button. Again, for the wiring, I kept the same color code (yellow for buttons and red for LEDs) and used the same 100 Ohm resistors. All I did on the actual breadboard was just add two new buttons, two yellow wires, and two black ground wires.</p>
 
                     <p style="text-align: justify"> The images below show the updated breadboard circuit with the added wires. My circuit definitely got a lot messier by adding two new buttons, but it functions fine.</p><br>
@@ -326,27 +326,27 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-6"> 
+            <div class="col-sm-6"> 
                 <img src="Top View.JPG" class="img-rounded2" style="width:100%" alt="Top Angled View">
             </div>
 
-            <div class="col-lg-6"> 
+            <div class="col-sm-6"> 
                 <img src="Pin Connections.JPG" class="img-rounded2" style="width:100%" alt="Pin Connections">
             </div>
         </div><br><br>
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                     <p style="text-align: justify"> Building the circuit was the easy part. The harder part was definitely the coding. After wiring, the first thing I did on the code was define each button and LED variable. I also defined the <code>pinMode</code> for all pins. For the LED pins, I made them all <code>OUTPUT</code>, and I made all the button pins<code>INPUT_PULLUP</code>. This way, the button logic is inverted, so when it is pressed, it is in a <code>LOW</code> state. After than, I defined three more variables for the actual state of the buttons (<code>HIGH</code> or <code>LOW</code>). </p><br>
             </div>
         </div>
  
         <div class="row">
-            <div class="col-lg-7"> 
+            <div class="col-sm-7"> 
                 <iframe src=https://create.arduino.cc/editor/farazb/bc42668b-8a15-4f78-8636-50e4377908d2/preview?embed style="height:1500px;width:100%;margin:10px 0" frameborder=0></iframe>
             </div>
 
-            <div class="col-lg-5">                                                           
+            <div class="col-sm-5">                                                           
                 <p style="text-align: justify"> In terms of actual coding, I added new variables for the two buttons and added two <code>if()</code> statement to start the LED shows. I did a lot of experimentation with the LED shows by testing out different delays and variable increments. Both LED shows use chains of <code>for()</code> loops to create the brightening and dimming lights in patterns. </p>
 
                 <img src="Left Show.gif" class="img-rounded2" style="width:100%" alt="Left Show"><br><br>
@@ -364,25 +364,25 @@
         </div>
 
         <div class="row"><br>
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <p style="text-align: justify"> All in all, I really enjoyed this assignment. I learned a lot about various new C++ functions, like the <code>if()</code> and <code>for()</code> conditional statements, and made a super cool interactive LED show circuit. Below, I embeded the same videos I embeded at the top.</p><br>
             </div>
         </div>
 
 
         <div class="row">
-            <div class="col-lg-6">                                                           
+            <div class="col-sm-6">                                                           
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ulDBKxbyluw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <div class="col-lg-6">                                                           
+            <div class="col-sm-6">                                                           
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/pky5hLqVoGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
             </div>
         </div>
 
 
         <div class="row">
-            <div class="col-lg-12"> 
+            <div class="col-sm-12"> 
                 <h1 class="page-header">What I Learned </h1>
                      <p>» How to use if() statements<br>
                         » How to use for() loops<br>
