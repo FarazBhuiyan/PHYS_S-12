@@ -86,7 +86,8 @@
 
     <div class="jumbotron feature">
         <div class="container">
-            <h1>01: Introduction & Documentation</h1>
+            <h1><b>10: Machine Building</h1></b>
+            <h2 class="navy-text"><b>July 22, 2021</h2></b>
         </div>
     </div>
 
@@ -95,28 +96,410 @@
 
         <!-- Heading -->
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">What To Do: </h1>
-
-                    <p><h3 class="gray-text">    1. Create a website and make a page with a proposal for a possible final project. <br>
-                                                 2. Read Chapters 1-3 of Making Things Move and note down interesting facts. <br>
-                                                 3. Research local fab labs and makerspaces. </p></h3>
-
-                 <h1 class="page-header">What I Did: </h1>
-                    <p><h3 class="gray-text"> To begin with, I was a little overwhelmed that we had to create a basic website using html and css, as I have no prior experience with either of the two. However, I found a realitvely easy to use template from <a href="https://www.quackit.com/html/templates/simple_website_templates.cfm">here</a>, and I imported and personalized it. The best part is that it's completely free (this isn't sponsored). With a lot of help from <a href="https://www.w3schools.com/html/default.asp">w3schools</a>, I was able to create the bare-bones of a somewhat-working, basic website. My website has key features like images, a working navbar, hyperlinks, etc. There are still many things I don't know to do, like what most of the stuff in the css folder means, but I'm sure with a lot of time and patience, I can learn the basics of css too. The image below is a snippet of my coding for this specific page, my intro & documentation page. Also, I researched local makerspaces. Although there aren't any that are very close to where I live, there are really good ones closer to Chicago. One of them is <a href="https://fox.build/">Fox.Build: Makerspace, Hackerspace, Coworking</a> located in St. Charles, Illinois, which is about 40 minutes away from my house. Unfortunately, there aren't any day passes, as all of their price listings are for monthly memberships. The process of filling in my own information was pretty easy, but I'm still pretty confused on the more complex tasks, like how to use different fonts and insert multiple images in a collage. </p><br></h3>
-
-                    <p><h4 class="gray-text">Part of my code of this specific webpage.</p></h4>
-                    <img src="01_Code.JPG" alt="Website Code" width="1000px"> 
-
-                <h1 class="page-header">What I Learned: </h1>
-                     <p> » What we will do during the course <br>
-                         » The very basics of using HTML and CSS for creating websites </p>
-
+            <div class="col-sm-12">
+                <h1 class="page-header">What To Do </h1>
             </div>
         </div>
+
+         <div class="row">
+            <div class="col-sm-12">
+                <p class="gray-text">1a. Make a machine that is controlled from a computer or phone.<br>
+                                     1b. Use at least one stepper motor. <br>
+                                     2. How can you calibrate motor position (i.e. guarantee the "home" position)?<br></p>
+            </div
+>        </div>
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <h1 class="page-header">What I Did </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">   
+                <p style="text-align: justify">I made various machines using <a href="https://www.omc-stepperonline.com/nema-17-bipolar-1-8deg-26ncm-36-8oz-in-0-4a-12v-42x42x34mm-4-wires.html?search=Nema%2017%20Bipolar%201.8deg%2026Ncm%20%2836.8oz.in%29%200.4A%2012V%2042x42x34mm%204%20Wires">Nema 17</a> stepper motors and the lazer-cut machine parts. The building part of the machines wasn't really hard, as it was just connecting snap-fit pieces. The coding part, however, was much harder because I used a stepper motor library called <a href="https://www.airspayce.com/mikem/arduino/AccelStepper/index.html">AccelStepper</a> to control the stepper motors. I looked over. the class examples quite a bit to learn how the AccelStepper library worked. Once I figured out how to use some basic movement functions of the AccelStepper library, I started building my own machines.</p>
+
+                <p style="text-align: justify">For tutorials I referenced, I looked at quite a few, because I was confused on how to use the stepper motors. One of the best ones was looking at the <a href="https://www.airspayce.com/mikem/arduino/AccelStepper/classAccelStepper.html">AccelStepper Class Reference</a> page, as it had a list of all the functions and what they do. I quickly glanced over the <a href="https://forum.arduino.cc/t/stepper-motor-basics/275223">Stepper Motor Basics</a> page on Arduino's forums. I also looked at two Google Groups discussions, one for the <a href="https://groups.google.com/g/accelstepper/c/JA7hz-6k18g?pli=1">RunSpeedToPosition</a> function and another for <a href="https://groups.google.com/g/accelstepper/c/-r3_ejPr4ZM">currentPosition</a> function, both of which are functions of the AccelStepper library. </p>
+
+                <p style="text-align: justify"> I watched two YouTube video tutorials about controling stepper motors. They were both really good help as they teach the basics of controling a stepper motor and using it to turn a timing belt for an axis. But, because neither was exactly what I needed, I was relatively on my own for most of this assignment.</p>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hEBjbSTLytk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-sm-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AR0un3kg-iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify"> I also had to actually make the machine components using the lazer-cut parts from the kit. The pictures below show the process of making one axis with a carriage that moves using a timing belt hooked up to a stepper motor.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3"> 
+                <img src="Machine PartsC.JPG" class="img-rounded center" style="width:100%" alt="Machine Parts">
+            </div>
+
+            <div class="col-sm-3"> 
+                <img src="Machine 1.JPG" class="img-rounded center" style="width:100%" alt="Machine Assembly 1">
+            </div>
+
+            <div class="col-sm-3"> 
+                <img src="Machine 2.JPG" class="img-rounded center" style="width:100%" alt="Machine Assembly 1">
+            </div>
+
+            <div class="col-sm-3"> 
+                <img src="Machine 3.JPG" class="img-rounded center" style="width:100%" alt="Machine Assembly 1">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <h1 class="page-header">Class Stepper Motor Examples</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify">These are two of the class examples we did. The first one just slides the carriage to random positions using random speeds and random acceleration, so no human control. The second one I modified by adding a left and right button to control the stepper motor turning in either direction.</p>
+
+                <p style="text-align: justify">The pictures below are of the random movement machine. The image of the wiring is what one <a href="https://www.pololu.com/product/2134">DRV8834 Low-Voltage Stepper Motor Driver</a> needs. All of the other machines use the same drivers and wiring for the drivers as this one.</p>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-6">                                                           
+                <img src="Example Breadboard Main.JPG" class="img-rounded center" style="width:100%" alt="Example Breadboard Main">
+            </div>
+
+            <div class="col-sm-6">                                                           
+                <img src="Example Machine.PNG" class="img-rounded center" width="560" height="310" alt="Example Machine">
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-7">      
+                <iframe src=https://create.arduino.cc/editor/farazb/529e60e7-c153-4462-a9d3-5c33f35f8b36/preview?embed style="height:1070px;width:100%;margin:10px 0" frameborder=0></iframe>
+            </div>
+
+            <div class="col-sm-5">    
+                <p style="text-align: justify"> On the Arduino embed to the left, there are two tabs. The first one is for random stepper movements and the second is for controlling the stepper using two buttons. I'll start by talking about the random movement machine.</p>
+
+                <p style="text-align: justify">The random movement machine uses the AccelStepper library. To start off, I inluded the AccelStepper library at the top. Then I defined the step and direction pins for the motor. These two pins are needed for the stepper driver we are using. After that, I defined the stepper motor using AccelStepper. There is no setup because this is just a very basic example.</p>
+
+                <p style="text-align: justify">The first <code>if()</code> statement is basically saying "if the stepper motor is being told to move, then do this..." Inside the <code>if()</code> statement are three stepper movement functions. The <code>stepper.moveTo()</code> function is for setting a distance to move to (either positive or negative); the <code>stepper.setMaxSpeed()</code> function is for setting the maximum speed in steps/second that the motor spins; and <code>stepper.setAcceleration()</code> function is for setting the acceleration rate of the motor. And finally, the <code>stepper.run()</code> function executes the commands above using the stepper movement paramater functions given.</p>
+
+                <p style="text-align: justify">A video for the random movement example machine is below.</p>
+
+                <iframe width="455" height="255" src="https://www.youtube.com/embed/59phxWgFHc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-12"> 
+                <p style="text-align: justify"> The second tab code is for controlling the movement of the stepper motor only using <code>digitalWrite()</code> functions. It doesn't use the AccelStepper lirbary, so the functionality of the stepper motor is limited to just step movements, no acceleration. The way it works is just by repeating the <code>digitalWrite()</code> function every one milisecond with either <code>HIGH</code> or <code>LOW</code> as the output. I change the direction of the motor by using <code>digitalWrite()</code> with the direction pin as an output of either <code>HIGH</code> (motor turns counter-clockwise) or <code>LOW</code> (motor turns clockwise). And that's pretty much all that was.
+
+                <p style="text-align: justify">I didn't include a video of how it works (because I further improve on this example later), but I did add pictures of my breadboard with the two buttons below.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"> 
+                <img src="1st Breadboard Main.JPG" class="img-rounded center" style="width:100%" alt="1st Breadboard Main">
+            </div>
+
+            <div class="col-sm-6"> 
+                <img src="1st Breadboard Back.JPG" class="img-rounded center" style="width:100%" alt="1st Breadboard Back">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <h1 class="page-header">Single Axis Button Stepper Control</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify"> Without using the AccelStepper library, you are pretty limited on what functions you can execute with your stepper motor. So, I decided that I would learn how to use the AccelStepper library for my next machines. It worked out much better than I thought. I stumbled across a few problems, but I also figured out ways to fix those problems, all of which I documented below.</p>
+
+                <p style="text-align: justify"> One thing to note is that I used the exact same wiring as I did in the example above. So, those pictures above show exactly what the breadboard circuit for this code looks like (because it's the same).</p>
+
+                <p style="text-align: justify"> Also, another thing to note, I write a lot of my though process and what the functions do in the code itself. This can be seen with the double-hash lines and pseudo code, again, both in the code itself.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-7">      
+                <iframe src=https://create.arduino.cc/editor/farazb/366e398c-8443-4711-82f9-1377bdb6e0f8/preview?embed style="height:2078px;width:100%;margin:10px 0" frameborder=0></iframe>
+            </div>
+
+            <div class="col-sm-5">    
+                <p style="text-align: justify">I used what I learned from controlling the motor without the AccelStepper library and my newly learned basic knowledge on the AccelStepper library to control the stepper motor on one axis.</p>
+
+                <p style="text-align: justify">I start off by doing the normal stuff: including the AccelStepper librariy, defining motor pins, defining button pins, and defining the stepper motor itself. I also included a milisecond timer with a one second interval for the serial monitor (I talk about that later).</p> 
+
+                <p style="text-align: justify">At the end of the setup part, there is code for "homing" the axis. I put "quotes" around homing because it's not really a good way of doing it at all. The motor spins for 2500 steps, which I calculated was a bit more than the total amount of steps actually needed for the carriage to travel from one end to the other. Essentially what happens is that the carriage is guaranteed to hit the left side (the side I have it set to) because the step amount I wrote for the motor to move is larger than the range of the carriage movement itself. If the carriage hits the left side before the motor finishes turning, the whole thing explodes. No I'm kidding. That doesn't happen. In fact, nothing happens. The motor can't turn because the carriage can't move, so it works out pretty well actually.</p> 
+
+                <p style="text-align: justify">The movement works in that each time a button is pressed, the motor turns in 300 step segments either clockwise or counterclockwise. I used 300 steps because I found it to be a good distance and it worked well with my other numbers I talk about later. But, one problem was that there were no limits to the movement, meaning if the carriage was on the right edge and the right button was pressed, then the motor would keep trying to turn and cause problems. A video of this can be seen below.</p> 
+
+                <iframe width="455" height="255" src="https://www.youtube.com/embed/dDpaoCvzPeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <p style="text-align: justify">So, I created an <code>Xpos</code> variable that changes depending on which button is pressed. If the right button is pressed moving the carriage rightwards, <code>Xpos</code> is incremented by +1, and when the carriage is moved leftwards <code>Xpos</code> is incremented by -1. I use this to determine the minimum and maximum position that the carriage can be in.</p> 
+
+                <p style="text-align: justify">I created 9 total positions with 8 segments in between that the carriage can be in (i.e. 0/8, 3/8, 8/8, etc). The motor turns in 300 step segments, so the total length of the 8 segments is 2400 steps, which is less than the maximum because I don't want the carriage to bump into the other side while using buttons. I then added <code>if()</code> statements to both buttons that basically say "if the carriage has reached either limit, don't allow another button press moving towards that limit." A video of this is seen below. </p> 
+
+                <iframe width="455" height="255" src="https://www.youtube.com/embed/FbspRgRCYlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">    
+                <p style="text-align: justify">In tandem with the "homing" system, the position system worked very well, as now, the machine would home and declare it's position by itself. But, this led to another problem. Firstly, I created some <code>Serial.print</code> lines of code to output the exact position (out of 8) and exact step position so I could easily see what the position of the carriage was. That wasn't the problem but rather helped me solve the problem.</p>
+
+                <p style="text-align: justify">The problem was that if the carriage was at a limit, and the button was pressed, although the carriage itself didn't move, the <code>Xpos</code> changed. Now this caused many issues because it would cause the position to be some whacky number, and because I have my button movements based on the <code>Xpos</code> variable, the movement of the carriage would be disrupted. The problem visualized and solution are shown below.</p>
+
+                <p style="text-align: justify">To fix this, I added in the last two <code>if()</code> statements that basically say "if the carriage is all the way to the right (or left) and the right (or left) button is pressed, then set the X position back to 8 (or 0 if at the left)". </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"> 
+                <img src="Serial Monitor Position Issue.PNG" class="img-rounded center" style="width:100%" alt="Serial Monitor Position Issue">
+            </div>
+
+             <div class="col-sm-6"> 
+                <img src="Serial Monitor Position Issue Solved2.PNG" class="img-rounded center" style="width:100%" alt="Serial Monitor Position Issue Solved">
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-12"> 
+                <p style="text-align: justify">This solved all positional issues, and I was able to finally improve on this design by adding in another axis: the Z-axis.</p>
+            </div>
+        </div>
+
+       
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <h1 class="page-header">Double Axis Button Stepper Control</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify"> Because I already had all the code written for one axis, I was able to easily add in another axis without too much trouble. The bulk of the changes were just adding variables for the new Z-axis and chaning old variables to X specific ones so I could make new Z-specific vairables. I also had to make a new axis and carriage using the rest of the lazer-cut pieces. The process for creating and attaching the new axis is shown below.</p> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">                                                           
+                <img src="Double Axis.JPG" class="img-rounded center" style="width:100%" alt="Double Axis">
+            </div>
+
+             <div class="col-sm-6">                                                           
+                <img src="Double Sided Tape Axis.JPG" class="img-rounded center" style="width:100%" alt="Double Sided Tape Axis">
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-7">                                                           
+                <p style="text-align: justify"> I created the second axis and oriented the motor wires to left side. I changed the motor oreintation on the old X axis to do the same. This was so the Z-axis motor wires can have more space to flex instead of being pressed against the X carriage.</p> 
+
+                <p style="text-align: justify"> To attach the two axis, I just used some double-sided tape, which turned out to create a really good bond as seen on the gif to the right.</p> 
+
+                <p style="text-align: justify"> There are many ways to attach the two axes, but at this point, I still hadn't decided where I was going with this assignment, so I figured a temporary solution with double-sided tape would to the trick.</p> 
+            </div>
+
+             <div class="col-sm-5">                                                           
+                <img src="Double Side Tape Gif.gif" class="img-rounded center" style="width:100%" alt="Double Side Tape Gif">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify"> Now, it was time for the coding part. Like I said, the coding part was pretty easy because I just had to duplicate and edit the code I already had for the X-axis.</p> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-7">                                                           
+                <iframe src=https://create.arduino.cc/editor/farazb/045eca65-433a-476e-9120-9f98560d939e/preview?embed style="height:1305px;width:100%;margin:10px 0" frameborder=0></iframe> 
+            </div>
+
+             <div class="col-sm-5">                                                           
+                <p style="text-align: justify"> Again, because the code is very similar to the code of the last machine, I will just breifly go over the changes here.</p>
+
+                <p style="text-align: justify"> I included the MultiStepper library, which is part of the AccelStepper library, but since I'm not exactly sure if some functions I used were part of the MultiStepper library, I just kept it in.</p>
+
+                <p style="text-align: justify"> I then defined integers to each motor pin and button pin for the Z-axis. I created a new variable for the Z position, <code>Zpos</code>, which is used for setting limits of the Z carriage. </p>
+
+                <p style="text-align: justify"> I redefined the regular stepper to <code>StepperX</code> and <code>StepperZ</code>. This allows me to indivudally control each motor. I changed all the old regular <code>stepper.</code> function beginnings to <code>stepperX.</code> so that they would control the X-axis.</p>
+
+                <p style="text-align: justify"> I setup the Z stepper parameters (maximum speed and acceleration) added a Z-axis homing part to the homing section of the code. Then, I basically duplicated the X-axis <code>while()</code> functions and changed the stepper variable to <code>StepperZ</code> for the Z-axis.</p>
+
+                <p style="text-align: justify"> Finally, I added the <code>Serial.print</code> lines of code for the Z position and added the Z maximum and limit reset with the very last two <code>if()</code> statements.</p>
+
+                <p style="text-align: justify"> Now, the Z-axis functions exactly the same as the X-axis does and is controllable using two more buttons. This increased the total buttons on the breadboard from two to four. I also had to add another stepper driver to the circuit, which added a lot of wires. The circuit pictures are further below.</p>
+
+                <p style="text-align: justify"> That's pretty much all there was to adding the Z-axis: add new variables, change old variables, and add new Z-axis functions. A video showing how it works is embeded below.</p>
+
+                <iframe width="455" height="255" src="https://www.youtube.com/embed/_ze4BcoWAqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify"> Below are the images of the breadboard circuit. It's pretty much double the wires of the single axis machine. I color-coded the wires and labeled which color corresponds to which pin in the code.</p> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4"> 
+                <img src="2nd Breadboard Main.JPG" class="img-rounded center" style="width:100%" alt="2nd Breadboard Main">
+            </div>
+
+            <div class="col-sm-4"> 
+                <img src="2nd Breadboard Top Diag.JPG" class="img-rounded center" style="width:100%" alt="2nd Breadboard Top Diag">
+            </div>
+
+            <div class="col-sm-4"> 
+                <img src="2nd Breadboard Back.JPG" class="img-rounded center" style="width:100%" alt="2nd Breadboard Back">
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify">Now that I had two axes working perfetly, I figured out where I wanted to take this assignment. I wanted to make a fruit/vegetable chopping bot.</p> 
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <h1 class="page-header">Button Controlled Fruit and Vegetable Chop Bot </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify"> For my chop bot, I 3D modeled and printed out a knife, which isn't sharp at all, and changed some of the code around. I designed the knife to perfectly match the height of the Z-carriage and attach to the front face piece using the two included m5 screws. I made the screw holes on the knife a pill shape, rather than a circular shape, so the knife height can be slightly adjusted up or down, depending on the thickness of the double-sided tape. I also cut out two holes near the bottom for saving material and because it looks cool.</p> 
+
+                <p style="text-align: justify">It now looks more like a fruit and vegetable guillotine than anything else.</p> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4"> 
+                <img src="3D Knife.JPG" class="img-rounded center" style="width:100%" alt="3D printed Knife">
+            </div>
+
+            <div class="col-sm-4"> 
+                <img src="Knife On Part.JPG" class="img-rounded center" style="width:100%" alt="Knife On Part">
+            </div>
+
+            <div class="col-sm-4"> 
+                <img src="Knife On Carriage.JPG" class="img-rounded center" style="width:100%" alt="Knife On Carriage">
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-7">                                                           
+                <iframe src=https://create.arduino.cc/editor/farazb/2adb5026-3eb7-4f82-9129-ecd460bca1cf/preview?embed style="height:1100px;width:100%;margin:10px 0" frameborder=0></iframe>
+            </div>
+
+             <div class="col-sm-5">                                                           
+                <p style="text-align: justify"> The biggest changes for the Chop Bot are the removal of one button and changing the Z movement to go all the way down and then back up. I removed one button because I only wanted one "chop" button. So you can move it left, right, and then chop, which is the down and up movement combined. This actually meant that the code got smaller because I removed quite a bit. There is no code for the 4th button and <code>Zpos</code> variable anymore.</p> 
+
+                <p style="text-align: justify"> A demonstration is shown in the gif below.</p> 
+
+                <img src="Knife Test Demo Gif.gif" class="img-rounded center" style="width:70%" alt="Knife Test Demo Gif"><br>
+
+                <p style="text-align: justify"> Another thing I changed was the Z range. I made it 2450 instead of 2400. This is so the knife goes all the way to the ground and back up. The old 2400 range was just so the Z and X carriages don't collide into the sides. I found that 2450 was the perfect amount, especially with the small adjustments on the knife itself. </p> 
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify">Since I finally got all the functions working for a chop bot, I needed to control it using the computer or my phone to fulfil the assignment requirement. I show what I did in the next section.</p> 
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <h1 class="page-header">Arduino IoT Controlled Fruit and Vegetable Chop Bot </h1>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify">To control my chop bot using a device, I decided to control it with <a href="https://https://create.arduino.cc/iot/"> Arduino IoT Cloud</a>. Because I have already shown how to set up Arduino IoT Cloud in my <a href="https://farazbhuiyan.github.io/PHYS_S-12/09_Network/index.html"> last assignment page</a>, I won't go into as much detail as I did during that assignment here. </p> 
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-7">                                                           
+                <iframe src=https://create.arduino.cc/editor/farazb/8777c347-6580-4cf1-ab73-2a5b4b9fe903/preview?embed style="height:2810px;width:100%;margin:10px 0" frameborder=0></iframe>
+            </div>
+
+             <div class="col-sm-5">                                                           
+                <p style="text-align: justify"> Just to reiderate from last assignment, Arduino IoT Cloud is a platform where you can control devices using a network connection using widgets on a dashboard. You create global variables for a "thing," as it's called, which then automatically writes in the code. All I had to do was edit the code by adding in the button functions. And, Arduino IoT Cloud works from anywhere around the world, so as long as you have an internet connection, you can control a microcontroller with a WiFi conneciton, in my case, it's my Huzzah Feather with the ESP32 microcontroller. </p>
+
+                <p style="text-align: justify"> The three global variables I created were leftButton, rightButton, and chopButton. These variables are basically the same as the button functions from the last machine, where each button produced a function. Other than that, I just transferred all the code from the last machine to this one, so it was really simple to set up. That's why I did all those button prototypes first: so this one would be easy.</p>
+
+                <p style="text-align: justify"> Because the code is basically a copy-and-pase, I'll just show my live demonstrations below.</p><br>
+
+                <p style="text-align: justify">This first video shows my Arduino IoT dashboard for the chop bot with three pushbutton widgets. </p>
+
+                <iframe width="455" height="255" src="https://www.youtube.com/embed/ta59pUZKQW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+
+                <p style="text-align: justify">Of course, no knife test would be complete without a hand test. Unfortunately, he motor doesn't have that much power to actually cut through most fruits and vegetables, which is shown later, and therefore my hand was not cut.</p>
+                <iframe width="455" height="255" src="https://www.youtube.com/embed/HjbvmVtW6XU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+
+                <p style="text-align: justify">I then commenced the live fruit tests. They weren't very successful. But, they were fun to do, so I count that as a win. This first one is a long watermelon piece cut test.</p>
+                <iframe width="455" height="255" src="https://www.youtube.com/embed/uice24o7ViY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+
+                <p style="text-align: justify">The next test is with a variety of fruits. It worked kind of well with the watermelon and banana pieces but didn't work very well with the pineapple and grape. It makes sense because the pineapple and grape skin are more dense than the banana and watermelon.</p>
+                <iframe width="455" height="255" src="https://www.youtube.com/embed/Ga_ctz5kADQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+
+                <p style="text-align: justify">Because I saw that the whole chopper was tipping when the knife went down, I put my hand on top as a weight to counter the tip. It definitely worked a lot better than it did without a weight, but it still didn't fully cut through the fruits. That's probably just because the blade is a bit too high, otherwise I think it would've cut through the watermelon and banana pieces.</p>
+                <iframe width="455" height="255" src="https://www.youtube.com/embed/VgIWG88IYjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <h1 class="page-header">What I Learned </h1>
+                    <p>» How to use many of functions in the AccelStepper Arduino library<br>
+                       » How to use some functions in the MultiStepper library<br>
+                       » How to create a virtual positioning field<br>
+                       » Ways to creatively set limits<br>
+                       » Ways to creatively home stepper motors<br>
+                    </p>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    
         <div class="small-print">
             <div class="container">
-                <p>Copyright &copy; Faraz Bhuiyan 2021 </p>
+                <p style="text-align: center">Copyright &copy; Faraz Bhuiyan 2021 </p>
             </div>
         </div>
     </div>
