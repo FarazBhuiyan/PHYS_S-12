@@ -103,9 +103,9 @@
 
          <div class="row">
             <div class="col-sm-12">
-                <p class="gray-text">1a. Make a machine that is controlled from a computer or phone.<br>
-                                     1b. Use at least one stepper motor. <br>
-                                     2. How can you calibrate motor position (i.e. guarantee the "home" position)?<br></p>
+                <p>1a. Make a machine that is controlled from a computer or phone.<br>
+                   1b. Use at least one stepper motor. <br>
+                   2. How can you calibrate motor position (i.e. guarantee the "home" position)?<br></p>
             </div
 >        </div>
 
@@ -265,9 +265,11 @@
             <div class="col-sm-12">    
                 <p style="text-align: justify">In tandem with the "homing" system, the position system worked very well, as now, the machine would home and declare it's position by itself. But, this led to another problem. Firstly, I created some <code>Serial.print</code> lines of code to output the exact position (out of 8) and exact step position so I could easily see what the position of the carriage was. That wasn't the problem but rather helped me solve the problem.</p>
 
-                <p style="text-align: justify">The problem was that if the carriage was at a limit, and the button was pressed, although the carriage itself didn't move, the <code>Xpos</code> changed. Now this caused many issues because it would cause the position to be some whacky number, and because I have my button movements based on the <code>Xpos</code> variable, the movement of the carriage would be disrupted. The problem visualized and solution are shown below.</p>
+                <p style="text-align: justify">The problem was that if the carriage was at a limit, and the button was pressed, although the carriage itself didn't move, the <code>Xpos</code> changed. Now this caused many issues because it would cause the position to be some whacky number, and because I have my button movements based on the <code>Xpos</code> variable, the movement of the carriage would be disrupted. 
 
                 <p style="text-align: justify">To fix this, I added in the last two <code>if()</code> statements that basically say "if the carriage is all the way to the right (or left) and the right (or left) button is pressed, then set the X position back to 8 (or 0 if at the left)". </p>
+
+                <p style="text-align: justify">The problem visualized and solution are shown below.</p>
             </div>
         </div>
 
@@ -283,7 +285,7 @@
 
         <div class="row"><br>
             <div class="col-sm-12"> 
-                <p style="text-align: justify">This solved all positional issues, and I was able to finally improve on this design by adding in another axis: the Z-axis.</p>
+                <p style="text-align: justify">This solved all positional issues. The first image above shows the erroneus positional readings, and the picture on the right shows the position reseting to the minimum X position of 0. Now, I was able to finally improve on this design by adding in the Z-axis.</p>
             </div>
         </div>
 
@@ -409,17 +411,19 @@
             <div class="col-sm-4"> 
                 <img src="Knife On Carriage.JPG" class="img-rounded center" style="width:100%" alt="Knife On Carriage">
             </div>
-        </div>
+        </div><br>
 
         <div class="row"><br>
             <div class="col-sm-7">                                                           
-                <iframe src=https://create.arduino.cc/editor/farazb/2adb5026-3eb7-4f82-9129-ecd460bca1cf/preview?embed style="height:1100px;width:100%;margin:10px 0" frameborder=0></iframe>
+                <iframe src=https://create.arduino.cc/editor/farazb/2adb5026-3eb7-4f82-9129-ecd460bca1cf/preview?embed style="height:1765px;width:100%;margin:10px 0" frameborder=0></iframe>
             </div>
 
-             <div class="col-sm-5">                                                           
-                <p style="text-align: justify"> The biggest changes for the Chop Bot are the removal of one button and changing the Z movement to go all the way down and then back up. I removed one button because I only wanted one "chop" button. So you can move it left, right, and then chop, which is the down and up movement combined. This actually meant that the code got smaller because I removed quite a bit. There is no code for the 4th button and <code>Zpos</code> variable anymore.</p> 
+             <div class="col-sm-5">  
+                <p style="text-align: justify"> One physical change I made was a modification to the Z-axis pulley screw. Because the Z carriage kept getting a lot of friction on the Z-axis causing step skips, I replaced the M5 screw that attaches black timing belt pulley to the top of the frame with a wodden dowel that was about as equally thick as the M5 screw. This solved the friction issue because now the belt was perfectly straight, as was the pully itself. The dowel runs through both sides of the axis. This is shown below</p>     
 
-                <p style="text-align: justify"> A demonstration is shown in the gif below.</p> 
+                <img src="Dowel TopSq.JPG" class="img-rounded center" style="width:80%" alt="Dowel TopSq"> <br>
+
+                <p style="text-align: justify"> The biggest changes in general for the Chop Bot are the removal of one button and changing the Z movement to go all the way down and then back up. I removed one button because I only wanted one "chop" button. So you can move it left, right, and then chop, which is the down and up movement combined. This actually meant that the code got smaller because I removed quite a bit. There is no code for the 4th button and <code>Zpos</code> variable anymore. A demonstration of this is shown in the gif below.</p> 
 
                 <img src="Knife Test Demo Gif.gif" class="img-rounded center" style="width:70%" alt="Knife Test Demo Gif"><br>
 
@@ -427,7 +431,7 @@
             </div>
         </div>
 
-        <div class="row"><br>
+        <div class="row">
             <div class="col-sm-12">                                                           
                 <p style="text-align: justify">Since I finally got all the functions working for a chop bot, I needed to control it using the computer or my phone to fulfil the assignment requirement. I show what I did in the next section.</p> 
             </div>
@@ -443,30 +447,30 @@
         <div class="row"><br>
             <div class="col-sm-12">                                                           
                 <p style="text-align: justify">To control my chop bot using a device, I decided to control it with <a href="https://https://create.arduino.cc/iot/"> Arduino IoT Cloud</a>. Because I have already shown how to set up Arduino IoT Cloud in my <a href="https://farazbhuiyan.github.io/PHYS_S-12/09_Network/index.html"> last assignment page</a>, I won't go into as much detail as I did during that assignment here. </p> 
+
+                <p style="text-align: justify"> Just to reiderate from last assignment, Arduino IoT Cloud is a platform where you can control devices using a network connection using widgets on a dashboard. You create global variables for a "thing," as it's called, which then automatically writes in the code. All I had to do was edit the code by adding in the button functions. And, Arduino IoT Cloud works from anywhere around the world, so as long as you have an internet connection, you can control a microcontroller with a WiFi conneciton, in my case, it's my Huzzah Feather with the ESP32 microcontroller. </p>
             </div>
         </div>
 
 
         <div class="row">
             <div class="col-sm-7">                                                           
-                <iframe src=https://create.arduino.cc/editor/farazb/8777c347-6580-4cf1-ab73-2a5b4b9fe903/preview?embed style="height:2810px;width:100%;margin:10px 0" frameborder=0></iframe>
+                <iframe src=https://create.arduino.cc/editor/farazb/8777c347-6580-4cf1-ab73-2a5b4b9fe903/preview?embed style="height:3038px; width:100%;margin:10px 0" frameborder=0></iframe>
             </div>
 
              <div class="col-sm-5">                                                           
-                <p style="text-align: justify"> Just to reiderate from last assignment, Arduino IoT Cloud is a platform where you can control devices using a network connection using widgets on a dashboard. You create global variables for a "thing," as it's called, which then automatically writes in the code. All I had to do was edit the code by adding in the button functions. And, Arduino IoT Cloud works from anywhere around the world, so as long as you have an internet connection, you can control a microcontroller with a WiFi conneciton, in my case, it's my Huzzah Feather with the ESP32 microcontroller. </p>
+                <p style="text-align: justify"> The three global variables I created were leftButton, rightButton, and chopButton. These variables are basically the same as the button functions from the last machine, where each button produced a function. Other than that, I just transferred all the code from the last machine to this one, so it was really simple to set up. That's why I did all those button prototypes first, so putting it all together on Arduino IoT would be easy.</p><br>
 
-                <p style="text-align: justify"> The three global variables I created were leftButton, rightButton, and chopButton. These variables are basically the same as the button functions from the last machine, where each button produced a function. Other than that, I just transferred all the code from the last machine to this one, so it was really simple to set up. That's why I did all those button prototypes first: so this one would be easy.</p>
-
-                <p style="text-align: justify"> Because the code is basically a copy-and-pase, I'll just show my live demonstrations below.</p><br>
+                <p style="text-align: justify">Below, I embeded videos of all my testing using the fruit/vegetable chop bot.</p>
 
                 <p style="text-align: justify">This first video shows my Arduino IoT dashboard for the chop bot with three pushbutton widgets. </p>
 
                 <iframe width="455" height="255" src="https://www.youtube.com/embed/ta59pUZKQW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
 
-                <p style="text-align: justify">Of course, no knife test would be complete without a hand test. Unfortunately, he motor doesn't have that much power to actually cut through most fruits and vegetables, which is shown later, and therefore my hand was not cut.</p>
+                <p style="text-align: justify">Of course, no knife test would be complete without a hand test. Unfortunately, the motor doesn't have enough power to actually cut through most fruits and vegetables, which is shown later, and therefore my hand was not cut.</p>
                 <iframe width="455" height="255" src="https://www.youtube.com/embed/HjbvmVtW6XU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
 
-                <p style="text-align: justify">I then commenced the live fruit tests. They weren't very successful. But, they were fun to do, so I count that as a win. This first one is a long watermelon piece cut test.</p>
+                <p style="text-align: justify">I then commenced the live fruit tests. They weren't very successful, but, they were fun to do. I count that as a win. This first one is a long watermelon piece cut test. The biggest problem is displayed of the lack of weight, causing the whole machine to tilt.</p>
                 <iframe width="455" height="255" src="https://www.youtube.com/embed/uice24o7ViY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
 
                 <p style="text-align: justify">The next test is with a variety of fruits. It worked kind of well with the watermelon and banana pieces but didn't work very well with the pineapple and grape. It makes sense because the pineapple and grape skin are more dense than the banana and watermelon.</p>
@@ -474,48 +478,101 @@
 
                 <p style="text-align: justify">Because I saw that the whole chopper was tipping when the knife went down, I put my hand on top as a weight to counter the tip. It definitely worked a lot better than it did without a weight, but it still didn't fully cut through the fruits. That's probably just because the blade is a bit too high, otherwise I think it would've cut through the watermelon and banana pieces.</p>
                 <iframe width="455" height="255" src="https://www.youtube.com/embed/VgIWG88IYjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+
+                <p style="text-align: justify">Finally, after all the testing was over, all that was left the aftermath of the fruits. This is shown in the image below. The watermelon and banana slices had a solid cut through them, but the pineapple slice and grape were left unharmed.</p>
+                <img src="Variety Aftermath.JPG" class="img-rounded center" style="width:100%" alt="Variety Aftermath">
             </div>
         </div>
 
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <h1 class="page-header">3D Printed Parts</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">                                                           
+                <p style="text-align: justify">I designed and 3D printed three parts: the laser-cut assembly spacer, the X axis leg, and the knife itself. I printed 8 spacers total (4 per axis), one X-axis leg, and one knife piece. Below are pictures of the parts and their respective F3D downloadable file links. </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">    
+                <h2 style="text-align: center" class= "gray-text"> Laser-Cut Piece Spacer </h2>
+
+                <img src="Laser Cut Axis Spacer.JPG" class="img-rounded center" style="width:100%" alt="Laser Cut Axis Spacer">
+
+                <p style="text-align: center"><a href="https://a360.co/3rDNSao">Download the spacer F3D file here</a></p>
+            </div>
+
+            <div class="col-sm-4">                                                           
+                <h2 style="text-align: center" class= "gray-text"> X-Axis Leg </h2>
+
+                <img src="X Axis Leg.JPG" class="img-rounded center" style="width:100%" alt="X Axis Leg">
+
+                <p style="text-align: center"><a href="https://a360.co/3jbTTHJ">Download the leg F3D file here</a></p>
+            </div>
+
+            <div class="col-sm-4">    
+                <h2 style="text-align: center" class= "gray-text"> Knife </h2>
+
+                <img src="Knife Pic2.JPG" class="img-rounded center" style="width:100%" alt="Knife Pic">
+
+                <p style="text-align: center"><a href="https://a360.co/3zFGrSQ">Download the knife F3D file here</a></p>
+            </div>
+        </div>
 
 
         <div class="row">
             <div class="col-sm-12"> 
                 <h1 class="page-header">What I Learned </h1>
-                    <p>» How to use many of functions in the AccelStepper Arduino library<br>
-                       » How to use some functions in the MultiStepper library<br>
-                       » How to create a virtual positioning field<br>
-                       » Ways to creatively set limits<br>
-                       » Ways to creatively home stepper motors<br>
-                    </p>
             </div>
         </div>
 
-
-
-
-
-    </div>
-    
-        <div class="small-print">
-            <div class="container">
-                <p style="text-align: center">Copyright &copy; Faraz Bhuiyan 2021 </p>
+        <div class="row">
+            <div class="col-sm-12"> 
+                <p>» How to use many of functions in the AccelStepper Arduino library<br>
+                   » How to use some functions in the MultiStepper library<br>
+                   » How to create a virtual positioning field<br>
+                   » Ways to creatively set limits<br>
+                   » Ways to creatively home stepper motors<br>
+                </p>
             </div>
         </div>
     </div>
-    
-    <!-- jQuery -->
-    <script src="../js/jquery-1.11.3.min.js"></script>
+</head>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
+<footer><br>
+    <div class="footer-blurb">
+        <div class="row"><br>
+            <div class= "text-center">
+                <a href="../09_Network/index.html" class="previous PageTurn">&#8249; Previous Assignment</a>
+                <a href="../11_Programming/index.html" class="next PageTurn"> Next Assignment &#8250;</a>
+            </div><br>
+
+            <h4 style="text-align: center"><a href="../index.html">Home</a> | <a href="../01_Intro/index.html">01</a> | <a href="../02_2D/index.html">02</a> | <a href="../03_Electronics/index.html">03</a> | <a href="../04_RapidProto/index.html">04</a> | <a href="../05_Programable/index.html">05</a> | <a href="../06_3D/index.html">06</a> | <a href="../07_Electronic Input/index.html">07</a> | <a href="../08_Electronic Output/index.html">08</a> | <a href="../09_Network/index.html">09</a> | <a href="../10_Machine/index.html">10</a> | <a href="../11_Programming/index.html">11</a> | <a href="../12_Wildcard/index.html">12</a> | <a href="../Final Project/index.html">Final Project</a></h4>
+        </div>
+    </div>
     
-    <!-- IE10 viewport bug workaround -->
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <div class="small-print">
+        <div class="container">
+            <p style="text-align: center">Copyright &copy; Faraz Bhuiyan 2021 </p>
+        </div>
+    </div>
+</footer>
     
-    <!-- Placeholder Images -->
-    <script src="../js/holder.min.js"></script>
+<!-- jQuery -->
+<script src="../js/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport bug workaround -->
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Placeholder Images -->
+<script src="../js/holder.min.js"></script>
     
-</body>
 
 </html>
