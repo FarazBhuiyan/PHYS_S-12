@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,20 +69,11 @@
             </div>
         </div>
     </nav>
-    </div>
+    
+
     <div class="jumbotron feature">
         <div class="container">
-            <div style="text-align: center">
-                <h2><b> Input the daily fish feeding time using military time in the text box below </b><br></h2>
-
-                <h3>It must be in hr:min format. e.g. "09:15" or "15:30"</h3>
-       
-                <input type="text" id="FeederSet">
-
-                <button onclick="setFeedingTime()">Set Feeding Time</button> <br><br>
-
-                <!-- <h4>*This doesn't actually control anything, it's just a demo of the real interface*</h4> -->
-            </div>
+            <h1 style="text-align: center"><b>Fish Feeder Interface</h1></b>
         </div>
     </div>
 
@@ -89,13 +81,39 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <img class="img-rounded2 center" src="Shrimp.jpg" style="width:50%" alt="Shrimp"><br>
-                <p style="text-align: center"> Feed us! -Shrimp and Shrimpette</p>
+                <div style="text-align: center">
+                    <h2><b> Type the daily fish feeding time using military time in the text box below </b><br></h2>
+
+                    <h4>(In hr:min format. e.g. "09:15" or "15:30")</h4>
+       
+                    <input type="text" id="FeederSet">
+
+                    <button onclick="setFeedingTime()">Set Feeding Time</button> <br><br>
+                </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="text-align: center">
+                    <h2><b>Manual Control:</b></h2>
+
+                    <button class="custombutton" id="OnButton" onclick="manualOn()">On</button>
+
+                    <button class="custombutton" id="OffButton" onclick="manualOff()">Off</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row"><br><br><br>
+            <div class="col-sm-12">
+                <img class="img-rounded2 center" src="Shrimp.jpg" style="width:50%" alt="Shrimp"><br>
+
+                <p style="text-align: center"> Feed us! -Shrimp and Shrimpette</p>
+            </div>
+         </div>
     </div>
-
-
+    
     
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
@@ -124,15 +142,37 @@
 
     // Get a database reference to our blog
     var ref = firebase.database().ref("/");
+
+    // make the buttons call the function below 
+    document.getElementById('OnButton').addEventListener('click', manualOn, true);
+
+    document.getElementById('OffButton').addEventListener('click', manualOff, true);
     
     function setFeedingTime(){
         var feedingTime = document.getElementById("FeederSet").value;
-        console.log("setting feeding time");
-        alert("Feeding Time Set.");
+        console.log("new feeding time set");
+        alert("Feeding Time Set");
         ref.update({
             "FEEDING TIME": (feedingTime)
         })
     } 
+
+    function OnButton(){
+        console.log("feeder manually turned on");
+        alert("Feeder Turned On Manually");
+        ref.update({
+            "FEEDER STATUS": "ON"
+        })
+    } 
+
+    function OffButton(){
+        console.log("feeder manually turned off");
+        alert("Feeder Turned Off Manually");
+        ref.update({
+            "FEEDER STATUS": "OFF"
+        })
+    } 
+
     </script>
 </body>
 

@@ -92,3 +92,16 @@ transform: translateX(400px);
   border-radius: 50%;
 }
 
+.custombutton {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: lightgrey;
+  border: none;
+}
+.custombutton:hover {
+  background: #9C9C9C
+;
+}
+
