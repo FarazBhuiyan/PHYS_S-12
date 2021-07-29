@@ -1,0 +1,168 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHYS_S 12: Introduction to Digital Fabrication</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-fire"></span> 
+                    PHYS_S-12
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="./index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="./About Me/index.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="./Final Project/index.html">Final Project</a>
+                    </li>
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="./01_Intro/index.html">01: Introduction & Documentation </a></li>
+                            <li><a href="./02_2D/index.html">02: 2D Design & Cutting</a></li>
+                            <li><a href="./03_Electronics/index.html">03: Electronics and Tools</a></li>
+                            <li><a href="./04_RapidProto/index.html">04: Rapid Prototyping</a></li>
+                            <li><a href="./05_Programable/index.html">05: Programmable Electronics</a></li>
+                            <li><a href="./06_3D/index.html">06: 3D Design & Printing</a></li>
+                            <li><a href="./07_Electronic Input/index.html">07: Electronic Input Devices</a></li>
+                            <li><a href="./08_Electronic Output/index.html">08: Electronic Output Devices</a></li>
+                            <li><a href=".09_Network/index.html">09: Networking / IoT</a></li>
+                            <li><a href="./10_Machine/index.html">10: Machine building</a></li>
+                            <li><a href="./11_Programming/index.html">11: Computer Programming</a></li>
+                            <li><a href="./12_Wildcard/index.html">12: Wildcard / Project Prep</a></li>
+                            <li><a href="./Final Project/index.html">Final Project</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="https://nathanmelenbrink.github.io/intro-dig-fab/index.html">Course Page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+    <div class="jumbotron feature">
+        <div class="container">
+            <div style="text-align: center">
+                <h2><b> Input the daily fish feeding time using military time in the text box below </b><br></h2>
+
+                <h3>It must be in hr:min format. e.g. "09:15" or "15:30"</h3>
+       
+                <input type="text" id="FeederSet">
+
+                <button onclick="setFeedingTime()">Set Feeding Time</button> <br><br>
+
+                <h4>*This doesn't actually control anything, it's just a demo of the real interface*</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="img-rounded2 center" src="Shrimp.jpg" style="width:50%" alt="Shrimp"><br>
+                <p style="text-align: center"> Feed us! -Shrimp and Shrimpette</p>
+            </div>
+        </div>
+    </div>
+
+
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+        apiKey: "AIzaSyBq8fCzfQKc6OKETFsA8GAPEflK2VvlmZA",
+        authDomain: "esp32-fish-feeder.firebaseapp.com",
+        databaseURL: "https://esp32-fish-feeder-default-rtdb.firebaseio.com",
+        projectId: "esp32-fish-feeder",
+        storageBucket: "esp32-fish-feeder.appspot.com",
+        messagingSenderId: "586070307447",
+        appId: "1:586070307447:web:75434fd439ae6b32a94c72",
+        measurementId: "G-TMKJKDL5SH"
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
+
+    // Get a database reference to our blog
+    var ref = firebase.database().ref("/");
+    
+    function setFeedingTime(){
+        var feedingTime = document.getElementById("FeederSet").value;
+        console.log("setting feeding time");
+        alert("Feeding Time Set.");
+        ref.update({
+            "FEEDER_STATUS": (feedingTime)
+        })
+    } 
+    </script>
+</body>
+
+<footer><br>
+    <div class="footer-blurb">
+        <div class="row"><br>
+            <div class= "text-center">
+                <a href="" class="next PageTurn"> Click Here to Go Back</a>
+            </div><br>
+
+            <h4 style="text-align: center"><a href="./index.html">Home</a> | <a href="./01_Intro/index.html">01</a> | <a href="./02_2D/index.html">02</a> | <a href="./03_Electronics/index.html">03</a> | <a href="./04_RapidProto/index.html">04</a> | <a href="./05_Programable/index.html">05</a> | <a href="./06_3D/index.html">06</a> | <a href="./07_Electronic Input/index.html">07</a> | <a href="./08_Electronic Output/index.html">08</a> | <a href="./09_Network/index.html">09</a> | <a href="./10_Machine/index.html">10</a> | <a href="./11_Programming/index.html">11</a> | <a href="./12_Wildcard/index.html">12</a> | <a href="./Final Project/index.html">Final Project</a></h4>
+        </div>
+    </div>
+
+
+    <div class="small-print">
+        <div class="container">
+            <p style="text-align: center">Copyright &copy; Faraz Bhuiyan 2021 </p>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport bug workaround -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Placeholder Images -->
+<script src="js/holder.min.js"></script>
+
+</html>
+

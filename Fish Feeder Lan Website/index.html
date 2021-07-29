@@ -55,4 +55,25 @@
     }   
     </script>
 
+    <h2>JavaScript Timing</h2>
+
+<p>Click "Set Time". Wait 10 seconds, and the page will alert "Fish Feeder Activated".</p>
+
+<button onclick="setInterval(timeFunction, 1000);">Set Time</button>
+
+<script>
+function timeFunction() {
+    // alert('Fish Feeder Activated');
+    console.log("turning on");
+    ref.update({
+        "LED_STATUS": "ON"
+    });
+
+    console.log("turning off");
+    ref.update({
+        "LED_STATUS": "OFF"
+        });
+}
+</script>
+
 </body>
