@@ -73,7 +73,7 @@
 
     <div class="jumbotron feature">
         <div class="container">
-            <h1 style="text-align: center"><b>Fish Feeder Interface</h1></b>
+            <h1 style="text-align: center"><b>Demo Fish Feeder Interface</h1></b>
         </div>
     </div>
 
@@ -98,14 +98,26 @@
                 <div style="text-align: center">
                     <h2><b>Manual Control:</b></h2>
 
-                    <button class="custombutton" id="OnButton" onclick="manualOn()">On</button>
+                    <button class="custombutton" id="OnButton" onclick="OnButton()">On</button>
 
-                    <button class="custombutton" id="OffButton" onclick="manualOff()">Off</button>
+                    <button class="custombutton" id="OffButton" onclick="OffButton()">Off</button>
                 </div>
             </div>
         </div>
 
-        <div class="row"><br><br><br>
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="text-align: center">
+                    <button class="custombutton2" id="OneCycle" onclick="OneCycle()">One Cycle</button>
+
+                    <button class="custombutton2" id="TwoCycles" onclick="TwoCycles()">Two Cycles</button>
+
+                    <button class="custombutton2" id="ThreeCycles" onclick="ThreeCycles()">Three Cycles</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row"><br><br>
             <div class="col-sm-12">
                 <img class="img-rounded2 center" src="Shrimp.jpg" style="width:50%" alt="Shrimp"><br>
 
@@ -170,6 +182,30 @@
         alert("Feeder Turned Off Manually");
         ref.update({
             "FEEDER STATUS": "OFF"
+        })
+    } 
+
+    function OneCycle(){
+        console.log("feeder manually activated for one cycle");
+        alert("Feeder Activated For One Cycle");
+        ref.update({
+            "FEEDER STATUS": "ONE CYCLE"
+        })
+    } 
+
+    function TwoCycles(){
+        console.log("feeder manually activated for two cycles");
+        alert("Feeder Activated For Two Cycles");
+        ref.update({
+            "FEEDER STATUS": "TWO CYCLES"
+        })
+    } 
+
+    function ThreeCycles(){
+        console.log("feeder manually activated for three cycles");
+        alert("Feeder Activated For Three Cycle");
+        ref.update({
+            "FEEDER STATUS": "THREE CYCLES"
         })
     } 
 

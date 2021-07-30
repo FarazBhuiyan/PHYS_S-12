@@ -99,8 +99,23 @@ transform: translateX(400px);
   padding: 0 40px;
   background: lightgrey;
   border: none;
+  border-radius: 5%;
 }
 .custombutton:hover {
+  background: #9C9C9C
+;
+}
+
+.custombutton2 {
+  margin-top: 10px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 15px;
+  background: lightgrey;
+  border: none;
+  border-radius: 5%;
+}
+.custombutton2:hover {
   background: #9C9C9C
 ;
 }
