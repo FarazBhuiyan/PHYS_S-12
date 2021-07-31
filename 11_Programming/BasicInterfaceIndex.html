@@ -143,7 +143,7 @@
             <div class="col-sm-12"> 
                 <p style="text-align: justify"> The main reason I switched over to using Firebase from using Arduino IoT is because I wanted to get a working clock using an NTP client. This probably also works using the Arduino IoT Cloud, but I found it to be much easier to do using Firebase and creating my own web interface.</p>
 
-                <p style="text-align: justify">The basis of my interface is built on an interface previous student <a href="https://michelleyl78.github.io/PHYS_S-12/09_class/09_class.html">Michelle</a> made last year. She used an NTP client to recieve a time output, which she then turned into a variable to use as a current time reference. Then, she created a textbox on her interface to input a set time at which her alarm clock would ring. This is exactly what I wanted, so I followed what she did. Of course, I changed many things so it isn't an exact copy.</p>
+                <p style="text-align: justify">The basis of my interface is built on an interface previous student <a href="https://michelleyl78.github.io/PHYS_S-12/09_class/09_class.html">Michelle </a>made last year. She used an NTP client to recieve a time output, which she then turned into a variable to use as a current time reference. Then, she created a textbox on her interface to input a set time at which her alarm clock would ring. This is exactly what I wanted, so I followed what she did. Of course, I changed many things so it isn't an exact copy.</p>
             </div>
         </div>
 
@@ -318,65 +318,19 @@
             </div>
         </div>
 
-        <div class="row"><br>
-            <div class="col-sm-12">
-                <p style="text-align: justify"> IFTTT also keeps a log of every time the event is triggered, so you can see exactly when the event happened. This is super helpful for my final project because it allows me to know if the feeder is actually being activated. It's like a serial monitor in real life.</p>
-
-                <p style="text-align: justify"> Now, I'll talk about my final code for this assignment.</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-7">
-                <iframe src=https://create.arduino.cc/editor/farazb/881ba3bf-41c7-43f6-87f1-64e9bcc4c741/preview?embed style="height:2332px;width:100%;margin:10px 0" frameborder=0></iframe>
-            </div>
-
-            <div class="col-sm-5">
-                <p style="text-align: justify">There are three main changes I made from the last iteration of the code.</p>
-
-                <p style="text-align: justify">One main change was adding in the <code>AnotherIFTTTWebhook.h</code> library to the sketch and calling it globally. This is the library that contains the event calling function and more. </p>
-
-                <p style="text-align: justify">Another change was defining the IFTTT_Key and IFTTT_Event globally. The key is my secret IFTTT key given on the IFTTT website, and the IFTTT Event is just "Feeder_Activated." </p>
-
-                <p style="text-align: justify">The last main change was creating a new <code>void()</code> function below the setup and loop functions with the name <code>sendIFTTTData()</code>, which can be called to for triggering the event. I did this so I can trigger the event from different web interface inputs, like  manual status changes, manual cycles, and daily cycles.</p>  
-
-                <p style="text-align: justify">Finally, all that's left to do is call the function somewhere in the code. Inside the first <code>if()</code> statement, the one for the automatic daily cycle, I called the function <code>sendIFTTTData()</code>, which exectes the new <code>sendIFTTTData()</code> void function I created.</p>
-
-                <p style="text-align: justify">And that's it! Now, it works perfectly. The video below shows a demo of the interface and push notification. You'll notice that the notification sends very quickly after the fish feeder has been activated. I believe they advertize a 10 second max event trigger time for free users, which includes me.</p> 
-
-                <iframe width="460" height="258" src="https://www.youtube.com/embed/NYTisPC_NnQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-
-                <p style="text-align: justify">Also, on the app, it tracks every single notification and time in one log. This is really convenient if I'm ever away and need to check if the fish have been regularly, which they should. Like I said, it's a good quality-of-life improvement. An image of the notification log on the IFTTT app is shown below. It shows the number of events that occured and what time events triggered. In my case, I only had one event, "Feeder_Activated," so I only recieved notifcations for that event.</p> 
-
-                <img class="center" src="IFTTT Activity.PNG" alt="IFTTT Notification Log" style="width:90%"> 
-            </div>
-        </div>
-
-        <div class="row"><br>
-            <div class="col-sm-12">
-                <p style="text-align: justify"> The final interface demo page is <a href="MainInterfaceIndex.html">here</a> (this is the same demo link as the very first demo link on this page). I also used the same HTML web interface page as I did in the last example, which can be found by <a href="FeederInterfaceHTML.txt">clicking here</a>.</p>
-                
-                <p style="text-align: justify"> All in all, this assignment was incredibly helpful for my final project, because I wass basically able to complete the whole web interface with a working push notification system. I'm really glad that the push notifications work, even though they don't add that much to the feeder itself, it a nice quality-of-life improvement to have.</p>
-            </div>
-        </div>
 
 
-        <div class="row">
+
+
+        
+
+
+     <div class="row">
             <div class="col-sm-12"> 
                 <h1 class="page-header">What I Learned </h1>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <p>» How to create a working web interface connected to Firebase <br>
-                   » How to recieve data from multiple Firebase datapoints <br>
-                   » How to using an NTP client <br>
-                   » How to convert NTP client data into usable data <br>
-                   » How to create Applets on IFTTT <br>
-                   » How to connect IFTTT to Arduino <br>
-                   » How to send push notifications from Arudino to IFTTT <br>
-                </p>
+                    <p>» <br>
+                       » 
+                    </p>
             </div>
         </div>
 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>PHYS_S 12: Assignment 11 Fish Feeder Interface Demo</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="text-align: center">
+                    <h2><b> Type the daily fish feeding time using military time in the text box below </b><br></h2>
+
+                    <h4>(In hr:min format. e.g. "09:15" or "15:30")</h4>
+       
+                    <input type="text" id="FeederSet">
+
+                    <button onclick="setFeedingTime()">Set Feeding Time</button> <br><br>
+                </div>
+            </div>
+        </div>
+   
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration. My Firebase info hidden for security reasons.
+  var firebaseConfig = {
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: "",
+        measurementId: ""
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
+
+    // Get a database reference to our blog
+    var ref = firebase.database().ref("/");
+  
+    function setFeedingTime(){
+        var feedingTime = document.getElementById("FeederSet").value;
+        console.log("new feeding time set");
+        alert("Feeding Time Set");
+        ref.update({
+            "FEEDING TIME": (feedingTime)
+        })
+    } 
+    </script>
+
+</body>
+
+</html>
+

@@ -136,16 +136,16 @@
 <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
 
 <script>
-  // Your web app's Firebase configuration
+  // Your web app's Firebase configuration. My Firebase info hidden for security reasons.
   var firebaseConfig = {
-        apiKey: "AIzaSyBq8fCzfQKc6OKETFsA8GAPEflK2VvlmZA",
-        authDomain: "esp32-fish-feeder.firebaseapp.com",
-        databaseURL: "https://esp32-fish-feeder-default-rtdb.firebaseio.com",
-        projectId: "esp32-fish-feeder",
-        storageBucket: "esp32-fish-feeder.appspot.com",
-        messagingSenderId: "586070307447",
-        appId: "1:586070307447:web:75434fd439ae6b32a94c72",
-        measurementId: "G-TMKJKDL5SH"
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: "",
+        measurementId: ""
     };
     
     // Initialize Firebase
