@@ -1097,12 +1097,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #ef9d10;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #ef9d10;
   text-decoration: underline;
 }
 a:focus {
@@ -1537,8 +1537,8 @@ samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
+  color: #FFA200;
+  background-color: #FFEFC8;
   border-radius: 4px;
 }
 kbd {

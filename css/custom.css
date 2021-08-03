@@ -67,6 +67,23 @@ h1, h2, h3, h4, h5, h6 {
 transform: translateX(400px);
 }
 
+a:visited {
+  color: #00479C; /*dark blue*/ 
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #5A7392; /*greyish blue*/
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: #ef9d10; /*orange*/
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
 .PageTurn {
   text-decoration: none;
   display: inline-block;
@@ -99,7 +116,7 @@ transform: translateX(400px);
   padding: 0 40px;
   background: lightgrey;
   border: none;
-  border-radius: 5%;
+  border-radius: 5% ;
 }
 .custombutton:hover {
   background: #9C9C9C
@@ -116,7 +133,14 @@ transform: translateX(400px);
   border-radius: 5%;
 }
 .custombutton2:hover {
-  background: #9C9C9C
-;
+  background: #9C9C9C;
+}
+
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #DA9A00;
+  background-color: #FFF6E0;
+  border-radius: 4px;
 }
 
