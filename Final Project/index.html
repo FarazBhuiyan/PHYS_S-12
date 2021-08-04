@@ -22,6 +22,10 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/arduino-light.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/arduino.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -37,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <span class="glyphicon glyphicon-fire"></span> 
                     PHYS_S-12
                 </a>
@@ -45,13 +49,15 @@
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li class="active">
                         <a href="../index.html">Home</a>
                     </li>
+
                     <li>
                         <a href="../About Me/index.html">About</a>
                     </li>
-                    <li class="active">
+
+                    <li>
                         <a href="../Final Project/index.html">Final Project</a>
                     </li>
                 
@@ -60,33 +66,32 @@
                         <ul class="dropdown-menu" aria-labelledby="about-us">
                             <li><a href="../01_Intro/index.html">01: Introduction & Documentation </a></li>
                             <li><a href="../02_2D/index.html">02: 2D Design & Cutting</a></li>
-                            <li><a href="#">03: Electronics and Tools</a></li>
-                            <li><a href="#">04: Rapid Prototyping</a></li>
-                            <li><a href="#">05: Programmable Electronics</a></li>
-                            <li><a href="#">06: 3D Design & Printing</a></li>
-                            <li><a href="#">07: Electronic Input Devices</a></li>
-                            <li><a href="#">08: Electronic Output Devices</a></li>
-                            <li><a href="#">09: Networking / IoT</a></li>
-                            <li><a href="#">10: Machine building</a></li>
-                            <li><a href="#">11: Computer Programming</a></li>
-                            <li><a href="#">12: Wildcard / Project Prep</a></li>
+                            <li><a href="../03_Electronics/index.html">03: Electronics and Tools</a></li>
+                            <li><a href="../04_RapidProto/index.html">04: Rapid Prototyping</a></li>
+                            <li><a href="../05_Programable/index.html">05: Programmable Electronics</a></li>
+                            <li><a href="../06_3D/index.html">06: 3D Design & Printing</a></li>
+                            <li><a href="../07_Electronic Input/index.html">07: Electronic Input Devices</a></li>
+                            <li><a href="../08_Electronic Output/index.html">08: Electronic Output Devices</a></li>
+                            <li><a href="..09_Network/index.html">09: Networking / IoT</a></li>
+                            <li><a href="../10_Machine/index.html">10: Machine building</a></li>
+                            <li><a href="../11_Programming/index.html">11: Computer Programming</a></li>
+                            <li><a href="../12_Wildcard/index.html">12: Wildcard / Project Prep</a></li>
                             <li><a href="../Final Project/index.html">Final Project</a></li>
                         </ul>
                     </li>
 
-                     <li>
+                    <li>
                         <a href="https://nathanmelenbrink.github.io/intro-dig-fab/index.html">Course Page</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 
     <div class="jumbotron feature">
         <div class="container">
-            <h1><b>Final Project Ideas:</h1></b>
+            <h1><b>Final Project: Automatic Fish Feeder</h1></b>
+            <h2 class="navy-text"><b>August 5, 2021</h2></b>
         </div>
     </div>
 
@@ -95,25 +100,613 @@
 
         <!-- Heading -->
         <div class="row">
-            <div class="col-lg-12"> 
-                <h1 class="page-header">Idea 1: Automatic Fish Feeder </h1>
-                    <p> Although there are many automated fish feeders in the market right now, I want to put a twist to it. Firstly, I want to power it with the flow of the water itself. Now the best way to do this is to have some sort of a small turbine just below the filter spout, where the water if flowing the fastest, and connect it to a battery. Then, I want to be able to control the feeder wirelessly, whether that's on my computer or on my phone using bluetooth or a wifi connection. This way I can set up a schedule to automate the feeder. Building on the wireless connectivity, I think it would be really cool to somehow make the schedule be based on the sun. So when the sun starts to rise, the feeder will drop a few pellets. Likewise, when the sun starts to set, it will drop a few pellets again. I'm not sure exactly how I'm going to do this, but I think it would be a really cool idea if it worked. </p>
+            <div class="col-sm-12"> 
+                <h1 class="page-header">Fish Feeder Demo </h1>
+            </div>
+        </div>
 
-                        <img src="FishFeeder.JPG" alt="Fish feeder inspiration">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <p> Below, there is a quick demonstration video of the feeder.</p>
+            </div>
+        </div>
 
-                <h1 class="page-header">Idea 2: Automatic Dry-Erase Board Cleaner </h1>
-                    <p> This idea is a little bit far fetched, but the premise is that once you finish drawing on a dry-erase board, the machine will automatically go to wherever there are marks and clean the area. I'm not sure how this would work though. One idea is that the machine is magnetic and there are moving magnets on the back of the board, so when the sensor detects any color on the board, the magnet will somehow move to that area. Another idea is a pulley system. If the board is used vertically, then the magnet idea work, but another idea using a pulley system to hoist a weighted eraser carriage may also work.
+        <div class="row">
+            <div class="col-sm-12"> 
+                <h1 class="page-header">A Summary Of How It Works </h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6"> 
+                <p style="text-align: justify"> The feeder is controlled using a web interface I created, an image of which is seen on the right. The interface is fairly simple and plain, but it has all the functions I want, like setting a feeding time and manual control. </p>
+
+                <p style="text-align: justify">On the interface, there is a box to type in a time using military time in hr:min format. Then, by clicking the "Set Feeding Time" button, the set time is updated in Google Firebase. The set feeding time is then shown below "Last set feeding time:".</p>
+
+                <p style="text-align: justify"> In addition to the automatic daily feeding, I added manual control. This way, I could go onto the interface website to manually feed the fish whenever I wanted to. There are "On" and "Off" buttons to continuouly run or turn off the feeder. There are also set cycle buttons to run the feeder for a set period of time. Currently, I have one cycle set to 1 second, two cycles set to 1.5 seconds, and three cycles set to 2 seconds.</p>
+
+                <p style="text-align: justify"> I go more in-depth on the functions, the coding, and Firebase in their own respective sections.</p>
+            </div>
+
+            <div class="col-sm-6"> 
+                <img class="img-rounded center" src="Web Interface.PNG" alt="Web Interface" style="width:100%">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <h1 class="page-header">Parts List </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <p style="text-align: justify">Below, I have listed every single part I used to make my final project. I included parts that were in the kit as well as parts I either 3D printed or purchased seperately.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"> 
+                <h2>From The Kit: </h2>
+
+                <p> » 1x Small Breadboard<br>
+                    » 1x ESP32 Huzzah<br>
+                    » 1x L9110, H Bridge Power Driver<br>
+                    » 1x N20 DC Gear Motor<br>
+                    » 1x Pushbutton<br>
+                    » 2x 100 Ohm Resistors<br>
+                    » 1x Red LED<br>
+                    » 1x Green LED<br>
+                    » 3x Small M3 Screws<br>
+                    » 3x M3 Nuts<br>
+                    » 1x M3 Washer<br>
+                    » Various Length 26AWG Solidcore Wire<br></p>
+            </div>
+
+            <div class="col-sm-6"> 
+                <h2>Not From The Kit: </h2>
+
+                <p> » 1x 3D Printed Electronics Enclosure<br>
+                    » 1x 3D Printed Electronics Enclosure Lid<br>
+                    » 1x 3D Printed Fish Feeder<br>
+                    » 1x 3D Printed Fish Feeder Screw<br>
+                    » 1x Plastic Bottle<br>
+                    » 1x Small Parchment Paper Piece<br>
+                    » 4x Male-to-Female Jumper Wires<br>
+                    » 1x Zip Tie<br>
+                    » Hot Glue<br>
+                    » Super Glue<br>
+                    » Electrical Tape<br></p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <h1 class="page-header">The Design Process </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-7"> 
+                <p style="text-align: justify"> To start off designing the fish feeder, I looked on <a href="https://www.thingiverse.com">Thingiverse</a> for other peoples' designs. I found one in particular that I really liked made by Steve5092 that can be seen by <a href="https://www.thingiverse.com/thing:2227877">clicking here</a>. I liked the design for one main reason: it has a small form-factor. The design is meant to be used with a DC gear motor, which is perfect because that's what I got in the kit.</p>
+
+                <p style="text-align: justify"> Instead of having a rotating drum that acts as a food holder, like I inititally planned on making, this design used a stationary upside-down water bottle as the food holder. With gravity, the food falls onto the screw and then gets pushed when the DC motor is turned on. This also allows storing a good amount of food in the bottle and as long as the other end is covered, the food won't go bad fast.</p>
+
+                <p style="text-align: justify"> Unfortunately, the main problem I ran into was that my motor didn't fit in the motor slot. Also, because the screw was so small, it didn't print very well on my 3D printer. I tried to edit original feeder design, but I figured that it would be best to start from scratch with inspiration from this design.</p>
+            </div>
+
+            <div class="col-sm-5"> 
+                <img class="img-rounded center" src="OG Feeder.PNG" alt="OG Feeder" style="width:100%">
+            </div>
+        </div>
+
+         <div class="row"><br>
+            <div class="col-sm-12"> 
+                <p style="text-align: justify"> The embeded model viewers below show my final fish feeder model. In the first model viewer, I made the feeder appearance blue glass and the screw appearance yellow plastic to show how the screw fits inside of the feeder. The second embed shows the feeder and screw with their generic grey colors (the same color I 3D printed them in).</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"> 
+                 <iframe src="https://myhub.autodesk360.com/ue2ba25e9/shares/public/SH56a43QTfd62c1cd9685433616d8346e141?mode=embed" width="560" height="570" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            </div>
+
+            <div class="col-sm-6"> 
+                 <iframe src="https://myhub.autodesk360.com/ue2ba25e9/shares/public/SH56a43QTfd62c1cd9686b06b4cfcd487704?mode=embed" width="560" height="570" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-12"> 
+                <p style="text-align: justify"> I made two main changes to the Thingiverse feeder design to suit my needs. </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify">One change I made was making the whole feeder larger than it was before. This served two purposes: allowed for a larger screw and better printing easability. In the process, increased the total screw diameter from 10mm to 16mm. I watched <a href="https://youtu.be/7lvErV4l5wQ">this video</a> by Product Design Online on YouTube for help on making screws on Fusion 360. My screw's inner tube diameter is 10mm, so the threads reach an extra 3mm out, which allows for more food to fit in between the threads. I also increased the thread revolution count from 5 to 10. This is what allows the food to flow at a more constant rate because more threads can push more food than less threads can. I also added a little handle part to the end of the screw, so you can easily take it off if needed. I watched the video to to right for guidance on making the screw piece.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify">Creating a suitable screw was a bit of a process. The first image below shows all my screw prototypes. The one on the far left is the original one from the Thingiverse design. The next set of three was for experimenting with a different inner tube thickness and screw head thickness. I learned that the larger the variance of thickness between the screw head and the screw threads, the less efficiently the fish food travels through the tube. The next set of two is for experimenting with different revolution counts. I first increased the revolution count to 15, but that made it so the threads were too close together causing the food to get stuck. I dialed it back to 10 revolutions and found that 10 was the perfect amount. The last set of 4 is just experimenting with different layer heights. My final screw uses a 0.1mm layer height, as seen on the far right.</p>
+
+                <p style="text-align: justify">The second image below shows how the DC motor connects to the screw. The DC motor shaft is notched, so one side of the cylindrical shaft is flat. I measured the shaft dimensions and created a hole equal in proportion to the motor shaft but a bit larger to accomodate for the extruded filament thickness. Essentially, it just connects together using friction. This is a good thing because it means I can easily swap out the screw to a different screw if I ever have to. It also means I can easily do maintanence on the feeder if it ever gets jammed.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <img class="img-rounded center" src="Screws.jpg" alt="Screws" style="width:100%">
+            </div>
+
+            <div class="col-sm-4">
+                <img class="img-rounded center" src="Motor Screw.jpg" alt="Motor Screw" style="width:100%">
+            </div>
+        </div>
+     
+        <div class="row"><br>
+            <div class="col-sm-6">
+                <p style="text-align: justify">The other main change I made was centering the mounting mechanism. I changed it because it flowed with the whole symmetric design I was going for. On the mount part, I also changed the orientation of the screw holes from horizontal to vertical. The side profile of my mount can be seen in the image to the right.</p>
+
+                <p style="text-align: justify">The images below show a close-up of the mount. I super-glued two M3 nuts into the M3 nut sockets so they don't fall out. Two M3 screws can then be screwed in from the right-hand side to creat a clamp around the fish tank glass.</p>
+
+                <div class="col-sm-6">
+                    <img class="img-rounded center" src="Mount LeftSQ.JPG" alt="SMount LeftSQ" style="width:100%">
+                </div>
+
+                <div class="col-sm-6">
+                    <img class="img-rounded center" src="Mount RightSQ.JPG" alt="Mount LeftSQ" style="width:100%">
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="Side ProfileSQ.JPG" alt="Side ProfileSQ" style="width:100%">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12"><br>
+                <p style="text-align: justify"> The next step was the create an enclosure for the main electronics (the Huzzah, motor driver, wires, etc). I made a seperate box for the electronics because I didn't want the feeder itself to be bulky, so this was really the only option. The image below shows the three prototype and final enclosures I made. </p>
+
+                <p style="text-align: justify">You can see one of the key design features I implemented in the electronics box below: the extrusions to hold the breadboard in place. I made tiny angled extrusions along the bottom of the walls in the box to act as friction points that hold the breadboard in place. I didn't want to use hardware to physically mount the breadboard in place, so this is a pretty neat solution.</p>
+
+                <p style="text-align: justify">I made cutouts in the walls of the enclosure where the LEDs were going to be, where the Huzzah power cable was going to come through, and on the lid where the motor wires go out of the enclosure. I also made long cutouts on the side walls of the enclosure to give it more of an open look than the previous closed box. In addition to those cutouts, I made circular holes in the bottom of the box and on the lid. The ones on the bottom are for using with my fingers to help orient the breadboard in the correct position and the ones on the lid are for acting as a handle.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <img class="img-rounded2 center" src="All BoxE.JPG" alt="All BoxE" style="width:100%">
+            </div>
+
+            <div class="col-sm-4">
+                <img class="img-rounded2 center" src="Box With Lid2.JPG" alt="Box With Lid" style="width:100%">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify">One thing to note is that I found the proper box height and cutout positions by doing many tests with the breadboard inside and all wires plugged in. I found that this height of about 50mm with the lid on was perfect for all the electronics I needed.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-5">
+                <p style="text-align: justify">To the right is the model viewer for the electronics box and lid. This is where the corner extrusion bits are easily visible. I made the holes on the box exactly where they need to be in relation to the breadboard. I also made the hole on the lid for the wires right in the middle, so the wires from the motor driver can go straight up from the box along the side of the fish tank. Also on the lid, I made four tiny sqaure extrusions in all corners to stop the lid from sliding off. The lid stays on without anything else. I was thinking about making a hinge for the lid, but I decided that this was more simple than a hinge mechanism.</p>
+
+                <p style="text-align: justify"> Also, one thing I should mention is that I didn't go in this exact order of desigining, wiring, programming, etc when I actually made my feeder. I did all of them together and built on ideas off eachother. For example, the LED hole is only there because I measured the exact spot of the LEDs on the breadboard. And I only have LEDs to begin with because when I was coding for the feeder, I thought making a status indicator would be useful.</p>
+            </div>
+
+            <div class="col-sm-7">
+                <iframe src="https://myhub.autodesk360.com/ue2ba25e9/shares/public/SH56a43QTfd62c1cd96876d66523028d4305?mode=embed" width="655" height="620" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify"> That's it for the design process. All of my 3D designs are downloadable by clicking the blue "Open in Fusion 360" button in the bottom right-hand side of the model viewers. Next, I talk about the wiring process.</p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <h1 class="page-header">The Wiring Process </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify"> I kept this wiring process section relatively short because the bulk of the features on the circuit are talked about the programming process section. The three pictures below show the circuit from various angles.</p>
+
+                <p style="text-align: justify"> Just for a quick summary of the electronics, four wires connect to the motor driver that then has two black wires connecting to the DC motor; the red and green LEDs are status indicators of the feeder where red means "on but not active" and green means "on and active"; and the pushbutton is for manual control, so I can just press that button when I'm next to the feeder to feed the fish instead of going onto the web interface and clicking "On."</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="Circuit Front.JPG" alt="Circuit Front" style="width:100%">
+            </div>
+
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="Circuit Diag.JPG" alt="Circuit Diag" style="width:100%">
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <p style="text-align: justify"> Starting with the motor driver, the orange and blue jumper wires connect pins 13 and 12 on the Huzzah to pins B-1B and B-1A respectively. The red and black jumper wires supply 3V and ground connections to the motor driver pins VCC and GND respectively.</p>
+
+                <p style="text-align: justify"> For the LEDs, one 100 Ohm resistors connects the red LED to pin 21 on the Huzzah, and another 100 Ohm resistor connects the green LED to pin 23 on the Huzzah. </p>
+
+                <p style="text-align: justify"> For the button, One end of the button connects to pin 14 on the Huzzah and the other connects to ground. Because I am using the built-in pullup resistors, I am not using a resistor for the button.</p>
+
+                <p style="text-align: justify"> Lastly, there are two black wires going from the "MOTOR B" connectors on the motor driver to the pins on the DC motor.</p>
+
+            </div>
+
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="Circuit Back.JPG" alt="Circuit Back" style="width:100%">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="Circuit Top.JPG" alt="Circuit Top" style="width:100%"><br>
+
+                <p style="text-align: justify"> The picture above shows the full circuit and to the right shows a close-up on the motor.</p>
+
+                <p style="text-align: justify"> I did a few modifications to the motor. First, I soldered long black wires, replacing the short, yellow ones, so that they are long enough to reach the electronics box on the table from the feeder on the tank and stay relatively hidden against the black back drop of the fish tank.</p>
+
+                <p style="text-align: justify"> I then used hot glue to cover the connections and attach a black zip tie to the motor. The glue serves as protection agasint shorting the circuit and the zip tie is for easily pulling the motor out of the socket.</p>
+            </div>
+
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="Motor.JPG" alt="Motor" style="width:100%">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <h1 class="page-header">The Programming Process </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify"> This section is for the coding part of my fish feeder. Because I have already talked about most of the code in <a href="../11_Programming/index.html">my assignment 11 webpage</a>, I'll breifly go over the different parts of the code.</p>
+
+                <p style="text-align: justify"> Below, I have embeded the full code for my final project. Further below the embed, I talk about the important parts.</p>
+
+                <p style="text-align: justify"> Just a quick note, in the code itself, I wrote a lot of pseudo code to explain what each line of code means.</p>
+
+                <iframe src=https://create.arduino.cc/editor/farazb/a5d35706-c5d9-431e-91d6-6671a3a6892f/preview?embed style="height:3750px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+                <p style="text-align: justify"> Now, I'll talk about the code in parts.</p><br>
+
+                <p style="text-align: justify">Starting off the code with the global section, lines 1-6 are for including the necessary libraries.</p>
+
+                <pre><code class="language-arduino">
+
+// Libraries
+#include &ltFirebaseESP32.h&gt          // Firebase library
+#include &ltWiFi.h&gt                   // ESP32 WiFi library
+#include "time.h"                   // Arduino's time library. Needed for NTP client
+#include &ltArduino.h&gt                // Needed for the AnotherIFTTTWebhook library
+#include "AnotherIFTTTWebhook.h"    // IFTTT Arduino library made by Siytek for connecting Arduino to IFTTT. GitHub page is https://github.com/Siytek/AnotherIFTTTWebhook
+                </code></pre><br><br>
+
+                <p style="text-align: justify">Lines 8-19 are for defining Firebase, WiFi, and IFTTT info. These will be referenced to later when the code calls for their respective functions. I left mine blank for privacy reasons, but the actual code has all the real info.</p>
+
+                <pre><code class="language-arduino">
+// Firebase hosting link and authentication key
+#define FIREBASE_HOST ""            // the project name address from firebase id
+#define FIREBASE_AUTH ""            // the secret key generated from firebase
+FirebaseData firebaseData;          // Define FirebaseESP32 data object
+
+// Wifi SSID and password
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
+
+// IFTTT Webhooks event name and key
+#define IFTTT_Key ""                      // secret key given by IFTTT for my feeder push notification applet
+#define IFTTT_Event "Feeder_Activated"    // name of the event I set on IFTTT
+                </code></pre><br><br>
+
+                <p style="text-align: justify">Lines 21-28 are for defining data recieved from Firebase as <a href="https://www.arduino.cc/reference/en/language/variables/data-types/string/">string</a> data types and defining variables for the NTP client. I talk more on the Firebase stuff later. For the NTP client, I just followed <a href="https://randomnerdtutorials.com/esp32-date-time-ntp-client-server-arduino/">this NTP client guide</a> by Random Nerd Tutorials. The tutorial is really comprehensive and easy to understand. The changes I made were setting the server to the U.S. server and changing to offset to -18000 seconds (-5 hours) because I live in the Central Time Zone (CST), which is 5 hours behind Greenwich Mean Time (GMT). Also, if needed, I can change the daylight offset to 3600 seconds (1 hour) to enable a time offset for daylight savings.</p>
+
+                <pre><code class="language-arduino">
+// Data recieved from Firebase
+String feedingTimeString = "";      // Daily feeding time received as string data from firebase
+String feederStatusString = "";     // Feeder status received as string data from firebase
+
+// NTP server stuff for time
+const char* ntpServer = "us.pool.ntp.org";   // Using U.S. NTP server
+const long  gmtOffset_sec = -18000;          // Time offset from GMT to CST is -18000 seconds (-5 hours or 5 hours behind)
+const int   daylightOffset_sec = 0;          // Currently no daylight savings time. Otherwise, if daylight savings time, then 3600 for 1 hour shift.
+                </code></pre><br><br>
+
+                <p style="text-align: justify">Lines 30-39 are for defining the motor, LED, and button pins to their respective names I created. I could've used the <code>#define</code> function for the pins, but I prefer to create <code>const int</code> variables instead to differenciate between defining long variables and pins.</p>
+
+                <pre><code class="language-arduino">
+// Defining DC motor pins
+const int motorSpd = 13;     // Pin 13 for motor speed
+const int motorDir = 12;     // Pin 12 for motor direction
+
+// Defining LED motor pins
+const int greenLED = 23;     // Pin 23 for the green LED
+const int redLED = 21;       // Pin 21 for the red LED
+
+// Defining physical button pin (button on breadboard)
+const int physicalButton = 14;
+                </code></pre><br><br>
+
+                <p style="text-align: justify">Lines 41-46 are for defining cycle variables by set times. These variables will then be used later when their respective functions (One Cycle, Two Cycles, etc) are called. This is just to make editing the set cycle feeding times easy if I ever need to.</p>
+
+                <pre><code class="language-arduino">
+// Creating time delays for each feeding cycle and daily feeding time
+const int oneCycleTime = 1000;                                           // One cycle time set to 1 second
+const int twoCycleTime = 1500;                                           // Two cycles time set to 1.5 seconds
+const int threeCycleTime = 2000;                                         // Three cycles time set to 2 seconds
+const int dailyFeedingCycleTime = oneCycleTime;                          // Daily feeding cycle time set to same as one cycle time
+const int dailyFeedingCyleTimeDelay = 60000 - dailyFeedingCycleTime;     // Delay set for 59 seconds after the initial cycle 
+                </code></pre><br><br>
+
+                <p style="text-align: justify">Finally, starting with line 49, the setup function begins. Lines 50-61 are for starting a serial monitor, which is used for debugging, and initializing the WiFi connection between the Huzzah and my home WiFi.</p>
+
+                <pre><code class="language-arduino">
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+
+  // Connect to wifi
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);  // Try to connect with WiFi
+
+  Serial.print("Connecting to ");
+  Serial.print(WIFI_SSID);
+  while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+                </code></pre><br><br>
+
+                <p style="text-align: justify">Lines 63-71 are for connecting the Huzzah to Google Firebase. This is where I set the <code>"FEEDER STATUS"</code> as <code>"OFF"</code>. The "FEEDER STATUS" is one piece of data that is recieved by the Huzzah from Firebase. I talk about this later, but in summary, this changes to "ON" if the feeder is manually turned on, and changes to "ONE CYCLE," "TWO CYCLES," or "THREE CYCLES" when the respective cycle is activated on the web interface.</p>
+
+                <pre><code class="language-arduino">
+Serial.println();
+Serial.print("Connected to ");
+Serial.println(WIFI_SSID);
+Serial.print("IP Address is : ");
+Serial.println(WiFi.localIP());                       // Print local IP address
+Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);         // Connect to firebase
+Firebase.reconnectWiFi(true);
+Firebase.set(firebaseData, "/FEEDER STATUS", "OFF");  // Set initial status to "OFF"
+                </code></pre><br><br>
+
+                <p style="text-align: justify">Lines 73-74 are for initializing the NTP server connection. This is how the Huzzah recieves the current time value. The line of code uses the <code>gmtOffset_sec</code>, <code>daylightOffset_sec</code>, and <code>ntpServer</code> variables I globally defined above the setup function.</p>
+
+                <pre><code class="language-arduino">
+// Initialize NTP server connection to get the current time
+configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+                </code></pre><br><br>
+
+                <p style="text-align: justify">Lines 76-85 are for defining min modes for the motor, LED, and pushbutton pins. To signify the use of a pullup resistor, I defined the <code>pinMode</code> for the pushbutton as <code>INPUT_PULLUP</code>.</p>
+
+                <pre><code class="language-arduino">
+// Motor pin modes
+pinMode(motorDir, OUTPUT);     // Connects to B-1B on motor driver. Controls motor speed
+pinMode(motorSpd, OUTPUT);     // Connects to B-1A on motor driver. Controls motor direction
+
+// LED pin modes
+pinMode(redLED, OUTPUT);       // Connects to pin 23 on the Huzzah ESP32
+pinMode(greenLED, OUTPUT);     // Connects to pin 21 on the Huzzah ESP32
+
+// Pin mode for physical button
+pinMode(physicalButton, INPUT_PULLUP);  // Connects to pin 32 on the Huzzah ESP32
+                </code></pre><br><br>
+
+                <p style="text-align: justify">To end off the setup of the code, I defined the status of the motor and LEDs. I set the red LED to on and the green to off. Also, I have the motor starting in a counter-clockwise direction because that's the way the screw needs to spin for the food to come out the front end. I also set the speed to 0 because I don't want it spinning right when I power the Huzzah.</p>
+
+                <pre><code class="language-arduino">
+// setting starting motor and LED statuses
+  digitalWrite(redLED, HIGH);    // Red LED starts as on, meaning on but not active
+  digitalWrite(greenLED, LOW);   // Red LED starts as off, meaning not currently running
+  digitalWrite(motorDir, LOW);   // Motor starts in the counter-clockwise direction
+  digitalWrite(motorSpd, LOW);   // Motor starts off
+}
+                </code></pre><br><br>
+
+                <p style="text-align: justify">The first set of code in the loop function is for creating the Firebase inputs. Lines 96-105 is where the data recieved from Firebase is actively being turned into string data, which the Huzzah can actually use. The two data inputs I made are "FEEDING TIME" and "FEEDER STATUS." As the name implies, "FEEDING TIME" is for recieving the set feeding time, and the "FEEDER STATUS" shows whether the feeder is actively feeding or not.</p>
+
+                <p style="text-align: justify">The image below shows what the data points look like my Firebase realtime database.</p>
+
+                <img class="img-rounded center" src="Firebase Sum.PNG" alt="Firebase" style="width:30%">
+
+                <p style="text-align: justify">This data is changed using the web interface, which I talk about later, and is then recieved by the Huzzah, sort of like a chain of command. The chain starts from the web interface, then goes to Firebase, and finally the data is outputted to the Huzzah.</p>
+
+                <pre><code class="language-arduino">
+void loop() {
+
+  /*
+     Creating firebase inputs.
+  */
+  Firebase.get(firebaseData, "/FEEDING TIME");     // Get feeding time input from firebase
+  feedingTimeString = firebaseData.stringData();   // Change to e.g. intData() or boolData()
+  //Serial.println(feedingTimeString);             // For debugging
+
+  Firebase.get(firebaseData, "/FEEDER STATUS");    // Get feeder status input from firebase
+  feederStatusString = firebaseData.stringData();  // Change to e.g. intData() or boolData()
+  //Serial.println(feederStatusString);            // For debugging
+
+                </code></pre><br><br>
+
+                <p style="text-align: justify">Lines 108-121 are for recieving an active time from the NTP client. I first created a <code>char</code> data type that stores the current time. Then, I use the <code>strftime</code> function with the <code>%R</code> specifier to format time recieved from the client into military time using hr:min format that then constatly updates the <code>currentTime</code> variable. I wanted to use military time to set the time to make the web interface simple. Also, I have other timers for my fish tank that use military time, so I can keep them all in sync. Information on the <code>strftime</code> function and specifiers can be found by <a href="https://www.cplusplus.com/reference/ctime/strftime/">clicking here</a>.  </p>
+
+                <pre><code class="language-arduino">
+/*
+    This section is for printing and defining varialbes to time recieved from NTP server.
+*/
+struct tm timeinfo;
+if (!getLocalTime(&timeinfo)) {
+Serial.println("Failed to obtain time");
+return;
+}
+
+//Serial.println("Time in HR:MIN");
+char currentTime [6];                         // Saving hour variable as char data type.
+strftime(currentTime, 6, "%R", &timeinfo);    // Strifetime() is a command for formatting time as a string. Writes time as HR:MIN ("00:00")
+Serial.println(currentTime);
+Serial.println();
+
+                </code></pre><br><br>
+
+                <p style="text-align: justify">Finally, we've reached the code for the actual feeding functions. To kick things off, lines 124-145 is where the daily feeding cycle code is. Note that within the <code>if()</code> statement, the variable <code>feedingTimeString</code> is being used. The <code>if()</code> statement basically says "if the time set on the web interface is equal to the current time recieved from the NTP client, run the code below." The code below is just turning the DC motor on for 1 second, which is the length of one cycle, and then turn off for 59 seconds, which is the delay I set. The reason for this is because the time recieved from the interface and the current time are equal for 1 whole minute, meaning that the <code>if()</code> statement activates for the period of the whole minute. With a delay of 59 seconds, the <code>if()</code> statement is only able to run once, thus solving the issue.</p>
+
+                <p style="text-align: justify">Within the <code>if()</code> statement, there's also line 130, which calls for the function <code>sendIFTTTData();</code>. This is calling for the <code>void sendIFTTTData</code> function I created below the <code>void loop</code> function that, when activated, triggers the IFTTT event. I haven't talked about IFTTT yet, which I will do later, but in a nutshell, when the event is triggered, a notification pushed out to my phone saying something along the lines of "Your fish have been fed! This happened on *whatever time*." I'll explain more thoroughly what IFTTT is when we get to that void function.</p>
+
+                <pre><code class="language-arduino">
+/*
+    This section is for recieving the input data from firebase and sending outputs to the motor and the status LEDs
+*/
+
+  // Daily set feeding time
+  if (feedingTimeString == currentTime) {     // Compare the input of motor status received from firebase
+    sendIFTTTData();                          // Executes sendData function that sends the push notification to my phone
+    digitalWrite(motorSpd, HIGH);             // Motor turns on at max speed
+    digitalWrite(motorDir, LOW);              // Motor turns in a counter-clockwise direction
+    digitalWrite(redLED, LOW);                // The red LED turns off and green turns on, meaning it's currently feeding
+    digitalWrite(greenLED, HIGH);
+
+    delay(dailyFeedingCycleTime);             // Feeds for 1 second
+
+    Serial.println("Motor Turned OFF");
+    digitalWrite(motorSpd, LOW);
+    digitalWrite(motorDir, LOW);
+    digitalWrite(redLED, HIGH);
+    digitalWrite(greenLED, LOW);
+
+    delay(dailyFeedingCyleTimeDelay);         // Delay off for 59 seconds to stop feeding after the first cycle.
+  }
+
+                </code></pre><br><br>
+
+                <p style="text-align: justify"> Lines 147-161 are for manual on and off control. One thing to note though is that variable in the <code>if()</code> statement that is being compared is <code>feederStatusString</code> and not <code>feederTimeString</code> like before, It works pretty similarly to how the daily cycle feeding does, where if the "On" button on the web interface is pressed, the <code>FEEDER STATUS</code> on Firebase gets updated, and then the motor turns off. The motor stays on until the "Off" button is pressed on the interface.</p>
+
+                <pre><code class="language-arduino">
+// Manually on mode
+  if (feederStatusString == "ON") {           // If manual on button is pressed, turn on the feeder and set correct LED status
+    digitalWrite(motorSpd, HIGH);
+    digitalWrite(motorDir, LOW);
+    digitalWrite(redLED, LOW);
+    digitalWrite(greenLED, HIGH);
+  }
+
+  // Manually off mode
+  else if (feederStatusString == "OFF") {     // If manual off button is pressed, turn off the feeder and revert LED status
+    digitalWrite(motorSpd, LOW);
+    digitalWrite(motorDir, LOW);
+    digitalWrite(redLED, HIGH);
+    digitalWrite(greenLED, LOW);
+  }
+
+                </code></pre><br><br>
+
+                <p style="text-align: justify"> Lines 163-177 are for the "One Cycle" function of the feeder. Again, like the previous <code>if()</code> statement, if this <code>if()</code> statement gets updated to "ONE CYCLE," then the code runs. Because this cycle is timed, I used a <code>Firebase.set</code> command after the cycle that sets the <code>FEEDER STATUS</code> to "OFF" or else, on Firebase, the "FEEDER STATUS" would just show as "ONE CYCLE" forever until another button is pressed.</p>
+
+                <p style="text-align: justify"> Also, because the two and three cycle lines of code are the exact same as the once cycle's code with only a difference in delays, I skip talking about two and three cycles, lies 179-209.</p>
+
+                <pre><code class="language-arduino">
+// Manually feed for one cycle
+  if (feederStatusString == "ONE CYCLE") {    // If one cycle button is pressed, run code for feeding one cycle
+    digitalWrite(motorSpd, HIGH);
+    digitalWrite(motorDir, LOW);
+    digitalWrite(redLED, LOW);
+    digitalWrite(greenLED, HIGH);
+
+    delay(oneCycleTime);                      // Feeds for 1 seconds
+
+    digitalWrite(motorSpd, LOW);
+    digitalWrite(motorDir, LOW);
+    digitalWrite(redLED, HIGH);
+    digitalWrite(greenLED, LOW);
+    Firebase.set(firebaseData, "/FEEDER STATUS", "OFF");  // Set feeder status in firebase status to "OFF"
+  }
+
+                </code></pre><br><br>
+
+                <p style="text-align: justify"> The last set of code in the loop function is in lines 211-226. This is for manually controlling the feeder with a pushbutton on the breadboard itself, not on the interface. It works exactly the same as the one cycle one does, in terms of functionality, but the only difference is that I use a <code>digitalRead</code> function to detect the status of the button. If it detects as <code>LOW</code>, then one cycle of feeding occurs, as it uses the same delay as the one cycle is.</p>
+
+                <pre><code class="language-arduino">
+  // Using the physical button on the circuit
+  if (digitalRead (physicalButton) == LOW) {   // If physical button is pressed, turn on the feeder and revert LED status
+    Serial.print ("Button On");
+    digitalWrite(motorSpd, HIGH);
+    digitalWrite(motorDir, LOW);
+    digitalWrite(redLED, LOW);
+    digitalWrite(greenLED, HIGH);
+
+    delay(oneCycleTime);                       // Feeds for 1 second (same time as feeding one cycle)
+
+    digitalWrite(motorSpd, LOW);
+    digitalWrite(motorDir, LOW);
+    digitalWrite(redLED, HIGH);
+    digitalWrite(greenLED, LOW);
+  }
+}
+
+                </code></pre><br><br>
+
+                <p style="text-align: justify"> At last, we have reached the end of the code. Lines 228-235 are for sending push notifications to my phone using the app IFTTT, which stands for If This Then That. This is what the second tab, the IFTTT library, is for. To be completely honest, I have no idea what any of the code in the second tab means (because I just downloaded that library from <a href="https://github.com/Siytek/AnotherIFTTTWebhook"> Siytek's GitHub</a> while following <a href="https://siytek.com/arduino-to-ifttt-using-webhooks/"> hig guide</a>. All I know is that this is the only one I have found to work. Anyway, this is void function is called to when the daily feeding cycle activates, which then triggers an event on IFTTT, and finally sends a push notification to me.</p>
+
+                <p style="text-align: justify">Since I already wrote about my experience with IFTTT on <a href="../11_Programming/index.html">my assignment 11 webpage</a>, I'll briefly go over it below.</p>
+
+                <pre><code class="language-arduino">
+void sendIFTTTData() {
+  /*
+     The one line below is for triggering the Feeder_Activated event on
+     IFTTT. Calling to this function means a push notification sends to
+     my phone saying something along the lines of "Your fish have been fed."
+  */
+  send_webhook(IFTTT_Event, IFTTT_Key, "Char 1", "Char 2", "Char 3");
+}
+
+                </code></pre><br><br>
+
+
+
+
+
+
+
+
+
 
 
 
             </div>
         </div>
-        <div class="small-print">
-            <div class="container">
-                <p>Copyright &copy; Faraz Bhuiyan 2021 </p>
+
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <h1 class="page-header">Creating The Web Interface </h1>
             </div>
         </div>
-    </div>
+
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <h1 class="page-header">Future Improvements </h1>
+            </div>
+        </div>
+
+</body>
     
     <!-- jQuery -->
     <script src="../js/jquery-1.11.3.min.js"></script>
@@ -127,6 +720,6 @@
     <!-- Placeholder Images -->
     <script src="../js/holder.min.js"></script>
     
-</body>
+
 
 </html>
