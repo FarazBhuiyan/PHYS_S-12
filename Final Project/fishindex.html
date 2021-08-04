@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Faraz's Automatic Fish Feeder Web Interface</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="text-align: center">
+                    <h1><b> Automated Daily Feeding</b><br></h1>
+
+                    <h3>(Use military time in hr:min format. e.g. "09:15" or "15:30")</h3>
+       
+                    <input type="text" id="FeederSet">
+
+                    <button onclick="setFeedingTime()">Set Feeding Time</button> <br><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="text-align: center">
+
+                    <h3>Last set feeding time:</h3>
+
+                    <h2 id="lastSetTime">00:00</h2>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="text-align: center">
+                    <h1><b>Manual Control</b></h1>
+
+                    <button class="custombutton" id="OnButton" onclick="OnButton()">On</button>
+
+                    <button class="custombutton" id="OffButton" onclick="OffButton()">Off</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="text-align: center">
+                    <button class="custombutton2" id="OneCycle" onclick="OneCycle()">One Cycle</button>
+
+                    <button class="custombutton2" id="TwoCycles" onclick="TwoCycles()">Two Cycles</button>
+
+                    <button class="custombutton2" id="ThreeCycles" onclick="ThreeCycles()">Three Cycles</button>
+                </div>
+            </div>
+        </div><br>
+
+        <hr>
+
+        <div class="row"><br>
+            <div class="col-sm-12">
+                <img class="img-rounded2 center" src="Shrimp.jpg" style="width:50%" alt="Shrimp"><br>
+
+                <p style="text-align: center"> Feed us! -Shrimp and Shrimpette</p>
+            </div>
+         </div>
+    </div>
+    
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+        apiKey: "AIzaSyBq8fCzfQKc6OKETFsA8GAPEflK2VvlmZA",
+        authDomain: "esp32-fish-feeder.firebaseapp.com",
+        databaseURL: "https://esp32-fish-feeder-default-rtdb.firebaseio.com",
+        projectId: "esp32-fish-feeder",
+        storageBucket: "esp32-fish-feeder.appspot.com",
+        messagingSenderId: "586070307447",
+        appId: "1:586070307447:web:75434fd439ae6b32a94c72",
+        measurementId: "G-TMKJKDL5SH"
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
+
+    // Get a database reference for the web interface
+    var ref = firebase.database().ref("/");
+
+    // make the buttons call their respective functions below 
+    document.getElementById('OnButton');
+    document.getElementById('OffButton');
+
+    var lastSetTime = firebase.database().ref('/');
+    lastSetTime.on('value', (snapshot) => {
+        const data = snapshot.val();
+        console.log(data);
+        document.getElementById("lastSetTime").innerHTML = data["FEEDING TIME"];
+    });
+
+
+    function setFeedingTime(){
+        var feedingTime = document.getElementById("FeederSet").value;
+        console.log("New feeding time set");
+        alert("Feeding Time Set");
+        document.getElementById("lastSetTime").innerHTML = lastSetTime;
+        ref.update({
+            "FEEDING TIME": (feedingTime)
+        })
+    } 
+
+    function OnButton(){
+        console.log("Feeder manually turned on");
+        alert("Feeder Turned On Manually");
+        ref.update({
+            "FEEDER STATUS": "ON"
+        })
+    } 
+
+    function OffButton(){
+        console.log("Feeder manually turned off");
+        alert("Feeder Turned Off Manually");
+        ref.update({
+            "FEEDER STATUS": "OFF"
+        })
+    } 
+
+    function OneCycle(){
+        console.log("Feeder manually activated for one cycle");
+        alert("Feeder Activated For One Cycle");
+        ref.update({
+            "FEEDER STATUS": "ONE CYCLE"
+        })
+    } 
+
+    function TwoCycles(){
+        console.log("Feeder manually activated for two cycles");
+        alert("Feeder Activated For Two Cycles");
+        ref.update({
+            "FEEDER STATUS": "TWO CYCLES"
+        })
+    } 
+
+    function ThreeCycles(){
+        console.log("Feeder manually activated for three cycles");
+        alert("Feeder Activated For Three Cycle");
+        ref.update({
+            "FEEDER STATUS": "THREE CYCLES"
+        })
+    } 
+
+    </script>
+</body>
+
+
+<!-- jQuery -->
+<script src="./js/jquery-1.11.3.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="./js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport bug workaround -->
+<script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Placeholder Images -->
+<script src="./js/holder.min.js"></script>
+
+</html>
+

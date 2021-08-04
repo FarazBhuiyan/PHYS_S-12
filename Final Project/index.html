@@ -124,13 +124,50 @@
 
                 <p style="text-align: justify">On the interface, there is a box to type in a time using military time in hr:min format. Then, by clicking the "Set Feeding Time" button, the set time is updated in Google Firebase. The set feeding time is then shown below "Last set feeding time:".</p>
 
-                <p style="text-align: justify"> In addition to the automatic daily feeding, I added manual control. This way, I could go onto the interface website to manually feed the fish whenever I wanted to. There are "On" and "Off" buttons to continuouly run or turn off the feeder. There are also set cycle buttons to run the feeder for a set period of time. Currently, I have one cycle set to 1 second, two cycles set to 1.5 seconds, and three cycles set to 2 seconds.</p>
-
-                <p style="text-align: justify"> I go more in-depth on the functions, the coding, and Firebase in their own respective sections.</p>
+                <p style="text-align: justify"> In addition to the automatic daily feeding, I added manual control. This way, I could go onto the interface website to manually feed the fish whenever I wanted to. There are "On" and "Off" buttons to continuouly run or turn off the feeder. There are also set cycle buttons to run the feeder for a set period of time. Currently, I have one cycle set to 1.5 seconds, two cycles set to 2 seconds, and three cycles set to 2.5 seconds.</p>
             </div>
 
             <div class="col-sm-6"> 
                 <img class="img-rounded center" src="Web Interface.PNG" alt="Web Interface" style="width:100%">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4"> 
+                <img class="img-rounded center" src="Firebase Sum.PNG" alt="Firebase" style="width:100%">
+            </div>
+
+            <div class="col-sm-8"> 
+                <p style="text-align: justify">The the left is what the Firebase console looks like. When something is inputted on the web interface, it updates here. The "FEEDER STATUS" can either display "ON," "OFF," "ONE CYCLE," "TWO CYCLES," or "THREE CYCLES" for each's respective function when activated. The "FEEDING TIME" updates whenever a new time is set on the web interface. This time is stored forever until it's changed again.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <p style="text-align: justify">Then, in the Huzzah code, I made a few lines of code that detect when the "FEEDER STATUS" and "FEEDING TIME" have changed and result in an output respective to the given input. For example, clicking the "One Cycle" button on the web interface activates the set of code for one feeding cycle. </p>
+
+                <p style="text-align: justify">The line of code below is line 164 in the main code page (I talk more in depth on coding later). This <code>if()</code> function only activates when the "FEEDER STATUS" is "ONE CYCLE." And, the only way for the "FEEDER STATUS" to show "ONE CYCLE" is for the "One Cycle" button to be pressed on the web interface. Just to note with the code below, I put ... in the <code>if()</code> statement here, but in the real code, it has the actual functions. I have these <code>if()</code> statements for all of the web interface inputs, so there is one for the set time, one for manually turning on, one for manually turning off, and three for the cycles.</p>
+
+                    <pre><code class="language-arduino">
+if (feederStatusString == "ONE CYCLE") {    // If one cycle button is pressed, run code for feeding one cycle
+...
+...
+}
+                </code></pre>
+
+                <p style="text-align: justify"> Think of it like a chain-of-command. First, the user inputs something on the web interface, which then outputs data to Firebase. When Firebase recieves the data from the web interface, Firebase outputs that data to the Huzzah. Finally, the Huzzah recieves all data changes from Firebase and then outputs the respective function to the whole feeder circuit, whether that's activating the motor or changing the LED status.</p>
+
+                <p style="text-align: justify"> So, going along with the one cycle example, if the "One Cycle" button is pressed on the interface, then first Firebase gets updated, then the Huzzah reads the changes, and finally the Huzzah activates the motor and/or LEDs that correspond to the activated function.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"> 
+                <p style="text-align: justify"> Another cool feature I have is that when the feeder automatically feeds using the set time, I get a push notification on my phone saying something along the lines of "Your fish have been fed on this day at this time." This is more of a quality-of-like improvement than it is a functional one because now, I'll know that the fish have been fed at the exact set time everyday.</p>
+            </div>
+
+            <div class="col-sm-6"> 
+                <img class="img-rounded2 center" src="IFTTT Notification.jpg" alt="IFTTT Notification" style="width:100%">
             </div>
         </div>
 
@@ -256,16 +293,16 @@
                 <p style="text-align: justify">The images below show a close-up of the mount. I super-glued two M3 nuts into the M3 nut sockets so they don't fall out. Two M3 screws can then be screwed in from the right-hand side to creat a clamp around the fish tank glass.</p>
 
                 <div class="col-sm-6">
-                    <img class="img-rounded center" src="Mount LeftSQ.JPG" alt="SMount LeftSQ" style="width:100%">
+                    <img class="img-rounded center" src="Mount LeftSQ.jpg" alt="SMount LeftSQ" style="width:100%">
                 </div>
 
                 <div class="col-sm-6">
-                    <img class="img-rounded center" src="Mount RightSQ.JPG" alt="Mount LeftSQ" style="width:100%">
+                    <img class="img-rounded center" src="Mount RightSQ.jpg" alt="Mount LeftSQ" style="width:100%">
                 </div>
             </div>
 
             <div class="col-sm-6">
-                <img class="img-rounded center" src="Side ProfileSQ.JPG" alt="Side ProfileSQ" style="width:100%">
+                <img class="img-rounded center" src="Side ProfileSQ.jpg" alt="Side ProfileSQ" style="width:100%">
             </div>
         </div>
 
@@ -276,6 +313,8 @@
                 <p style="text-align: justify">You can see one of the key design features I implemented in the electronics box below: the extrusions to hold the breadboard in place. I made tiny angled extrusions along the bottom of the walls in the box to act as friction points that hold the breadboard in place. I didn't want to use hardware to physically mount the breadboard in place, so this is a pretty neat solution.</p>
 
                 <p style="text-align: justify">I made cutouts in the walls of the enclosure where the LEDs were going to be, where the Huzzah power cable was going to come through, and on the lid where the motor wires go out of the enclosure. I also made long cutouts on the side walls of the enclosure to give it more of an open look than the previous closed box. In addition to those cutouts, I made circular holes in the bottom of the box and on the lid. The ones on the bottom are for using with my fingers to help orient the breadboard in the correct position and the ones on the lid are for acting as a handle.</p>
+
+                <p style="text-align: justify">On the inside of the LED cutout, I attached a small piece of parchment paper to act as a diffuser when looking through the other side.</p>
             </div>
         </div>
 
@@ -393,7 +432,6 @@
                 <p style="text-align: justify">Starting off the code with the global section, lines 1-6 are for including the necessary libraries.</p>
 
                 <pre><code class="language-arduino">
-
 // Libraries
 #include &ltFirebaseESP32.h&gt          // Firebase library
 #include &ltWiFi.h&gt                   // ESP32 WiFi library
@@ -451,11 +489,11 @@ const int physicalButton = 14;
 
                 <pre><code class="language-arduino">
 // Creating time delays for each feeding cycle and daily feeding time
-const int oneCycleTime = 1000;                                           // One cycle time set to 1 second
-const int twoCycleTime = 1500;                                           // Two cycles time set to 1.5 seconds
-const int threeCycleTime = 2000;                                         // Three cycles time set to 2 seconds
+const int oneCycleTime = 1500;                                           // One cycle time set to 1.5 seconds
+const int twoCycleTime = 2000;                                           // Two cycles time set to 2 seconds
+const int threeCycleTime = 2500;                                         // Three cycles time set to 2.5 seconds
 const int dailyFeedingCycleTime = oneCycleTime;                          // Daily feeding cycle time set to same as one cycle time
-const int dailyFeedingCyleTimeDelay = 60000 - dailyFeedingCycleTime;     // Delay set for 59 seconds after the initial cycle 
+const int dailyFeedingCyleTimeDelay = 60000 - dailyFeedingCycleTime;     // Delay set for 58.5 seconds after the initial cycle to prevent more cycles during the minute
                 </code></pre><br><br>
 
                 <p style="text-align: justify">Finally, starting with line 49, the setup function begins. Lines 50-61 are for starting a serial monitor, which is used for debugging, and initializing the WiFi connection between the Huzzah and my home WiFi.</p>
@@ -543,7 +581,6 @@ void loop() {
   Firebase.get(firebaseData, "/FEEDER STATUS");    // Get feeder status input from firebase
   feederStatusString = firebaseData.stringData();  // Change to e.g. intData() or boolData()
   //Serial.println(feederStatusString);            // For debugging
-
                 </code></pre><br><br>
 
                 <p style="text-align: justify">Lines 108-121 are for recieving an active time from the NTP client. I first created a <code>char</code> data type that stores the current time. Then, I use the <code>strftime</code> function with the <code>%R</code> specifier to format time recieved from the client into military time using hr:min format that then constatly updates the <code>currentTime</code> variable. I wanted to use military time to set the time to make the web interface simple. Also, I have other timers for my fish tank that use military time, so I can keep them all in sync. Information on the <code>strftime</code> function and specifiers can be found by <a href="https://www.cplusplus.com/reference/ctime/strftime/">clicking here</a>.  </p>
@@ -563,7 +600,6 @@ char currentTime [6];                         // Saving hour variable as char da
 strftime(currentTime, 6, "%R", &timeinfo);    // Strifetime() is a command for formatting time as a string. Writes time as HR:MIN ("00:00")
 Serial.println(currentTime);
 Serial.println();
-
                 </code></pre><br><br>
 
                 <p style="text-align: justify">Finally, we've reached the code for the actual feeding functions. To kick things off, lines 124-145 is where the daily feeding cycle code is. Note that within the <code>if()</code> statement, the variable <code>feedingTimeString</code> is being used. The <code>if()</code> statement basically says "if the time set on the web interface is equal to the current time recieved from the NTP client, run the code below." The code below is just turning the DC motor on for 1 second, which is the length of one cycle, and then turn off for 59 seconds, which is the delay I set. The reason for this is because the time recieved from the interface and the current time are equal for 1 whole minute, meaning that the <code>if()</code> statement activates for the period of the whole minute. With a delay of 59 seconds, the <code>if()</code> statement is only able to run once, thus solving the issue.</p>
@@ -574,7 +610,6 @@ Serial.println();
 /*
     This section is for recieving the input data from firebase and sending outputs to the motor and the status LEDs
 */
-
   // Daily set feeding time
   if (feedingTimeString == currentTime) {     // Compare the input of motor status received from firebase
     sendIFTTTData();                          // Executes sendData function that sends the push notification to my phone
@@ -583,7 +618,7 @@ Serial.println();
     digitalWrite(redLED, LOW);                // The red LED turns off and green turns on, meaning it's currently feeding
     digitalWrite(greenLED, HIGH);
 
-    delay(dailyFeedingCycleTime);             // Feeds for 1 second
+    delay(dailyFeedingCycleTime);             // Feeds for 1.5 seconds
 
     Serial.println("Motor Turned OFF");
     digitalWrite(motorSpd, LOW);
@@ -591,7 +626,7 @@ Serial.println();
     digitalWrite(redLED, HIGH);
     digitalWrite(greenLED, LOW);
 
-    delay(dailyFeedingCyleTimeDelay);         // Delay off for 59 seconds to stop feeding after the first cycle.
+    delay(dailyFeedingCyleTimeDelay);         // Delay off for 58.5 seconds to stop feeding after the first cycle.
   }
 
                 </code></pre><br><br>
@@ -614,12 +649,11 @@ Serial.println();
     digitalWrite(redLED, HIGH);
     digitalWrite(greenLED, LOW);
   }
-
                 </code></pre><br><br>
 
                 <p style="text-align: justify"> Lines 163-177 are for the "One Cycle" function of the feeder. Again, like the previous <code>if()</code> statement, if this <code>if()</code> statement gets updated to "ONE CYCLE," then the code runs. Because this cycle is timed, I used a <code>Firebase.set</code> command after the cycle that sets the <code>FEEDER STATUS</code> to "OFF" or else, on Firebase, the "FEEDER STATUS" would just show as "ONE CYCLE" forever until another button is pressed.</p>
 
-                <p style="text-align: justify"> Also, because the two and three cycle lines of code are the exact same as the once cycle's code with only a difference in delays, I skip talking about two and three cycles, lies 179-209.</p>
+                <p style="text-align: justify"> Also, because the two and three cycle lines of code are the exact same as the once cycle's code with only a difference in delay length, I skip talking about two and three cycles, lies 179-209.</p>
 
                 <pre><code class="language-arduino">
 // Manually feed for one cycle
@@ -629,7 +663,7 @@ Serial.println();
     digitalWrite(redLED, LOW);
     digitalWrite(greenLED, HIGH);
 
-    delay(oneCycleTime);                      // Feeds for 1 seconds
+    delay(oneCycleTime);                      // Feeds for 1.5 seconds
 
     digitalWrite(motorSpd, LOW);
     digitalWrite(motorDir, LOW);
@@ -637,7 +671,6 @@ Serial.println();
     digitalWrite(greenLED, LOW);
     Firebase.set(firebaseData, "/FEEDER STATUS", "OFF");  // Set feeder status in firebase status to "OFF"
   }
-
                 </code></pre><br><br>
 
                 <p style="text-align: justify"> The last set of code in the loop function is in lines 211-226. This is for manually controlling the feeder with a pushbutton on the breadboard itself, not on the interface. It works exactly the same as the one cycle one does, in terms of functionality, but the only difference is that I use a <code>digitalRead</code> function to detect the status of the button. If it detects as <code>LOW</code>, then one cycle of feeding occurs, as it uses the same delay as the one cycle is.</p>
@@ -651,7 +684,7 @@ Serial.println();
     digitalWrite(redLED, LOW);
     digitalWrite(greenLED, HIGH);
 
-    delay(oneCycleTime);                       // Feeds for 1 second (same time as feeding one cycle)
+    delay(oneCycleTime);                       // Feeds for 1.5 seconds (same time as feeding one cycle)
 
     digitalWrite(motorSpd, LOW);
     digitalWrite(motorDir, LOW);
@@ -659,7 +692,6 @@ Serial.println();
     digitalWrite(greenLED, LOW);
   }
 }
-
                 </code></pre><br><br>
 
                 <p style="text-align: justify"> At last, we have reached the end of the code. Lines 228-235 are for sending push notifications to my phone using the app IFTTT, which stands for If This Then That. This is what the second tab, the IFTTT library, is for. To be completely honest, I have no idea what any of the code in the second tab means (because I just downloaded that library from <a href="https://github.com/Siytek/AnotherIFTTTWebhook"> Siytek's GitHub</a> while following <a href="https://siytek.com/arduino-to-ifttt-using-webhooks/"> hig guide</a>. All I know is that this is the only one I have found to work. Anyway, this is void function is called to when the daily feeding cycle activates, which then triggers an event on IFTTT, and finally sends a push notification to me.</p>
@@ -675,22 +707,77 @@ void sendIFTTTData() {
   */
   send_webhook(IFTTT_Event, IFTTT_Key, "Char 1", "Char 2", "Char 3");
 }
-
                 </code></pre><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify"> <a href="https://ifttt.com">IFTTT</a> is "is a service that allows a user to program a response to events in the world," as written by Wikipedia. Essentially, you make "if" and "then" statements for virtually anything. For example, if someone rings your doorbell, you can have IFTTT set up to send you a notification on your phone, log it down on a spreadsheet, turn the front lights on, etc.</p>
+
+                <p style="text-align: justify"> In my case, I am using "Webhooks" as my "if" statement. Using webhooks is the way to recieve web requests on IFTTT, meaning that's how the Huzzah will be communicating with the IFTTT app. </p>
+
+                <p style="text-align: justify"> For my "then" statement, I'm using "Notifications" as the output. This is how IFTTT will respond when a web request is recieved from the Huzzah. </p>
+
+                <p style="text-align: justify"> The pictures below show my main Applet screen. An Applet is one whole "if this" event happens "then that" event occurs app. Hence the name Applet. The title of my Applet is the first image below. The second image is of my Applet's "if" and "then" settings page, where I can edit what is the "if" event and what is the "then" result.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="IFTTT Main.PNG" alt="IFTTT Main" style="width:100%">
+            </div>
+
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="IFTTT IFT TT.PNG" alt="IFTTT IFT TT" style="width:100%">
+
+                <p style="text-align: justify"> One thing to note is that in the picture above, the black "+" signs are for adding filters to the data and querying subsets of the data. Because I don't have the pro version of IFTTT, I don't have access to that.<p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify"> Below are images of what I specifically set as the "if" and "then" statements.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify">The "if" statement is where I created the event name "Feeder_Activated." I put in this event name in the Arduino code as the <code>IFTTT_Event</code>. This is what triggers when the daily feeding time equals the current time (when the fish feeder automatically runs).</p>
+
+                <p style="text-align: justify">Then, for my "then" statement, I have a notification pushed from the IFTTT app on my phone. The actual messsage can be changed to whatever you want, but I have it set so it tells me the event, "Feeder_Activated," occured and at what time it occured. The time part is just for keeping track of what time I have set, so I don't always have to go back to the interface.</p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="IFTTT If.PNG" alt="IFTTT If" style="width:100%">
+            </div>
+
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="IFTTT Then.PNG" alt="IFTTT Then" style="width:100%">
+            </div>
+        </div>
+
+        <div class="row"><br>
+            <div class="col-sm-12">
+                <p style="text-align: justify">And that's it for setting up an IFTTT Applet. I'd recommend checking out <a href="https://create.arduino.cc/projecthub/uladzislau-bayouski/ifttt-the-phone-connected-3a009b">this project guide</a> by Uladzislau Bayouski on setting up Webhooks and Notifications on IFTTT and <a href="https://siytek.com/arduino-to-ifttt-using-webhooks/">this guide</a> by Siytek on connecting Arduino to IFTTT.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <div class="row">
