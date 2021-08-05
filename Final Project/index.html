@@ -745,7 +745,7 @@ Serial.println();
             <div class="col-sm-6">
                 <img class="img-rounded center" src="IFTTT IFT TT.PNG" alt="IFTTT IFT TT" style="width:100%">
 
-                <p style="text-align: justify"> One thing to note is that in the picture above, the black "+" signs are for adding filters to the data and querying subsets of the data. Because I don't have the pro version of IFTTT, I don't have access to that.<p>
+                <p style="text-align: justify"> One thing to note is that in the picture above, the black "+" signs are for adding filters to the data and querying subsets of the data. Because I don't have the pro version of IFTTT, I don't have access to that.</p>
             </div>
         </div>
 
@@ -1177,9 +1177,9 @@ lastSetTime.on('value', (snapshot) => {
             </div>
         </div>
 
-        <div class="row">
+        <div class="row"><br>
             <div class="col-sm-12"> 
-                <p style="text-align: justify"> These two videos are the last two of the page. The first one is a complete assembly guide from scratch (for anyone wanting to make it) and the second is a demo of the manual pushbutton.</p>
+                <p style="text-align: justify"> The two videos below are the last two of the page. The first one is a complete assembly guide from scratch (for anyone wanting to make it) and the second is a demo of the manual pushbutton.</p>
             </div>
         </div>
 
@@ -1200,7 +1200,38 @@ lastSetTime.on('value', (snapshot) => {
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-sm-12"> 
+                <p style="text-align: justify"> There are three main improvements I would like to make in the future. One is adding a small TFT display above the LED indicator, another is to fix the connection delay issues, and the last is to add more functions to the web interface. I give a brief summary of each below.</p>
+
+                <p style="text-align: justify"> My original plan for the electronics box was to have a TFT display above the LED indicator that would scroll throug the current time, set time, and feeding status. Unfortunately, I couldn't get my TFT display to work on either Huzzah or the Metro boards. This is something that is definitely possible, but I just have to buy a new TFT display because I'm pretty sure mine's broken. </p>
+
+                <p style="text-align: justify"> The connection issue I'm talking about has to do with a delay between pressing a button on the interface and the fish feeder actually outputting that function. An example of this delay can be seen in the second video of the last section. There isn't always a delay, but when there is, it gets quite frustrating to work with the feeder. I don't know what the root cause of the issue is, though. I'm guessing it has something to do with the connection from the interface to Firebase because there isn't anything wrong with the hardware.</p>
+
+                <p style="text-align: justify"> The last improvement I would like to make is adding more functionality to the web interface. One thing I think would be cool is specific times for specific days. This can be good for feeding the fish when you are at home to make sure everything is working fine. Another thing I can do is to select what type of food (large pellets, small pellets, dried bloodworms, etc) I have in the food holder and have the feeder automatically know how much the motor should spin to get the correct amount of food into the tank. This would be a great help because I wouldn't have to go into the code each time to adjust the delay for feeding because, as of right now, the feeder is only meant to be filled with these really small pellets. The delays wont work for larger pellets because they fill in the gaps between the screw thread more than the small pellets do, so they come out at a slower rate.</p>
+            </div>
+        </div>
+    </div>
 </body>
+    
+ <footer><br>
+    <div class="footer-blurb">
+        <div class="row"><br>
+            <div class= "text-center">
+                <a href="../12_Wildcard/index.html" class="previous PageTurn">&#8249; Previous Assignment</a>
+                <a href="../index.html" class="next PageTurn"> Home Page &#8250;</a>
+            </div><br>
+
+            <h4 style="text-align: center"><a href="../index.html">Home</a> | <a href="../01_Intro/index.html">01</a> | <a href="../02_2D/index.html">02</a> | <a href="../03_Electronics/index.html">03</a> | <a href="../04_RapidProto/index.html">04</a> | <a href="../05_Programable/index.html">05</a> | <a href="../06_3D/index.html">06</a> | <a href="../07_Electronic Input/index.html">07</a> | <a href="../08_Electronic Output/index.html">08</a> | <a href="../09_Network/index.html">09</a> | <a href="../10_Machine/index.html">10</a> | <a href="../11_Programming/index.html">11</a> | <a href="../12_Wildcard/index.html">12</a> | <a href="../Final Project/index.html">Final Project</a></h4>
+        </div>
+    </div>
+    
+    <div class="small-print">
+        <div class="container">
+            <p style="text-align: center">Copyright &copy; Faraz Bhuiyan 2021 </p>
+        </div>
+    </div>
+</footer>
     
     <!-- jQuery -->
     <script src="../js/jquery-1.11.3.min.js"></script>
@@ -1214,6 +1245,4 @@ lastSetTime.on('value', (snapshot) => {
     <!-- Placeholder Images -->
     <script src="../js/holder.min.js"></script>
     
-
-
 </html>
