@@ -107,13 +107,17 @@
 
         <div class="row">
             <div class="col-sm-12"> 
-                <p> Below, there is a quick demonstration video of the feeder.</p>
+                <p> Below, there is a quick demonstration video of the feeder. I recommend using sound to hear when the motor activates.</p>
+
+                <iframe width="900" height="510" class= "center" src="https://www.youtube.com/embed/jArrtYOfalk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+                <p> <a href= "fishindex.html">Click here</a> to view a demo of the web interface page.</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-12"> 
-                <h1 class="page-header">A Summary Of How It Works </h1>
+                <h1 class="page-header">A Summary of How it Works </h1>
             </div>
         </div>
 
@@ -186,7 +190,7 @@ if (feederStatusString == "ONE CYCLE") {    // If one cycle button is pressed, r
 
         <div class="row">
             <div class="col-sm-6"> 
-                <h2>From The Kit: </h2>
+                <h2>From the Kit: </h2>
 
                 <p> » 1x Small Breadboard<br>
                     » 1x ESP32 Huzzah<br>
@@ -203,7 +207,7 @@ if (feederStatusString == "ONE CYCLE") {    // If one cycle button is pressed, r
             </div>
 
             <div class="col-sm-6"> 
-                <h2>Not From The Kit: </h2>
+                <h2>Not From the Kit: </h2>
 
                 <p> » 1x 3D Printed Electronics Enclosure<br>
                     » 1x 3D Printed Electronics Enclosure Lid<br>
@@ -242,6 +246,8 @@ if (feederStatusString == "ONE CYCLE") {    // If one cycle button is pressed, r
 
          <div class="row"><br>
             <div class="col-sm-12"> 
+                <h2>Designing the Fish Feeder</h2>
+
                 <p style="text-align: justify"> The embeded model viewers below show my final fish feeder model. In the first model viewer, I made the feeder appearance blue glass and the screw appearance yellow plastic to show how the screw fits inside of the feeder. The second embed shows the feeder and screw with their generic grey colors (the same color I 3D printed them in).</p>
             </div>
         </div>
@@ -308,6 +314,8 @@ if (feederStatusString == "ONE CYCLE") {    // If one cycle button is pressed, r
 
         <div class="row">
             <div class="col-sm-12"><br>
+                <h2>Designing the Electronics Box</h2>
+
                 <p style="text-align: justify"> The next step was the create an enclosure for the main electronics (the Huzzah, motor driver, wires, etc). I made a seperate box for the electronics because I didn't want the feeder itself to be bulky, so this was really the only option. The image below shows the three prototype and final enclosures I made. </p>
 
                 <p style="text-align: justify">You can see one of the key design features I implemented in the electronics box below: the extrusions to hold the breadboard in place. I made tiny angled extrusions along the bottom of the walls in the box to act as friction points that hold the breadboard in place. I didn't want to use hardware to physically mount the breadboard in place, so this is a pretty neat solution.</p>
@@ -386,7 +394,6 @@ if (feederStatusString == "ONE CYCLE") {    // If one cycle button is pressed, r
                 <p style="text-align: justify"> For the button, One end of the button connects to pin 14 on the Huzzah and the other connects to ground. Because I am using the built-in pullup resistors, I am not using a resistor for the button.</p>
 
                 <p style="text-align: justify"> Lastly, there are two black wires going from the "MOTOR B" connectors on the motor driver to the pins on the DC motor.</p>
-
             </div>
 
             <div class="col-sm-6">
@@ -410,6 +417,24 @@ if (feederStatusString == "ONE CYCLE") {    // If one cycle button is pressed, r
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify"> The images below show what the breadboard circuit looks like when inside the electrical box. It's a bit cramped, but it still fits everything perfectly.</p>
+
+                <p style="text-align: justify"> One thing I did to prevent the wires from ripping out of the board if I dropped the electrical box was screwing one corner of the motor driver to the side walls. The side holes were a completely a design choice that ended up being really helpful because of that screw. The picture to the bottom right shows the motor driver attached to one of the sides using the small M3 screw, an M3 washer, and an M3 nut. Screwing the driver in ensures that if the electrical box (or the fish feeder) ever drops, then the wires don't take out the whole thing. In this case, the two black wires may come out of the driver sockets, but they won't pull the driver and other wires out with them.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="Box Top.JPG" alt="Box Top" style="width:100%">
+            </div>
+
+            <div class="col-sm-6">
+                <img class="img-rounded center" src="Box Screw.JPG" alt="Box Screw" style="width:100%">
+            </div>
+        </div>
+
 
         <div class="row">
             <div class="col-sm-12"> 
@@ -421,90 +446,88 @@ if (feederStatusString == "ONE CYCLE") {    // If one cycle button is pressed, r
             <div class="col-sm-12">
                 <p style="text-align: justify"> This section is for the coding part of my fish feeder. Because I have already talked about most of the code in <a href="../11_Programming/index.html">my assignment 11 webpage</a>, I'll breifly go over the different parts of the code.</p>
 
-                <p style="text-align: justify"> Below, I have embeded the full code for my final project. Further below the embed, I talk about the important parts.</p>
+                <p style="text-align: justify"> Below, I have embeded the full code for my final project. Further below the embed, I talk about parts of the code.</p>
 
                 <p style="text-align: justify"> Just a quick note, in the code itself, I wrote a lot of pseudo code to explain what each line of code means.</p>
 
+                <h2>Full Arduino Code</h2>
+
                 <iframe src=https://create.arduino.cc/editor/farazb/a5d35706-c5d9-431e-91d6-6671a3a6892f/preview?embed style="height:3750px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+                <h2>Arduino Code Overview</h2>
 
                 <p style="text-align: justify"> Now, I'll talk about the code in parts.</p><br>
 
                 <p style="text-align: justify">Starting off the code with the global section, lines 1-6 are for including the necessary libraries.</p>
 
-                <pre><code class="language-arduino">
-// Libraries
+<pre><code class="language-arduino">// Libraries
 #include &ltFirebaseESP32.h&gt          // Firebase library
 #include &ltWiFi.h&gt                   // ESP32 WiFi library
 #include "time.h"                   // Arduino's time library. Needed for NTP client
 #include &ltArduino.h&gt                // Needed for the AnotherIFTTTWebhook library
-#include "AnotherIFTTTWebhook.h"    // IFTTT Arduino library made by Siytek for connecting Arduino to IFTTT. GitHub page is https://github.com/Siytek/AnotherIFTTTWebhook
-                </code></pre><br><br>
+#include "AnotherIFTTTWebhook.h"    // IFTTT Arduino library made by Siytek 
+</code></pre><br><br>
 
                 <p style="text-align: justify">Lines 8-19 are for defining Firebase, WiFi, and IFTTT info. These will be referenced to later when the code calls for their respective functions. I left mine blank for privacy reasons, but the actual code has all the real info.</p>
 
-                <pre><code class="language-arduino">
-// Firebase hosting link and authentication key
-#define FIREBASE_HOST ""            // the project name address from firebase id
-#define FIREBASE_AUTH ""            // the secret key generated from firebase
-FirebaseData firebaseData;          // Define FirebaseESP32 data object
+<pre><code class="language-arduino">// Firebase hosting link and authentication key
+#define FIREBASE_HOST ""      // The project name address from firebase ID
+#define FIREBASE_AUTH ""      // The secret key generated from firebase
+FirebaseData firebaseData;     
 
 // Wifi SSID and password
-#define WIFI_SSID ""
+#define WIFI_SSID ""        
 #define WIFI_PASSWORD ""
 
 // IFTTT Webhooks event name and key
-#define IFTTT_Key ""                      // secret key given by IFTTT for my feeder push notification applet
-#define IFTTT_Event "Feeder_Activated"    // name of the event I set on IFTTT
-                </code></pre><br><br>
+#define IFTTT_Key ""                      // Secret key given by IFTTT 
+#define IFTTT_Event "Feeder_Activated"    // Name of the event I set on IFTTT
+</code></pre><br><br>
 
                 <p style="text-align: justify">Lines 21-28 are for defining data recieved from Firebase as <a href="https://www.arduino.cc/reference/en/language/variables/data-types/string/">string</a> data types and defining variables for the NTP client. I talk more on the Firebase stuff later. For the NTP client, I just followed <a href="https://randomnerdtutorials.com/esp32-date-time-ntp-client-server-arduino/">this NTP client guide</a> by Random Nerd Tutorials. The tutorial is really comprehensive and easy to understand. The changes I made were setting the server to the U.S. server and changing to offset to -18000 seconds (-5 hours) because I live in the Central Time Zone (CST), which is 5 hours behind Greenwich Mean Time (GMT). Also, if needed, I can change the daylight offset to 3600 seconds (1 hour) to enable a time offset for daylight savings.</p>
 
-                <pre><code class="language-arduino">
-// Data recieved from Firebase
+<pre><code class="language-arduino">// Data recieved from Firebase
 String feedingTimeString = "";      // Daily feeding time received as string data from firebase
 String feederStatusString = "";     // Feeder status received as string data from firebase
 
 // NTP server stuff for time
-const char* ntpServer = "us.pool.ntp.org";   // Using U.S. NTP server
-const long  gmtOffset_sec = -18000;          // Time offset from GMT to CST is -18000 seconds (-5 hours or 5 hours behind)
-const int   daylightOffset_sec = 0;          // Currently no daylight savings time. Otherwise, if daylight savings time, then 3600 for 1 hour shift.
-                </code></pre><br><br>
+const char* ntpServer = "us.pool.ntp.org";  
+const long  gmtOffset_sec = -18000;        
+const int   daylightOffset_sec = 0;         
+</code></pre><br><br>
 
                 <p style="text-align: justify">Lines 30-39 are for defining the motor, LED, and button pins to their respective names I created. I could've used the <code>#define</code> function for the pins, but I prefer to create <code>const int</code> variables instead to differenciate between defining long variables and pins.</p>
 
-                <pre><code class="language-arduino">
-// Defining DC motor pins
-const int motorSpd = 13;     // Pin 13 for motor speed
-const int motorDir = 12;     // Pin 12 for motor direction
+<pre><code class="language-arduino">// Defining DC motor pins
+const int motorSpd = 13;   
+const int motorDir = 12;   
 
 // Defining LED motor pins
-const int greenLED = 23;     // Pin 23 for the green LED
-const int redLED = 21;       // Pin 21 for the red LED
+const int greenLED = 23;    
+const int redLED = 21;    
 
 // Defining physical button pin (button on breadboard)
 const int physicalButton = 14;
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify">Lines 41-46 are for defining cycle variables by set times. These variables will then be used later when their respective functions (One Cycle, Two Cycles, etc) are called. This is just to make editing the set cycle feeding times easy if I ever need to.</p>
 
-                <pre><code class="language-arduino">
-// Creating time delays for each feeding cycle and daily feeding time
-const int oneCycleTime = 1500;                                           // One cycle time set to 1.5 seconds
-const int twoCycleTime = 2000;                                           // Two cycles time set to 2 seconds
-const int threeCycleTime = 2500;                                         // Three cycles time set to 2.5 seconds
-const int dailyFeedingCycleTime = oneCycleTime;                          // Daily feeding cycle time set to same as one cycle time
-const int dailyFeedingCyleTimeDelay = 60000 - dailyFeedingCycleTime;     // Delay set for 58.5 seconds after the initial cycle to prevent more cycles during the minute
-                </code></pre><br><br>
+<pre><code class="language-arduino">// Creating time delays for each feeding cycle and daily feeding time
+const int oneCycleTime = 1500;     
+const int twoCycleTime = 2000;                                    
+const int threeCycleTime = 2500;                                    
+const int dailyFeedingCycleTime = oneCycleTime;                    
+const int dailyFeedingCyleTimeDelay = 60000 - dailyFeedingCycleTime; 
+</code></pre><br><br>
 
                 <p style="text-align: justify">Finally, starting with line 49, the setup function begins. Lines 50-61 are for starting a serial monitor, which is used for debugging, and initializing the WiFi connection between the Huzzah and my home WiFi.</p>
 
-                <pre><code class="language-arduino">
-void setup() {
+<pre><code class="language-arduino">void setup() {
   Serial.begin(115200);
   delay(1000);
 
   // Connect to wifi
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);  // Try to connect with WiFi
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD); 
 
   Serial.print("Connecting to ");
   Serial.print(WIFI_SSID);
@@ -512,32 +535,29 @@ void setup() {
     Serial.print(".");
     delay(500);
   }
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify">Lines 63-71 are for connecting the Huzzah to Google Firebase. This is where I set the <code>"FEEDER STATUS"</code> as <code>"OFF"</code>. The "FEEDER STATUS" is one piece of data that is recieved by the Huzzah from Firebase. I talk about this later, but in summary, this changes to "ON" if the feeder is manually turned on, and changes to "ONE CYCLE," "TWO CYCLES," or "THREE CYCLES" when the respective cycle is activated on the web interface.</p>
 
-                <pre><code class="language-arduino">
-Serial.println();
+<pre><code class="language-arduino">Serial.println();
 Serial.print("Connected to ");
 Serial.println(WIFI_SSID);
 Serial.print("IP Address is : ");
-Serial.println(WiFi.localIP());                       // Print local IP address
+Serial.println(WiFi.localIP());                       
 Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);         // Connect to firebase
 Firebase.reconnectWiFi(true);
 Firebase.set(firebaseData, "/FEEDER STATUS", "OFF");  // Set initial status to "OFF"
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify">Lines 73-74 are for initializing the NTP server connection. This is how the Huzzah recieves the current time value. The line of code uses the <code>gmtOffset_sec</code>, <code>daylightOffset_sec</code>, and <code>ntpServer</code> variables I globally defined above the setup function.</p>
 
-                <pre><code class="language-arduino">
-// Initialize NTP server connection to get the current time
+<pre><code class="language-arduino">// Initialize NTP server connection to get the current time
 configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify">Lines 76-85 are for defining min modes for the motor, LED, and pushbutton pins. To signify the use of a pullup resistor, I defined the <code>pinMode</code> for the pushbutton as <code>INPUT_PULLUP</code>.</p>
 
-                <pre><code class="language-arduino">
-// Motor pin modes
+<pre><code class="language-arduino">// Motor pin modes
 pinMode(motorDir, OUTPUT);     // Connects to B-1B on motor driver. Controls motor speed
 pinMode(motorSpd, OUTPUT);     // Connects to B-1A on motor driver. Controls motor direction
 
@@ -547,18 +567,17 @@ pinMode(greenLED, OUTPUT);     // Connects to pin 21 on the Huzzah ESP32
 
 // Pin mode for physical button
 pinMode(physicalButton, INPUT_PULLUP);  // Connects to pin 32 on the Huzzah ESP32
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify">To end off the setup of the code, I defined the status of the motor and LEDs. I set the red LED to on and the green to off. Also, I have the motor starting in a counter-clockwise direction because that's the way the screw needs to spin for the food to come out the front end. I also set the speed to 0 because I don't want it spinning right when I power the Huzzah.</p>
 
-                <pre><code class="language-arduino">
-// setting starting motor and LED statuses
-  digitalWrite(redLED, HIGH);    // Red LED starts as on, meaning on but not active
-  digitalWrite(greenLED, LOW);   // Red LED starts as off, meaning not currently running
-  digitalWrite(motorDir, LOW);   // Motor starts in the counter-clockwise direction
-  digitalWrite(motorSpd, LOW);   // Motor starts off
+<pre><code class="language-arduino">// setting starting motor and LED statuses
+  digitalWrite(redLED, HIGH);   
+  digitalWrite(greenLED, LOW);  
+  digitalWrite(motorDir, LOW); 
+  digitalWrite(motorSpd, LOW); 
 }
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify">The first set of code in the loop function is for creating the Firebase inputs. Lines 96-105 is where the data recieved from Firebase is actively being turned into string data, which the Huzzah can actually use. The two data inputs I made are "FEEDING TIME" and "FEEDER STATUS." As the name implies, "FEEDING TIME" is for recieving the set feeding time, and the "FEEDER STATUS" shows whether the feeder is actively feeding or not.</p>
 
@@ -568,8 +587,7 @@ pinMode(physicalButton, INPUT_PULLUP);  // Connects to pin 32 on the Huzzah ESP3
 
                 <p style="text-align: justify">This data is changed using the web interface, which I talk about later, and is then recieved by the Huzzah, sort of like a chain of command. The chain starts from the web interface, then goes to Firebase, and finally the data is outputted to the Huzzah.</p>
 
-                <pre><code class="language-arduino">
-void loop() {
+<pre><code class="language-arduino">void loop() {
 
   /*
      Creating firebase inputs.
@@ -579,14 +597,13 @@ void loop() {
   //Serial.println(feedingTimeString);             // For debugging
 
   Firebase.get(firebaseData, "/FEEDER STATUS");    // Get feeder status input from firebase
-  feederStatusString = firebaseData.stringData();  // Change to e.g. intData() or boolData()
-  //Serial.println(feederStatusString);            // For debugging
-                </code></pre><br><br>
+  feederStatusString = firebaseData.stringData(); 
+  //Serial.println(feederStatusString);          
+</code></pre><br><br>
 
                 <p style="text-align: justify">Lines 108-121 are for recieving an active time from the NTP client. I first created a <code>char</code> data type that stores the current time. Then, I use the <code>strftime</code> function with the <code>%R</code> specifier to format time recieved from the client into military time using hr:min format that then constatly updates the <code>currentTime</code> variable. I wanted to use military time to set the time to make the web interface simple. Also, I have other timers for my fish tank that use military time, so I can keep them all in sync. Information on the <code>strftime</code> function and specifiers can be found by <a href="https://www.cplusplus.com/reference/ctime/strftime/">clicking here</a>.  </p>
 
-                <pre><code class="language-arduino">
-/*
+<pre><code class="language-arduino">/*
     This section is for printing and defining varialbes to time recieved from NTP server.
 */
 struct tm timeinfo;
@@ -596,29 +613,29 @@ return;
 }
 
 //Serial.println("Time in HR:MIN");
-char currentTime [6];                         // Saving hour variable as char data type.
-strftime(currentTime, 6, "%R", &timeinfo);    // Strifetime() is a command for formatting time as a string. Writes time as HR:MIN ("00:00")
+char currentTime [6];                         // Saving hour variable as char data type
+strftime(currentTime, 6, "%R", &timeinfo);    // Strifetime() command for formatting time
 Serial.println(currentTime);
 Serial.println();
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify">Finally, we've reached the code for the actual feeding functions. To kick things off, lines 124-145 is where the daily feeding cycle code is. Note that within the <code>if()</code> statement, the variable <code>feedingTimeString</code> is being used. The <code>if()</code> statement basically says "if the time set on the web interface is equal to the current time recieved from the NTP client, run the code below." The code below is just turning the DC motor on for 1 second, which is the length of one cycle, and then turn off for 59 seconds, which is the delay I set. The reason for this is because the time recieved from the interface and the current time are equal for 1 whole minute, meaning that the <code>if()</code> statement activates for the period of the whole minute. With a delay of 59 seconds, the <code>if()</code> statement is only able to run once, thus solving the issue.</p>
 
                 <p style="text-align: justify">Within the <code>if()</code> statement, there's also line 130, which calls for the function <code>sendIFTTTData();</code>. This is calling for the <code>void sendIFTTTData</code> function I created below the <code>void loop</code> function that, when activated, triggers the IFTTT event. I haven't talked about IFTTT yet, which I will do later, but in a nutshell, when the event is triggered, a notification pushed out to my phone saying something along the lines of "Your fish have been fed! This happened on *whatever time*." I'll explain more thoroughly what IFTTT is when we get to that void function.</p>
 
-                <pre><code class="language-arduino">
-/*
-    This section is for recieving the input data from firebase and sending outputs to the motor and the status LEDs
+<pre><code class="language-arduino">/*
+    This section is for recieving the input data from firebase 
+    and sending outputs to the motor and the status LEDs.
 */
   // Daily set feeding time
-  if (feedingTimeString == currentTime) {     // Compare the input of motor status received from firebase
-    sendIFTTTData();                          // Executes sendData function that sends the push notification to my phone
-    digitalWrite(motorSpd, HIGH);             // Motor turns on at max speed
-    digitalWrite(motorDir, LOW);              // Motor turns in a counter-clockwise direction
-    digitalWrite(redLED, LOW);                // The red LED turns off and green turns on, meaning it's currently feeding
+  if (feedingTimeString == currentTime) {   // Compare current time to web interface input
+    sendIFTTTData();                        // Executes sendData function
+    digitalWrite(motorSpd, HIGH);           // Motor turns on at max speed
+    digitalWrite(motorDir, LOW);            // Motor turns in a counter-clockwise direction
+    digitalWrite(redLED, LOW);              // The red LED turns off and green turns on
     digitalWrite(greenLED, HIGH);
 
-    delay(dailyFeedingCycleTime);             // Feeds for 1.5 seconds
+    delay(dailyFeedingCycleTime);           // Active feeding time set as delay
 
     Serial.println("Motor Turned OFF");
     digitalWrite(motorSpd, LOW);
@@ -626,16 +643,14 @@ Serial.println();
     digitalWrite(redLED, HIGH);
     digitalWrite(greenLED, LOW);
 
-    delay(dailyFeedingCyleTimeDelay);         // Delay off for 58.5 seconds to stop feeding after the first cycle.
+    delay(dailyFeedingCyleTimeDelay);       // Delay after feeding
   }
-
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify"> Lines 147-161 are for manual on and off control. One thing to note though is that variable in the <code>if()</code> statement that is being compared is <code>feederStatusString</code> and not <code>feederTimeString</code> like before, It works pretty similarly to how the daily cycle feeding does, where if the "On" button on the web interface is pressed, the <code>FEEDER STATUS</code> on Firebase gets updated, and then the motor turns off. The motor stays on until the "Off" button is pressed on the interface.</p>
 
-                <pre><code class="language-arduino">
-// Manually on mode
-  if (feederStatusString == "ON") {           // If manual on button is pressed, turn on the feeder and set correct LED status
+<pre><code class="language-arduino">// Manually on mode
+  if (feederStatusString == "ON") {      
     digitalWrite(motorSpd, HIGH);
     digitalWrite(motorDir, LOW);
     digitalWrite(redLED, LOW);
@@ -643,48 +658,46 @@ Serial.println();
   }
 
   // Manually off mode
-  else if (feederStatusString == "OFF") {     // If manual off button is pressed, turn off the feeder and revert LED status
+  else if (feederStatusString == "OFF") {  
     digitalWrite(motorSpd, LOW);
     digitalWrite(motorDir, LOW);
     digitalWrite(redLED, HIGH);
     digitalWrite(greenLED, LOW);
   }
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify"> Lines 163-177 are for the "One Cycle" function of the feeder. Again, like the previous <code>if()</code> statement, if this <code>if()</code> statement gets updated to "ONE CYCLE," then the code runs. Because this cycle is timed, I used a <code>Firebase.set</code> command after the cycle that sets the <code>FEEDER STATUS</code> to "OFF" or else, on Firebase, the "FEEDER STATUS" would just show as "ONE CYCLE" forever until another button is pressed.</p>
 
                 <p style="text-align: justify"> Also, because the two and three cycle lines of code are the exact same as the once cycle's code with only a difference in delay length, I skip talking about two and three cycles, lies 179-209.</p>
 
-                <pre><code class="language-arduino">
-// Manually feed for one cycle
-  if (feederStatusString == "ONE CYCLE") {    // If one cycle button is pressed, run code for feeding one cycle
+<pre><code class="language-arduino">// Manually feed for one cycle
+  if (feederStatusString == "ONE CYCLE") { 
     digitalWrite(motorSpd, HIGH);
     digitalWrite(motorDir, LOW);
     digitalWrite(redLED, LOW);
     digitalWrite(greenLED, HIGH);
 
-    delay(oneCycleTime);                      // Feeds for 1.5 seconds
+    delay(oneCycleTime);                      // Feeds for set time
 
     digitalWrite(motorSpd, LOW);
     digitalWrite(motorDir, LOW);
     digitalWrite(redLED, HIGH);
     digitalWrite(greenLED, LOW);
-    Firebase.set(firebaseData, "/FEEDER STATUS", "OFF");  // Set feeder status in firebase status to "OFF"
+    Firebase.set(firebaseData, "/FEEDER STATUS", "OFF");  // Set feeder status in firebase to "OFF"
   }
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify"> The last set of code in the loop function is in lines 211-226. This is for manually controlling the feeder with a pushbutton on the breadboard itself, not on the interface. It works exactly the same as the one cycle one does, in terms of functionality, but the only difference is that I use a <code>digitalRead</code> function to detect the status of the button. If it detects as <code>LOW</code>, then one cycle of feeding occurs, as it uses the same delay as the one cycle is.</p>
 
-                <pre><code class="language-arduino">
-  // Using the physical button on the circuit
-  if (digitalRead (physicalButton) == LOW) {   // If physical button is pressed, turn on the feeder and revert LED status
+<pre><code class="language-arduino">// Using the physical button on the circuit
+  if (digitalRead (physicalButton) == LOW) {  
     Serial.print ("Button On");
     digitalWrite(motorSpd, HIGH);
     digitalWrite(motorDir, LOW);
     digitalWrite(redLED, LOW);
     digitalWrite(greenLED, HIGH);
 
-    delay(oneCycleTime);                       // Feeds for 1.5 seconds (same time as feeding one cycle)
+    delay(oneCycleTime);                       // Feeds for set time
 
     digitalWrite(motorSpd, LOW);
     digitalWrite(motorDir, LOW);
@@ -692,14 +705,13 @@ Serial.println();
     digitalWrite(greenLED, LOW);
   }
 }
-                </code></pre><br><br>
+</code></pre><br><br>
 
                 <p style="text-align: justify"> At last, we have reached the end of the code. Lines 228-235 are for sending push notifications to my phone using the app IFTTT, which stands for If This Then That. This is what the second tab, the IFTTT library, is for. To be completely honest, I have no idea what any of the code in the second tab means (because I just downloaded that library from <a href="https://github.com/Siytek/AnotherIFTTTWebhook"> Siytek's GitHub</a> while following <a href="https://siytek.com/arduino-to-ifttt-using-webhooks/"> hig guide</a>. All I know is that this is the only one I have found to work. Anyway, this is void function is called to when the daily feeding cycle activates, which then triggers an event on IFTTT, and finally sends a push notification to me.</p>
 
                 <p style="text-align: justify">Since I already wrote about my experience with IFTTT on <a href="../11_Programming/index.html">my assignment 11 webpage</a>, I'll briefly go over it below.</p>
 
-                <pre><code class="language-arduino">
-void sendIFTTTData() {
+<pre><code class="language-arduino">void sendIFTTTData() {
   /*
      The one line below is for triggering the Feeder_Activated event on
      IFTTT. Calling to this function means a push notification sends to
@@ -707,12 +719,14 @@ void sendIFTTTData() {
   */
   send_webhook(IFTTT_Event, IFTTT_Key, "Char 1", "Char 2", "Char 3");
 }
-                </code></pre><br><br>
+</code></pre><br><br>
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-12">
+                <h2>Sending Push Notifications Using IFTTT</h2>
+
                 <p style="text-align: justify"> <a href="https://ifttt.com">IFTTT</a> is "is a service that allows a user to program a response to events in the world," as written by Wikipedia. Essentially, you make "if" and "then" statements for virtually anything. For example, if someone rings your doorbell, you can have IFTTT set up to send you a notification on your phone, log it down on a spreadsheet, turn the front lights on, etc.</p>
 
                 <p style="text-align: justify"> In my case, I am using "Webhooks" as my "if" statement. Using webhooks is the way to recieve web requests on IFTTT, meaning that's how the Huzzah will be communicating with the IFTTT app. </p>
@@ -767,22 +781,415 @@ void sendIFTTTData() {
         </div>
 
 
+        <div class="row">
+            <div class="col-sm-12"> 
+                <h1 class="page-header">Creating the Web Interface </h1>
+            </div>
+        </div>
 
+        <div class="row"><br>
+            <div class="col-sm-12">
+                <p style="text-align: justify">In this section, I'll talk about the JavaScript I wrote for the web interface to work. I won't go over the CSS because really any CSS config works as long as you create the right classes. I also used the same bootstrap theme as I have on this website, so I won't go over that either.</p>
 
+                <p style="text-align: justify">Like I did for the programming section, I'll first embed the whole code below and then later talk about certain parts further below.</p>
 
+                <h2>Web Interface HTML and JS Code </h2>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-sm-12">
+<pre><code class="language-html">&lt!DOCTYPE html&gt
+&lthtml lang="en">
 
+&lthead>
+    &ltmeta charset="utf-8">
+    &ltmeta http-equiv="X-UA-Compatible" content="IE=edge">
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1">
 
+    &lttitle>Faraz's Automatic Fish Feeder Web Interface&lt/title>
 
+    &ltlink href="./css/bootstrap.min.css" rel="stylesheet">
+    &ltlink href="./css/custom.css" rel="stylesheet">
+&lt/head>
 
+&ltbody>
+    &ltdiv class="container">
+        &ltdiv class="row">
+            &ltdiv class="col-sm-12">
+                &ltdiv style="text-align: center">
+                    &lth1>&ltb> Automated Daily Feeding&lt/b>&ltbr>&lt/h1>
+                    &lth3>(Use military time in hr:min format. e.g. "09:15" or "15:30")&lt/h3>
+                    &ltinput type="text" id="FeederSet">
+                    &ltbutton onclick="setFeedingTime()">Set Feeding Time&lt/button> &ltbr>&ltbr>
+                &lt/div>
+            &lt/div>
+        &lt/div>
 
+        &ltdiv class="row">
+            &ltdiv class="col-sm-12">
+                &ltdiv style="text-align: center">
+                    &lth3>Last set feeding time:&lt/h3>
+                    &lth2 id="lastSetTime">00:00&lt/h2>
+                &lt/div>
+            &lt/div>
+        &lt/div>
 
+        &lthr>
 
+        &ltdiv class="row">
+            &ltdiv class="col-sm-12">
+                &ltdiv style="text-align: center">
+                    &lth1>&ltb>Manual Control&lt/b>&lt/h1>
+                    &ltbutton class="custombutton" id="OnButton" onclick="OnButton()">On&lt/button>
+                    &ltbutton class="custombutton" id="OffButton" onclick="OffButton()">Off&lt/button>
+                &lt/div>
+            &lt/div>
+        &lt/div>
 
+        &ltdiv class="row">
+            &ltdiv class="col-sm-12">
+                &ltdiv style="text-align: center">
+                    &ltbutton class="custombutton2" id="OneCycle" onclick="OneCycle()">One Cycle&lt/button>
+                    &ltbutton class="custombutton2" id="TwoCycles" onclick="TwoCycles()">Two Cycles&lt/button>
+                    &ltbutton class="custombutton2" id="ThreeCycles" onclick="ThreeCycles()">Three Cycles&lt/button>
+                &lt/div>
+            &lt/div>
+        &lt/div>&ltbr>
+
+        &lthr>
+
+        &ltdiv class="row">&ltbr>
+            &ltdiv class="col-sm-12">
+                &ltimg class="img-rounded2 center" src="Shrimp.jpg" style="width:50%" alt="Shrimp">&ltbr>
+                &ltp style="text-align: center"> Feed us! -Shrimp and Shrimpette&lt/p>
+            &lt/div>
+         &lt/div>
+    &lt/div>
+    
+    
+&lt!-- The core Firebase JS SDK is always required and must be listed first -->
+&ltscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js">&lt/script>
+
+&lt!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+&ltscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js">&lt/script>
+&ltscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js">&lt/script>
+
+&ltscript>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: "",
+        measurementId: ""
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
+
+    // Get a database reference for the web interface
+    var ref = firebase.database().ref("/");
+
+    // make the buttons call their respective functions below 
+    document.getElementById('OnButton');
+    document.getElementById('OffButton');
+    document.getElementById('OneCycle');
+    document.getElementById('TwoCycles');
+    document.getElementById('ThreeCycles');
+
+    var lastSetTime = firebase.database().ref('/');
+    lastSetTime.on('value', (snapshot) => {
+        const data = snapshot.val();
+        console.log(data);
+        document.getElementById("lastSetTime").innerHTML = data["FEEDING TIME"];
+    });
+
+    function setFeedingTime(){
+        var feedingTime = document.getElementById("FeederSet").value;
+        console.log("New feeding time set");
+        alert("Feeding Time Set");
+        ref.update({
+            "FEEDING TIME": (feedingTime)
+        })
+    } 
+
+    function OnButton(){
+        console.log("Feeder manually turned on");
+        alert("Feeder Turned On Manually");
+        ref.update({
+            "FEEDER STATUS": "ON"
+        })
+    } 
+
+    function OffButton(){
+        console.log("Feeder manually turned off");
+        alert("Feeder Turned Off Manually");
+        ref.update({
+            "FEEDER STATUS": "OFF"
+        })
+    } 
+
+    function OneCycle(){
+        console.log("Feeder manually activated for one cycle");
+        alert("Feeder Activated For One Cycle");
+        ref.update({
+            "FEEDER STATUS": "ONE CYCLE"
+        })
+    } 
+
+    function TwoCycles(){
+        console.log("Feeder manually activated for two cycles");
+        alert("Feeder Activated For Two Cycles");
+        ref.update({
+            "FEEDER STATUS": "TWO CYCLES"
+        })
+    } 
+
+    function ThreeCycles(){
+        console.log("Feeder manually activated for three cycles");
+        alert("Feeder Activated For Three Cycle");
+        ref.update({
+            "FEEDER STATUS": "THREE CYCLES"
+        })
+    } 
+    &lt/script>
+&lt/body>
+
+&lt!-- jQuery -->
+&ltscript src="./js/jquery-1.11.3.min.js">&lt/script>
+
+&lt!-- Bootstrap Core JavaScript -->
+&ltscript src="./js/bootstrap.min.js">&lt/script>
+
+&lt!-- IE10 viewport bug workaround -->
+&ltscript src="./js/ie10-viewport-bug-workaround.js">&lt/script>
+
+&lt/html>
+</code></pre><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>HTML and JS Code Overview</h2>
+
+                <p style="text-align: justify"> I'm now going to talk about the important parts of the web interface code</p><br><br>
+
+                <p style="text-align: justify"> The first main chunk of code is for setting the time. I first write out the title of the section and a description of how to use the text box. Then, I use the <code>input</code> function with the <code>type</code> equal to text. This is for the box itself and allowing an input in that box. Then I add the <code>id</code> of <code>"FeederSet"</code>, which is an ID I created for the text box. On the line below that, I created the actual "Set Feeding Time" button and used an <code>onclick</code> function to make sure the <code>"setFeedingTime()"</code> function only executes on the button click.</p>
+
+                <p style="text-align: justify"> The image below shows what part of the interface the code represents.</p>
+
+                <img class="img-rounded center" src="Interface P1.PNG" alt="Interface P1" style="width:50%">
+
+<pre><code class="language-html">&lth1>&ltb> Automated Daily Feeding&lt/b>&ltbr>&lt/h1>
+&lth3>(Use military time in hr:min format. e.g. "09:15" or "15:30")&lt/h3>
+&ltinput type="text" id="FeederSet">
+&ltbutton onclick="setFeedingTime()">Set Feeding Time&lt/button>&ltbr>&ltbr>
+</code></pre><br><br>
+
+                <p style="text-align: justify"> Next, I added a box where the web interface recieves the last set time from Firebase and displays it. There isn't really much to it here, I just created the header for where the time will be displayed. I set the <code>id</code> of this display box to <code>lastSetTime</code>. I talk more on how this works further below.</p>
+
+        <       img class="img-rounded center" src="Interface P2.PNG" alt="Interface P2" style="width:25%">
+
+<pre><code class="language-html">&lth3>Last set feeding time:&lt/h3>
+&lth2 id="lastSetTime">00:00&lt/h2>
+</code></pre><br><br>
+
+                <p style="text-align: justify"> Then, I created the manual control buttons. I used the same steps as I did for the "Set Feeding Time" button," where I set each button to have its own respective <code>id</code> based on its function and used the <code>onclick</code> function to actually make it a button. I also added two custom CSS classes <code>custombutton</code> and <code>custonbutton2</code> to make the buttons grey and rounded. I followed <a href="https://codepen.io/davidcochran/pen/WbWXoa">this guide</a> to make custom buttons using CSS.</p>
+
+                <img class="img-rounded center" src="Interface P3.PNG" alt="Interface P3" style="width:30%">
+
+<pre><code class="language-html">&lth1>&ltb>Manual Control&lt/b>&lt/h1>
+&ltbutton class="custombutton" id="OnButton" onclick="OnButton()">On&lt/button>
+&ltbutton class="custombutton" id="OffButton" onclick="OffButton()">Off&lt/button>
+...
+&ltbutton class="custombutton2" id="OneCycle" onclick="OneCycle()">One Cycle&lt/button>
+&ltbutton class="custombutton2" id="TwoCycles" onclick="TwoCycles()">Two Cycles&lt/button>
+&ltbutton class="custombutton2" id="ThreeCycles" onclick="ThreeCycles()">Three Cycles&lt/button>
+</code></pre><br><br>
+
+                <p style="text-align: justify"> This stuff is all for connecting to Firebase. I copied this from the class demo we did earlier in the semester and added in my Firebase config. I left the Firebase config here blank for privacy reasons, but the real code has the real Firebase info. There isn't any picture for what this represents on the web interfact because this is stuff that happens behind-the-scenes.</p>
+
+<pre><code class="language-html">&l!-- The core Firebase JS SDK is always required and must be listed first -->
+&lscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js">&l/script>
+
+&l!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+&lscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js">&l/script>
+&lscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js">&l/script>
+
+&lscript>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: "",
+        measurementId: ""
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    // Get a database reference for the web interface
+    var ref = firebase.database().ref("/");
+</code></pre><br><br>
+
+                <p style="text-align: justify"> These five lines are for calling the buttons in this script. I needed to do this because I created the buttons outside of this <code>script</code>, so I need to tell the interfact to be constantly checking for the status changes of these buttons. Think of it like a loop function, and these lines are what are checking the status of the buttons in that loop.</p>
+
+<pre><code> class="language-html">// make the buttons call their respective functions below 
+    document.getElementById('OnButton');
+    document.getElementById('OffButton');
+    document.getElementById('OneCycle');
+    document.getElementById('TwoCycles');
+    document.getElementById('ThreeCycles');
+</code></pre><br><br>
+
+                <p style="text-align: justify"> This set of code is for the last set time box. Firstly, I looked at <a href="https://firebase.google.com/docs/database/web/read-and-write#read_data">this guide</a> from Firebase on how to read data from Firebase and display it on a webpage, and secondly, I edited their first "Read data" example to fit my needs. Essentially what's happning is that the <code>lastSetTime</code> variable is being recieved from Firebase using the command <code>snapshot</code>, which takes a saves the current time value in Firebase. I then used the <code>getElementById</code> function to get the box with ID <code>lastSetTime</code> to then display the <code>["FEEDING TIME"]</code>. I highly recommend checking out that guide I posted above, as it goes over pretty much everything on reading and writing on Firebase.  </p>
+
+<pre><code class="language-html">var lastSetTime = firebase.database().ref('/');
+lastSetTime.on('value', (snapshot) => {
+    const data = snapshot.val();
+    console.log(data);
+    document.getElementById("lastSetTime").innerHTML = data["FEEDING TIME"];
+});
+</code></pre><br><br>
+
+                <p style="text-align: justify"> For setting the feeding time, I used the code below. Quite simply, I created a variable called "feedingTime" that stores the time data that's typed in the text box with the <code>"FeederSet"</code> ID. Then, the Firebase data point "FEEDING TIME" is updated with whatever the <code>feedingTime</code> is, which is the time typed in the text box. </p>
+
+<pre><code class="language-html">   function setFeedingTime(){
+        var feedingTime = document.getElementById("FeederSet").value;
+        console.log("New feeding time set");
+        alert("Feeding Time Set");
+        ref.update({
+            "FEEDING TIME": (feedingTime)
+        })
+    } 
+});
+</code></pre><br><br>
+
+                <p style="text-align: justify"> The "On" and "Off" button functions are super simple. When either button is pressed, the respective button function is called. So, for example, if the "On" button is pressed, then the <code>onButton()</code> function is called on, which I talked about earier. Then, there is a <code>console.log</code> function to display the function on the web page console and an <code>alert</code> function to give an alert from the web page. Finally, I use the <code>ref.update</code> function to update the status of "FEEDER STATUS" on Firebase to either "ON" or "OFF." When the status changes on Firebase, the data is sent to the Huzzah. </p>
+
+<pre><code class="language-html">   function OnButton(){
+        console.log("Feeder manually turned on");
+        alert("Feeder Turned On Manually");
+        ref.update({
+            "FEEDER STATUS": "ON"
+        })
+    } 
+
+    function OffButton(){
+        console.log("Feeder manually turned off");
+        alert("Feeder Turned Off Manually");
+        ref.update({
+            "FEEDER STATUS": "OFF"
+        })
+    } 
+</code></pre><br><br>
+
+                <p style="text-align: justify"> Finally, we have reached the end of the web page code. The last section is for the three cycles. But, since the code is basically exactly the same but with the cycle number changed, I'll only talk about the code for the first cycle. Similar to how the "On" and "Off" buttons work, the cycle buttons all work by having their function tag first be called by the web page when the web page buttons are pressed. Then there's the <code>console.log</code> and <code>alert</code> function. At the end, there's the <code>ref.update</code> function for chaning the "FEEDER STATUS" on Firebase to "ONE CYCLE." For the other cycles, this would be either "TWO CYCLES" or "THREE CYCLES." Then, when Firebase updates the "FEEDER STATUS," the data is sent to the Huzzah and is outputted by the respective function, in this case, the one cycle code is run. </p>
+
+<pre><code class="language-html">   function OneCycle(){
+        console.log("Feeder manually activated for one cycle");
+        alert("Feeder Activated For One Cycle");
+        ref.update({
+            "FEEDER STATUS": "ONE CYCLE"
+        })
+    } 
+</code></pre><br>
+                <p style="text-align: justify"> <a href= "fishindex.html">Click here</a> to view a demo of the web interface page.</p>
+                <p style="text-align: justify"> And that's it for the web interface HTML and JS code overview. Next, I talk about the final product and then end off with possible future improvements.</p>
+            </div>
+        </div>
+
+ 
+        <div class="row">
+            <div class="col-sm-12"> 
+                <h1 class="page-header">Final Product </h1>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-sm-12"> 
-                <h1 class="page-header">Creating The Web Interface </h1>
+                <p style="text-align: justify"> The final fish feeder turned out great. I like the simplicity of the web interface and the feeder itself. Below are some videos and pictures of the fish feeder and some feeding demonstrations.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"> 
+                <img class="img-rounded center" src="Feeder.JPG" alt="Feeder" style="width:100%"><br>
+
+                <p style="text-align: justify"> I mounted the feeder on the back side of the tank, next to the CO2 diffuser and water heater. I placed the electronics box right behind the tank with the red LED facing outwards. The electronics box was actually the perfect size for the edge of the table, which is good. Although there are the two black wires hanging off of the back, I can easily tape them to the back of the tank and they would be hidden because the background of my tank is black.</p>
+
+                <p style="text-align: justify"> I think it looks pretty good on the back of the tank, as the back is now filled with aquarium components: the filter, water heater, light handle, CO2 diffuser, and now the fish feeder.</p>
+            </div>
+
+            <div class="col-sm-6"> 
+                <img class="img-rounded center" src="Whole Feeder.JPG" alt="Whole Feeder" style="width:100%">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <p style="text-align: justify"> To attach the fish feeder to the back glass of the tank, I lightly screwed two M3 screws though the screw holes to create a clamp around the glass. The side image of the feeder and a video of the installation are shown below.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"> 
+                <img class="img-rounded center" src="Feeder Side.JPG" alt="Feeder Side" style="width:100%">
+            </div>
+
+            <div class="col-sm-6"> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dFwvQnknnfc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <p style="text-align: justify"> I made sure not to tighten the screws too much because, at the end of the day, I am screwing into glass and glass can break. There is also the black posterboard background that acts as somewhat of padding between the screw and glass.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <p style="text-align: justify"> The way I calibrated the delay amount for each cycle was by doing a lot of testing, and the end product was definitely worth it. The video below shows the feeding cycles and the image shows a large test of food quanity versus cycle count.</p>
+
+                <p style="text-align: justify"> In the video, one thing to note is that when I clicked the "Two Cycles" button, it took some time before the feeder actually fed two cycles. This is actually a common occurence I found with using Firebase. I'm not sure why the problem exists, but sometimes, it just takes a little bit for the web interfact input is outputted on the feeder. On the contrary, when I clicked the "Three Cycles" button, it worked immediately.</p>
+
+                <p style="text-align: justify"> In the cycles test, the food amount progressively increases with each cycle amount increase. This is exactly what I wanted and I found these feeding amounts to be sufficient for my fish.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/U57Nsdd0cZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-sm-6"> 
+                <img class="img-rounded center" width="560" height="315" src="Delay Test.jpg" alt="Cycle Delay Test">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <p style="text-align: justify"> These two videos are the last two of the page. The first one is a complete assembly guide from scratch (for anyone wanting to make it) and the second is a demo of the manual pushbutton.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Qk2YVRgmWdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-sm-6"> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GnyOKbIb6Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
