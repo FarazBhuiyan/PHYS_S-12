@@ -152,3 +152,8 @@ code {
   font-size: 18px;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
