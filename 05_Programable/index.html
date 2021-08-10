@@ -94,22 +94,31 @@
         <div class="row">
             <div class="col-sm-12">
                 <h1 class="page-header">What To Do </h1>
+            </div>
+        </div>
 
-                    <p class="gray-text"> 1a. Program a microcontroller to produce an output using at least one button for input. <br>
-                                          1b. Include a conditional statement and a for() loop. <br>
-                                          2. Start working on the 3D design for the final project.</p>
+        <div class="row">
+            <div class="col-sm-12">
+                <p> 1a. Program a microcontroller to produce an output using at least one button for input. <br>
+                    1b. Include a conditional statement and a for() loop. <br>
+                    2. Start working on the 3D design for the final project.</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-12">                                                           
                  <h1 class="page-header">What I Did </h1>
-                    <p style="text-align: justify"> For this assignment, I made a mini light show. I used the Metro board, the breadboard, and Arduino IDE.  I used the conditional statements that we learned in class, like <code>if()</code> statements and used many <code>for()</code> loops, to control all 5 of the LEDs in various ways. Using both of these newly learned aspects of coding on Arduino, I was able to program 5 buttons to control 5 lights, but with a twist. In total, I'd say it took me around 4 to 5 hours to finish all of the electronics building and programming, which I think is really quick considering I had to learn how to apply the different fucntions we learned into my light show. </p>
+             </div>
+         </div>
 
-                    <p style="text-align: justify"> In class, we made three main demo/challenge circuits, which I go over later. Those circuits helped me grasp the fundamentals of coding using  <code>if()</code> functions and <code>for()</code>loops. </p> 
+         <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: justify"> For this assignment, I made a mini light show. I used the Metro board, the long breadboard, and Arduino IDE.  I used the conditional statements that we learned in class, like <code>if()</code> statements and <code>for()</code> loops, to control all 5 of the LEDs in various ways. Using both of these newly learned aspects of coding on Arduino, I was able to program 5 buttons to control 5 lights. In total, I'd say it took me around 4 to 5 hours to finish all of the electronics building and programming, which I think is really quick considering I had to learn and apply the different fucntions we learned into my light show. </p>
+
+                <p style="text-align: justify"> In class, we made three main demo/challenge circuits, which I go over later. Those circuits helped me grasp the fundamentals of coding using <code>if()</code> functions and <code>for()</code>loops. </p> 
 
 
-                    <p style="text-align: justify"> For references, I didn't really use much. As usual, the <a href="https://www.arduino.cc/reference/en/"> Ardiono Language Reference page</a> was very helpful for searching up specifics about the various variables and functions I used. Learning about the functionality of <code>for()</code> loops was challenging, as we jumped straight into the <code>for()</code> loop, skipping the <code>while()</code> loop. The <code>for()</code> loop is essentially just a shorter version of a <code>while()</code> loop. I learned how to use the <code>while()</code> and <code>for()</code> loops by watching these cideos I embeded below. They were both really helpful</p>
+                <p style="text-align: justify"> For references, I didn't really use much. As usual, the <a href="https://www.arduino.cc/reference/en/"> Ardiono Language Reference page</a> was very helpful for searching up specifics about the various variables and functions I used. Learning about the functionality of <code>for()</code> loops was challenging, as we jumped straight into the <code>for()</code> loop, skipping the <code>while()</code> loop. The <code>for()</code> loop is essentially just a shorter version of a <code>while()</code> loop. I learned how to use the <code>while()</code> and <code>for()</code> loops by watching these videos I embeded below.</p>
             </div>
         </div>
 
@@ -132,9 +141,9 @@
 
         <div class="row">
             <div class="col-sm-4">                                                           
-                <p style="text-align: justify"> To the right is a gif of my favorite moment of the actual "show." Technically, there are two "shows," but they're both pretty similar. So the buttons on the back left and back right are for the shows, and the front three are for manual control of the lights.</p>
+                <p style="text-align: justify"> To the right is a gif of my favorite moment of one of the "shows." Technically, there are two pre-made "shows". The buttons on the back left and back right are for the shows and the front three are for manual control.</p>
 
-                <p style="text-align: justify">My orignal idea for this assignment was to actually only have the 3 front buttons, but have multiple functions for the buttons to essentialy make a manual light show. I still went with this idea, so the three buttons in the front do manually control the lights, but I ran into many issues, which I talk about later. </p><br>
+                <p style="text-align: justify">My orignal idea for this assignment was to only have the 3 front buttons but to have multiple functions for the buttons to essentialy make a manual light show. I still went with this idea, so the three buttons in the front do manually control the lights, but I ran into many issues when controlling different lights with the same buttons, which I talk about later. </p><br>
             </div>
 
             <div class="col-sm-8">
@@ -172,9 +181,9 @@
 
         <div class="row">
             <div class="col-sm-12">                                                           
-                <p style="text-align: justify"> This lab example is one that I heavily referenced for my light show circuit, as mine uses 5 buttons, 3 of which share similar functionality. This circuit was the first time I used push buttons and the built-in pullup resistors.</p> 
+                <p style="text-align: justify"> This lab example is one that I heavily referenced for my light show circuit, as mine uses 5 buttons, 3 of which sharing similar functionality to the buttons in this circuit. This circuit was the first time I used push buttons and the built-in pullup resistors.</p> 
 
-                <p style="text-align: justify"> One thing we learned in class what the difference between pullup and pulldown resistors are. Our Metro boards have built-in pullup resistors, which essentially just inverts the reading. So, in my sketch, both buttons have to be pushed down while being in a <code>LOW</code> state. Now, this is only possible if we use pullup resistors or else any button press reads as a <code>HIGH</code> output, not <code>LOW</code>.</p><br>
+                <p style="text-align: justify"> One thing we learned in class what the difference between pullup and pulldown resistors are. Our Metro boards have built-in pullup resistors, which essentially just inverts the reading of an input. So, in my sketch, both buttons have to be pushed down to be in a <code>LOW</code> state. Now, this is only possible since I used pullup resistors or else any button press outputs as <code>HIGH</code>, not <code>LOW</code>.</p><br>
 
             
             </div>
@@ -186,13 +195,11 @@
             </div>
 
             <div class="col-sm-5">                                                           
-                
                 <p style="text-align: justify"> In the gif below, the red LED only turns on when both buttons are pressed. The coding for this was very helpful for my light show, as two of the LEDs and three buttons on my circuit have the same functionality as the red LED and two buttons on this circuit.</p>
 
                 <img src="2 Button LED.gif" class="img-rounded2" style="width:100%" alt="2 Button LED"><br><br>
 
-                <p style="text-align: justify"> This was also my first time using logical operators, symbols that can be used in expressions to combine two or more relational expressions. I used <code>&&</code>, which means "and." So, in this sketch, the <code>if()</code> statement says that if the left button and right button are both both in the same state, and the left one is in a <code>LOW</code> (meaning both are in a <code>LOW</code> state), then the red LED turns on. The <code>if()</code> statement was a bit confusing to understand at first, but I soon got a better understanding of it during the lab and when I started making my own circuit.  </p>
-
+                <p style="text-align: justify"> This was also my first time using logical operators, symbols that can be used in expressions to combine two or more relational expressions. I used <code>&&</code>, which means "and." So, in this sketch, the <code>if()</code> statement says that "if the left button and right button are both both in the same state, and the left one is in a <code>LOW</code> (meaning both are in a <code>LOW</code> state), then the red LED turns on." The <code>if()</code> statement was a bit confusing to understand at first, but I soon got a better understanding of it during the lab and when I started to make my own circuit.  </p>
             </div>
         </div>
                 
@@ -219,9 +226,9 @@
 
                 <img src="Minute Second Toggle LEDs.gif" class="img-rounded2" style="width:100%" alt="Minute Second LEDs"><br><br>
 
-                <p style="text-align: justify">This was my first time using the <code>bool</code> variable, and I can see how it's useful for storing small bits of data. It can only store two values: true or false (on or off).</p> 
+                <p style="text-align: justify">This was my first time using the <code>bool</code> variable, and I can see how it's useful for storing small bits of data. It can only store two values: true or false (in my case, on or off).</p> 
 
-                <p style="text-align: justify">This was my second time using logical operators. In this example, the "<code>!</code>" operator is used, which means to execute the opposite. Specifically, it is used to change the states of the LEDs from an on or off state to a not on or not off state.</p> <br>
+                <p style="text-align: justify">This was my second time using logical operators. In this example, the "<code>!</code>" operator is used, which means to execute the opposite. Specifically, it is used to change the states of the LEDs from an on or off state to a not on (off) or not off (on) state.</p>
             </div>
         </div>
 
@@ -240,17 +247,17 @@
 
         <div class="row">
             <div class="col-sm-7">                                                           
-                <iframe src=https://create.arduino.cc/editor/farazb/578681db-00b9-4a6a-8b81-0b9cf99a5918/preview?embed style="height:760px;width:100%" frameborder=0></iframe>
+                <iframe src=https://create.arduino.cc/editor/farazb/578681db-00b9-4a6a-8b81-0b9cf99a5918/preview?embed style="height:710px;width:100%" frameborder=0></iframe>
             </div>
 
             <div class="col-sm-5">                                                           
-                <p style="text-align: justify"> The function of the code is pretty simple: one LED toggles on and off every second and the other toggles every minute. In this example, we used regular <code>int</code> variables as well as <code>bool</code> variables. In the gif below, the blue LED is toggling every one second while the yellow LED is staying on (the gif is repeating so the yellow LED never turns off). </p><br>
+                <p style="text-align: justify"> I also referenced this example a lot when making my final light show. What's happening is that the button press activated the LED, which then dims over a period of around 4-5 seconds. The gif below shows the circuit.</p>
 
                 <img src="Button Dimming LED.gif" class="img-rounded2" style="width:100%" alt="Button Dimming LED"><br><br>
 
-                <p style="text-align: justify">This was my first time using the <code>bool</code> variable, and I can see how it's useful for storing small bits of data. It can only store two values: true or false (on or off).</p> 
+                <p style="text-align: justify">The way to adjust the LED dimming time is by increasing the <code>delay</code>. I have the delay set to 10 miliseconds, but if increased, then it will take longer to finish the <code>for()</code> loop.</p>
 
-                <p style="text-align: justify">This was my second time using logical operators. In this example, the "<code>!</code>" operator is used, which means to execute the opposite. Specifically, it is used to change the states of the LEDs from an on or off state to a not on or not off state.</p> <br>
+                <p style="text-align: justify">Another thing I could've done was to decrease the increment of the <code>int</code> "i" (assuming "i" is greater than 1). However, because the increment I already have set is -1, I am using the lowest increment I can actually use (because the variable "i" can't be a fraction of 1).</p>
             </div>
         </div>
 
@@ -262,7 +269,7 @@
 
         <div class="row">
             <div class="col-sm-12"> 
-                    <p style="text-align: justify"> For my circuit, I combined what I learned in all the demos, and added some of my own code. The embeded Arduiono sketch below doesn't include the back two buttons, as that's coming up next after this section. The two images below show the circuit and the pin connections. I color-coded the positive wires: red for LEDs and yellow for buttons. And of course, black for ground. There wasn't any sort of pattern I was following in terms of where I plugged in the wires on the Metro board. For the LEDs, I used 100 Ohm resistors to keep it simple.</p><br>
+                <p style="text-align: justify"> For my circuit, I combined what I learned in all the demos, and added some of my own code. The embeded Arduiono sketch below doesn't include the back two buttons, as that's coming up next after this section. The two images below show the circuit and the pin connections. I color-coded the positive wires: red for LEDs and yellow for buttons. And of course, black for ground. There wasn't any sort of pattern I was following in terms of where I plugged in the wires on the Metro board. For the LEDs, I used 100 Ohm resistors to keep it simple.</p><br>
             </div>
         </div>
 
@@ -278,7 +285,7 @@
 
         <div class="row">
             <div class="col-sm-12"> 
-                    <p style="text-align: justify"> Building the circuit was the easy part. The harder part was definitely the coding. After wiring, the first thing I did on the code was define each button and LED variable. I also defined the <code>pinMode</code> for all pins. For the LED pins, I made them all <code>OUTPUT</code>, and I made all the button pins<code>INPUT_PULLUP</code>. This way, the button logic is inverted, so when it is pressed, it is in a <code>LOW</code> state. After than, I defined three more variables for the actual state of the buttons (<code>HIGH</code> or <code>LOW</code>). </p><br>
+                <p style="text-align: justify">  After wiring, the first thing I added to the code was definitons of each button and LED variable pin numbers to their respective names. I also defined the <code>pinMode</code> as either <code>INPUT_PULLUP</code> for the buttons or <code>OUTPUT</code> for the LEDs. After that, I defined three more variables for the button state as either <code>HIGH</code> or <code>LOW</code>.</p>
             </div>
         </div>
  
@@ -288,23 +295,21 @@
             </div>
 
             <div class="col-sm-5">                                                           
-                <p style="text-align: justify"> The gif below shows the three buttons controlling the three front LEDs This was just taking the demo circuit code we did in class and reformatting it to fit my circuit, which was really easy.</p>
+                <p style="text-align: justify"> The gif below shows the three buttons controlling the three front LEDs. This was essentially just taking one of the demo circuit's code we did in class and reformatting it to fit three LEDs.</p>
 
                 <img src="Single Button.gif" class="img-rounded2" style="width:100%" alt="Single Button"><br><br>
 
-                <p style="text-align: justify">The next step was to get the back green and yellow LEDs to also work. This was also really simple. I took the demo code we did in class and added it in to mine. But, one thing to note is that I actually double hashed all of the <code>analogWrite(colorLED, 0);</code> and added in <code>else</code> statements after the button press <code>if()</code> statements. I did this because the LEDs would keep flashing on and off when I held the buttons down. I think this happened because the LEDs would be on, but since the loop keeps running, the LEDs flashed off for the <code>analogWrite(colorLED, 0);</code> part.</p> 
+                <p style="text-align: justify">The next step was to get the back green and yellow LEDs to also work. This was also really simple. I took the demo code we did in class and added it in to mine. But, one thing to note is that I actually double hashed all of the <code>analogWrite(colorLED, 0);</code> and added in <code>else</code> statements after the button press <code>if()</code> statements. I did this because the LEDs would keep flashing on and off when I held the buttons down. I think this happened because the LEDs would be on, but since the loop keeps running, the LEDs flashed off for the <code>analogWrite("color"LED, "pin#");</code> part.</p> 
 
                 <img src="Double Button No Off.gif" class="img-rounded2" style="width:100%" alt="Double Button No Off"><br><br>
 
-                <p style="text-align: justify">I also added the final <code>if()</code> statement to make all the LEDs turn on. This was actually the hardest part to figure out, because mine kept not working. The last <code>if()</code> statement is saying if the left and middle buttons are the same state; and the right and middle buttons are the same state; and the middle button state is <code>LOW</code>, then all lights turn on. This can be seen in the gif above.</p>
+                <p style="text-align: justify">I also added the final <code>if()</code> statement to make all the LEDs turn on. This was actually the hardest part to figure out, because mine kept not working. The last <code>if()</code> statement says that "if the left and middle buttons are the same state; and the right and middle buttons are the same state; and the middle button state is <code>LOW</code>, then all lights turn on." This can be seen in the gif above.</p>
 
                 <img src="Final No Show.gif" class="img-rounded2" style="width:100%" alt="Final No Show"><br><br>
 
-                <p style="text-align: justify">Lastly, I added code to make sure, for example, when the left and middle buttons are pressed, only the green LED lights up and not also the red and white LEDs. This is shown in the gif above. Again, this was rather simple. I just made two new <code>if()</code> statement that said when either the left and middle or right and middle buttons are pressed, only either of the back two light up by setting the front LEDs to have an <code>analongWrite</code> value of 0, meaning off.</p>
+                <p style="text-align: justify">Lastly, I added code to make sure, for example, when the left and middle buttons are pressed, only the green LED lights up and not also the red and white LEDs. This is shown in the gif above. I made two new <code>if()</code> statement that say "if either the left and middle or right and middle buttons are pressed, then only either of the back two light up by setting the respective front LEDs <code>analongWrite</code> value's to 0, meaning off."</p>
             </div>
-
         </div>
-
 
 
         <div class="row">
@@ -315,9 +320,9 @@
 
         <div class="row">
             <div class="col-sm-12"> 
-                    <p style="text-align: justify"> Because my V1 code didn't use any <code>for()</code> loops, I added two new buttons which added the actual light show component of my build. All I did was add two more buttons, increasing the total number of buttons from 3 to 5, and made one unique pattern for each button. Again, for the wiring, I kept the same color code (yellow for buttons and red for LEDs) and used the same 100 Ohm resistors. All I did on the actual breadboard was just add two new buttons, two yellow wires, and two black ground wires.</p>
+                <p style="text-align: justify"> Because my V1 code didn't use any <code>for()</code> loops, I added two new buttons which added the actual light show component of my build. For the wiring, I kept the same color code (yellow for buttons and red for LEDs) and used 100 Ohm resistors. All I did on the actual breadboard was just add two new buttons, two yellow wires, and two black ground wires.</p>
 
-                    <p style="text-align: justify"> The images below show the updated breadboard circuit with the added wires. My circuit definitely got a lot messier by adding two new buttons, but it functions fine.</p><br>
+                <p style="text-align: justify"> The images below show the updated breadboard circuit with the added wires.</p>
             </div>
         </div>
 
@@ -329,17 +334,11 @@
             <div class="col-sm-6"> 
                 <img src="Pin Connections.JPG" class="img-rounded2" style="width:100%" alt="Pin Connections">
             </div>
-        </div><br><br>
+        </div><br>
 
         <div class="row">
-            <div class="col-sm-12"> 
-                    <p style="text-align: justify"> Building the circuit was the easy part. The harder part was definitely the coding. After wiring, the first thing I did on the code was define each button and LED variable. I also defined the <code>pinMode</code> for all pins. For the LED pins, I made them all <code>OUTPUT</code>, and I made all the button pins<code>INPUT_PULLUP</code>. This way, the button logic is inverted, so when it is pressed, it is in a <code>LOW</code> state. After than, I defined three more variables for the actual state of the buttons (<code>HIGH</code> or <code>LOW</code>). </p><br>
-            </div>
-        </div>
- 
-        <div class="row">
             <div class="col-sm-7"> 
-                <iframe src=https://create.arduino.cc/editor/farazb/bc42668b-8a15-4f78-8636-50e4377908d2/preview?embed style="height:1500px;width:100%;margin:10px 0" frameborder=0></iframe>
+                <iframe src=https://create.arduino.cc/editor/farazb/bc42668b-8a15-4f78-8636-50e4377908d2/preview?embed style="height:1500px;width:100%;margin:1px 0" frameborder=0></iframe>
             </div>
 
             <div class="col-sm-5">                                                           
@@ -347,11 +346,11 @@
 
                 <img src="Left Show.gif" class="img-rounded2" style="width:100%" alt="Left Show"><br><br>
 
-                <p style="text-align: justify">The gif above is the show for the back left button. The coding for this is pretty simple. I just compiled many of the same <code>for()</code> loops we did in class for each individual LED. Tis was the first show I made, so I wanted to keep it simple.</p> 
+                <p style="text-align: justify">The gif above is the show for the back left button. I compiled many of the same <code>for()</code> loops we did in class for each individual LED. This was the first show I made, so I wanted to keep it simple.</p> 
 
                 <img src="Right Show.gif" class="img-rounded2" style="width:100%" alt="Right Show"><br><br>
 
-                <p style="text-align: justify">I also added the final <code>if()</code> statement to make all the LEDs turn on. This was actually the hardest part to figure out, because mine kept not working. The last <code>if()</code> statement is saying if the left and middle buttons are the same state; and the right and middle buttons are the same state; and the middle button state is <code>LOW</code>, then all lights turn on. This can be seen in the gif above.</p>
+                <p style="text-align: justify">The gif above show the second light show, which is activated by pressing the back right button. This one turned out much better than the first one did because it goes faster than the first one. The inspiration for this show was a firework. The second show starts with two loops (firework launch), then flashes three times (firework pops), and ends with the random turning off (firework fading away).</p>
 
                 <img src="LED Spiral.gif" class="img-rounded2" style="width:100%" alt="Final No Show"><br><br>
 
@@ -361,7 +360,7 @@
 
         <div class="row"><br>
             <div class="col-sm-12"> 
-                <p style="text-align: justify"> All in all, I really enjoyed this assignment. I learned a lot about various new C++ functions, like the <code>if()</code> and <code>for()</code> conditional statements, and made a super cool interactive LED show circuit. Below, I embeded the same videos I embeded at the top.</p><br>
+                <p style="text-align: justify"> Below, I embeded the same videos of the circuit as I did at the top.</p><br>
             </div>
         </div>
 
@@ -372,7 +371,7 @@
             </div>
 
             <div class="col-sm-6">                                                           
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/pky5hLqVoGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pky5hLqVoGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
             </div>
         </div>
 
@@ -380,12 +379,16 @@
         <div class="row">
             <div class="col-sm-12"> 
                 <h1 class="page-header">What I Learned </h1>
-                     <p>» How to use if() statements<br>
-                        » How to use for() loops<br>
-                        » How to use nested for() loops<br>
-                        » How to use buttons as inputs<br>
-                        » How to set pins as input pullups<br>
-                     </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12"> 
+                <p> » How to use if() statements<br>
+                    » How to use for() loops<br>
+                    » How to use nested for() loops<br>
+                    » How to use buttons as inputs<br>
+                    » How to set pins as input pullups</p>
             </div>
         </div>
     </div>
