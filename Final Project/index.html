@@ -1010,15 +1010,15 @@ Serial.println();
 
                 <p style="text-align: justify"> This stuff is all for connecting to Firebase. I copied this from the class demo we did earlier in the semester and added in my Firebase config. I left the Firebase config here blank for privacy reasons, but the real code has the real Firebase info. There isn't any picture for what this represents on the web interfact because this is stuff that happens behind-the-scenes.</p>
 
-<pre><code class="language-html">&l!-- The core Firebase JS SDK is always required and must be listed first -->
-&lscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js">&l/script>
+<pre><code class="language-html">&lt!-- The core Firebase JS SDK is always required and must be listed first -->
+&ltscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js">&lt/script>
 
-&l!-- TODO: Add SDKs for Firebase products that you want to use
+&lt!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-&lscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js">&l/script>
-&lscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js">&l/script>
+&ltscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js">&lt/script>
+&ltscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js">&lt/script>
 
-&lscript>
+&ltscript>
   // Your web app's Firebase configuration
   var firebaseConfig = {
         apiKey: "",
@@ -1041,7 +1041,7 @@ Serial.println();
 
                 <p style="text-align: justify"> These five lines are for calling the buttons in this script. I needed to do this because I created the buttons outside of this <code>script</code>, so I need to tell the interfact to be constantly checking for the status changes of these buttons. Think of it like a loop function, and these lines are what are checking the status of the buttons in that loop.</p>
 
-<pre><code> class="language-html">// make the buttons call their respective functions below 
+<pre><code class="language-html">// make the buttons call their respective functions below 
     document.getElementById('OnButton');
     document.getElementById('OffButton');
     document.getElementById('OneCycle');
