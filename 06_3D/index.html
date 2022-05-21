@@ -15,6 +15,24 @@
     <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
     <link href="../css/custom.css" rel="stylesheet">
 
+    <!-- Scrollbar Stuff -->
+    <style>
+    ::-webkit-scrollbar {
+    width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+    </style>
 </head>
 
 <body>
@@ -22,20 +40,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Logo and responsive toggle -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <span class="glyphicon glyphicon-fire"></span> 
-                    PHYS_S-12
-                </a>
-            </div>
-            
+           
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
@@ -43,14 +48,6 @@
                         <a href="../index.html">Home</a>
                     </li>
 
-                    <li>
-                        <a href="../About Me/index.html">About</a>
-                    </li>
-
-                    <li>
-                        <a href="../Final Project/index.html">Final Project</a>
-                    </li>
-                
                     <li class="dropdown" >
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="about-us">
@@ -68,6 +65,10 @@
                             <li><a href="../12_Wildcard/index.html">12: Wildcard / Project Prep</a></li>
                             <li><a href="../Final Project/index.html">Final Project</a></li>
                         </ul>
+                    </li>
+
+                    <li>
+                        <a href="../Final Project/index.html">Final Project</a>
                     </li>
 
                     <li>
